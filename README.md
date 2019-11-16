@@ -1,15 +1,25 @@
+# Bản phiên dịch Tiếng Việt dành cho Gatsby
 
-# Gatsby Vietnamese Translation
+Đây là kho lưu trữ phiên bản dịch Tiếng Việt của Gatsby.
 
-This repo contains the Vietnamese translation for Gatsby.
+## Bạn muốn đóng góp? :raising_hand:
 
-Please refer to the [Translation Progress Issue](https://github.com/gatsbyjs/gatsby-vi/issues/1) to start translating!
+Hãy bắt đầu bằng cách tham khảo:
 
-Useful Links:
+* [Hướng dẫn đóng góp](/CONTRIBUTING.md) và...
+* [Tiến độ phiên dịch](https://github.com/gatsbyjs/gatsby-vi/issues/1) để chọn 1 trang cần dịch.
 
-* [Style Guide](/style-guide.md)
-* [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
-* [Gatsby Discord](https://gatsby.dev/discord)
+## Những liên kết hữu ích :+1:
 
-(Feel free to translate this document and add any content you feel would be useful to contributors).
-  
+Tham khảo những liên kết sau đây để hoàn thành những bản dịch có chất lượng tốt nhất!
+
+* [Phong cách dịch tham khảo](/style-guide.md)
+* [Hướng dẫn phiên dịch của Gatsby](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
+
+## Giao lưu với cộng đồng :speech_balloon:
+
+<img src="https://discordapp.com/assets/2c21aeda16de354ba5334551a883b481.png" alt="drawing" width="30" style="margin-bottom: -10px"/> **Server của Gatsby trên Discord**: [Tại đây](https://gatsby.dev/discord)
+
+Nhóm bảo trì và những nhóm đóng góp dịch thuật cho Gatsby dùng Discord để giao lưu với nhau. Bạn có thể dùng server Discord để giao tiếp với những người đóng góp khác và đặt câu hỏi khi cần thiết.
+
+Hãy tham gia cùng chúng tôi để cùng nhau phát triển Gatsby nói riêng và cộng động phần mềm mã nguồn mở nói chung.
