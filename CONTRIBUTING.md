@@ -8,7 +8,7 @@ Chào mừng bạn đến với kho tài liệu Tiếng Việt của Gatsby! Tr�
 
 Tài liệu cho Gatsby là tập hợp những trang được viết bằng [Markdown](https://dillinger.io/) (một ngôn ngữ đánh dấu đơn giản và dễ tiếp cận). Những trang này khi hoàn tất sẽ được hiển thị trên website tài liệu chính thức của [Gatsby](https://www.gatsbyjs.org/). Từng tập tin Markdown (*.md) tương ứng với một trang tài liệu và cần được dịch sang Tiếng Việt. Nhóm bảo trì của Gatsby đã và đang cố gắng làm việc này, bạn có thể xem [tiến độ phiên dịch](https://github.com/gatsbyjs/gatsby-vi/issues/1) trong mục [Vấn đề](https://github.com/gatsbyjs/gatsby-vi/issues) của kho lưu trữ này. Trang tiến độ phiên dịch sẽ cho bạn thấy những trang đã được dịch và những trang cần được dịch.
 
-## Hướng dẫn
+## Hướng dẫn :information_source:
 
 Chúng tôi biết rằng bạn muốn giúp đỡ chúng tôi trong việc phiên dịch một cách nhanh chóng nhưng chúng tôi có một quy trình để đảm bảo rằng việc dịch thuật diễn ra trôi chảy.
 
@@ -193,7 +193,7 @@ Khi PR của bạn đã được tạo, nhóm bảo trì sẽ dành thời gian 
 
 Bạn có thể áp dụng những đề xuất đó, commit những thay đổi bạn cần thực hiện và push lên kho lưu trữ do bạn sở hữu. PR bạn tạo sẽ được Github theo dõi và cập nhật tự động với những thay đổi bạn vừa thực hiện.
 
-## Lời khuyên cho người đóng góp
+## Khuyến cáo :thumbsup:
 
 1. Bạn có thể tìm thấy chi tiết về cách dịch một số từ thông dụng và phong cách dịch tham khảo tại [đây](https://github.com/gatsbyjs/gatsby-vi/blob/master/style-guide.md). Đó là những quy tắc dịch rất hiển nhiên nhưng rất quan trọng và luôn cần được cân nhắc kỹ.
 
@@ -203,20 +203,33 @@ Bạn có thể áp dụng những đề xuất đó, commit những thay đổi
 
 1. Luôn giữ ngôn ngữ trung lập, tránh phụ thuộc vào giới tính, tuổi tác, vùng miền, sắc tộc, văn hóa, tôn giáo, tư tưởng chính trị...
 
-1. Khi người đóng góp không thể dịch 1 từ nào đó, bạn hoàn toàn có thể dùng Google Dịch. Vui lòng đừng dịch cả trang bằng Google Dịch vì sẽ bị mất đi ý nghĩa của trang.
+1. Khi người đóng góp không thể dịch 1 từ nào đó, bạn hoàn toàn có thể dùng [Google Dịch](https://translate.google.com.vn/#view=home&op=translate&sl=en&tl=vi). Vui lòng đừng dịch cả trang bằng Google Dịch vì sẽ bị mất đi ý nghĩa của trang.
 
 1. Bên cạnh việc dịch thuật, các bạn cũng có thể đọc qua các tài liệu đã được dịch và đóng góp bằng cách phát hiện ra những lỗi như lỗi đánh máy, cách dùng từ, dịch sai hoặc cả kể khi bạn có cách dịch tốt hơn cách hiện tại. Chỉ cần tạo một Pull Reuqest để sửa lỗi và chúng tôi sẽ trân trọng đóng góp của bạn.
 
-*Bonus*: Nếu bạn dùng Visual Studio Code (VSCode) phục vụ việc chỉnh sửa bản dịch, bạn có thể cài đặt các tiện ích mở rộng sau để tiện cho việc chỉnh sửa file định dạng Markdown.
+### Những công cụ/tiện ích hỗ trợ dịch :wrench:
+
+Nếu bạn dùng Visual Studio Code (VSCode) phục vụ việc chỉnh sửa bản dịch, bạn có thể cài đặt các tiện ích mở rộng sau để tiện cho việc chỉnh sửa file định dạng Markdown:
 
 * [Github Markdown Preview](https://marketplace.visualstudio.com/items?itemName=bierner.github-markdown-preview): Sau khi cài đặt, dùng tổ hợp phím `Ctrl + Shift + V` để kích hoạt chế độ xem trước của Github cho file định dạng Markdown. Tiện ích cho phép VSCode hiển thị xem trước cho file Markdown hiện tại như Github sẽ hiển thị trước khi bạn push lên kho lưu trữ cá nhân.
 
 * [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Cộng cụ giúp bạn gõ tài liệu Markdown tốt hơn và theo khuôn mẫu hơn.
 
+## Phần thưởng :gift:
+
+Khi bạn đóng góp bằng cách dịch tài liệu cho Gatsby, bạn không chỉ đóng góp cho cộng đồng mã nguồn mở mà còn đóng góp một cách chính thức cho Gatsby nữa.
+
+Gatsby muốn cám ơn bạn bằng cách tặng bạn những món quà từ [cửa hàng Gatsby](https://store.gatsbyjs.org/).
+
+* Với mỗi đóng góp cho Gatsby, bạn có thể nhận những phần quà cấp 1 như vớ, mũ, áo phông, bình đựng nước...
+* Với tích lũy 5 đóng góp trở lên, bạn có thể nhận những phần quà cấp 2 như áo khoác hoodie và quần dài.
+
+Rất tuyệt phải không nào? Bạn có thể tìm hiểu thêm tại [đây](https://www.gatsbyjs.org/contributing/contributor-swag/).
+
 ## Bắt đầu thôi nào! :running:
 
 Nếu bạn đã đọc đến đây thì còn chần chờ gì nữa? Hãy nhận một trang và bắt đầu đóng góp cho cộng đồng Gatsby thôi nào!
 
-# Những trang theo dõi tiến độ
+# Phụ lục: Những trang theo dõi tiến độ :bar_chart:
 
 * [Tiền độ dịch thuật: Trước tiên](https://github.com/gatsbyjs/gatsby-vi/issues/1)
