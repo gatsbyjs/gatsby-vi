@@ -193,8 +193,30 @@ Khi PR của bạn đã được tạo, nhóm bảo trì sẽ dành thời gian 
 
 Bạn có thể áp dụng những đề xuất đó, commit những thay đổi bạn cần thực hiện và push lên kho lưu trữ do bạn sở hữu. PR bạn tạo sẽ được Github theo dõi và cập nhật tự động với những thay đổi bạn vừa thực hiện.
 
-## Khuyến cáo cho người đóng góp
+## Lời khuyên cho người đóng góp
 
+1. Bạn có thể tìm thấy chi tiết về cách dịch một số từ thông dụng và phong cách dịch tham khảo tại [đây](https://github.com/gatsbyjs/gatsby-vi/blob/master/style-guide.md). Đó là những quy tắc dịch rất hiển nhiên nhưng rất quan trọng và luôn cần được cân nhắc kỹ.
 
+1. Luôn kiểm tra lỗi chính tả và ngữ pháp kỹ lưỡng, dịch tài liệu với cách dùng từ và hành văn văn tốt nhất có thể.
 
+1. Tránh thêm hoặc xóa bớt hàng trong tài liệu gốc. Từng hàng chữ trong tài liệu gốc nên được dịch thành từng hàng tương ứng trong Tiếng Việt. Điều này có thể được kiểm tra sau khi dịch bằng cách so sánh 10 hàng đầu tiên và 10 hàng cuối cùng giữa tài liệu gốc và tài liệu dịch. Chúng nên là từng cặp hàng tương ứng với nhau.
 
+1. Luôn giữ ngôn ngữ trung lập, tránh phụ thuộc vào giới tính, tuổi tác, vùng miền, sắc tộc, văn hóa, tôn giáo, tư tưởng chính trị...
+
+1. Khi người đóng góp không thể dịch 1 từ nào đó, bạn hoàn toàn có thể dùng Google Dịch. Vui lòng đừng dịch cả trang bằng Google Dịch vì sẽ bị mất đi ý nghĩa của trang.
+
+1. Bên cạnh việc dịch thuật, các bạn cũng có thể đọc qua các tài liệu đã được dịch và đóng góp bằng cách phát hiện ra những lỗi như lỗi đánh máy, cách dùng từ, dịch sai hoặc cả kể khi bạn có cách dịch tốt hơn cách hiện tại. Chỉ cần tạo một Pull Reuqest để sửa lỗi và chúng tôi sẽ trân trọng đóng góp của bạn.
+
+*Bonus*: Nếu bạn dùng Visual Studio Code (VSCode) phục vụ việc chỉnh sửa bản dịch, bạn có thể cài đặt các tiện ích mở rộng sau để tiện cho việc chỉnh sửa file định dạng Markdown.
+
+* [Github Markdown Preview](https://marketplace.visualstudio.com/items?itemName=bierner.github-markdown-preview): Sau khi cài đặt, dùng tổ hợp phím `Ctrl + Shift + V` để kích hoạt chế độ xem trước của Github cho file định dạng Markdown. Tiện ích cho phép VSCode hiển thị xem trước cho file Markdown hiện tại như Github sẽ hiển thị trước khi bạn push lên kho lưu trữ cá nhân.
+
+* [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Cộng cụ giúp bạn gõ tài liệu Markdown tốt hơn và theo khuôn mẫu hơn.
+
+## Bắt đầu thôi nào! :running:
+
+Nếu bạn đã đọc đến đây thì còn chần chờ gì nữa? Hãy nhận một trang và bắt đầu đóng góp cho cộng đồng Gatsby thôi nào!
+
+# Những trang theo dõi tiến độ
+
+* [Tiền độ dịch thuật: Trước tiên](https://github.com/gatsbyjs/gatsby-vi/issues/1)
