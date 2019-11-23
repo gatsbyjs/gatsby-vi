@@ -42,7 +42,7 @@ Thật tuyệt vời nếu đây là lần đầu tiên bạn đóng góp cho c�
 
 #### Những công cụ cần thiết
 
-Bạn cần cài đặt những phần mềm sau trong máy tính của bạn để có thể đóng góp:
+Bạn cần cài đặt những công cụ sau trong máy tính của bạn để có thể đóng góp:
 
 * [Git](https://git-scm.com/)
 * Một terminal - cửa sổ gõ dòng lệnh (ví dụ: PowerShell, Windows Terminal, Git Bash...)
@@ -52,7 +52,7 @@ Bạn cần cài đặt những phần mềm sau trong máy tính của bạn đ
 
 1. Đầu tiên, bạn cần Fork kho lưu trữ về kho của bạn.
 
-    Điều hướng hướng đến kho lưu trữ gốc (tại [đây](https://github.com/gatsbyjs/gatsby-vi)). Hãy bấm vào nút **Fork** ở góc phía trên, bên phải của kho lưu trữ và đợi vài giây để Github sao chép kho lưu trữ gốc về tài khoản cá nhân của bạn.
+    Điều hướng hướng đến kho lưu trữ gốc (tại [đây](https://github.com/gatsbyjs/gatsby-vi)). Hãy bấm vào nút **Fork** ở góc phía trên, bên phải của kho lưu trữ và chờ Github sao chép kho lưu trữ gốc về tài khoản cá nhân của bạn.
 
     Bản sẽ được chuyển hướng đến một kho lưu trữ tương tự như kho lưu trữ gốc với tên người sở hữu là bạn.
 
@@ -66,57 +66,135 @@ Bạn cần cài đặt những phần mềm sau trong máy tính của bạn đ
     git clone <URL>
     ```
     
-    Chờ vài giây để Git clone toàn bộ kho lưu trữ về máy bạn. Sau đó, hãy điều hướng termiank vào trong thư mục chứa kho lưu trữ:
+    Chờ Git clone toàn bộ kho lưu trữ về máy bạn. Sau đó, hãy điều hướng termiank vào trong thư mục chứa kho lưu trữ:
 
     ```bash
     cd gatsby-vi
     ```
 
-1. Tạo 1 nhánh phát triển (branch) cho kho lưu trữ.
+1. Tạo 1 branch (nhánh phát triển) mới cho kho lưu trữ.
 
-    Khi bạn clone kho lưu trữ về, bạn sẽ mặc định bắt đầu trong nhánh `master`, nơi chỉ nên chứa những tài liệu dịch chính thức. Những thay đổi của bạn trong kho lưu trữ này nên nằm trong một nhánh "tại chỗ" khác.
+    Khi bạn clone kho lưu trữ về, bạn sẽ được mặc định trong nhánh `master`, nơi chỉ chứa những tài liệu dịch chính thức. Những thay đổi của bạn trong kho lưu trữ này nên nằm trong một nhánh "tại chỗ" mới.
 
-    Khi bạn đã trong thư mục chứa kho lưu trữ, thực hiện dòng lệnh sau để tạo 1 nhánh phát triển mới với `<TÊN-NHÁNH>` đại diện tài liệu bạn chuẩn bị dịch. Ví dụ: `tutorial-7`, `docs-index`, `code-of-conduct`...
+    Khi bạn đã trong thư mục chứa kho lưu trữ, thực hiện dòng lệnh sau để tạo 1 nhánh mới với `<TÊN-NHÁNH>` đại diện tài liệu bạn chuẩn bị dịch. Ví dụ: `tutorial-7`, `docs-index`, `code-of-conduct`...
 
     ```bash
     git checkout -b <TÊN-NHÁNH>
     ```
 
-    Nếu bạn dùng terminal Git Bash hoặc khi bạn chạy lệnh `git branch`, bạn sẽ thấy tên nhánh của bạn đã được đổi từ `master` sang tên mới. Lúc này bạn có thể bắt thực hiện những thay đổi trong kho lưu trữ tại chỗ để bắt đầu dịch trang tài liệu bạn đã được chỉ định.
-    
-<!-- ## Cách đóng góp
+    Nếu bạn dùng terminal Git Bash (hoặc khi bạn chạy lệnh `git branch`), bạn sẽ thấy tên nhánh của bạn đã được đổi từ `master` sang tên mới.
 
-1. Navigate to a folder to store the repository
-1. Clone this repository:
+1. Mở file Markdown của tài liệu bạn đã được chỉ định bằng công cụ gõ văn bản yêu thích và bắt đầu chỉnh sửa nội dung sang Tiếng Việt.
 
-    ```bash
-    git clone https://github.com/gatsbyjs/gatsby-vi.git
+### Nộp bản dịch (Commit & Push)
+
+#### Commit
+
+Sau khi chỉnh sửa nội dung của tài liệu, bạn sẽ cần phải commit những thay đôi này bằng cách thực hiện những lệnh sau:
+
+```bash
+git add <TÊN-FILE>
+git commit -m <TIN-NHẮN>
+```
+
+với
+
+* `<TÊN-FILE>` là đường dẫn đến (những) file bạn chỉnh sửa. Cách nhanh nhất để lấy đường dẫn đến file là dùng lệnh `git status`. Lệnh này sẽ hiển thị những file đã bị thay đổi hoặc thêm mới trong phần `Modified` hoặc `Untracked`.
+* `<TIN-NHẮN>` là mô tả cho mục đích của chỉnh sửa bạn đã thực hiện
+
+**Lưu ý:**
+
+Việc commit không nên được thực hiện khi bạn trên nhánh master. Xem tên nhánh hiện tại của bạn bằng lệnh `git branch`. Nếu bạn còn trên nhánh master, có thể bạn đã chưa chạy lệnh `git checkout` ở phần trên.
+
+Trước khi commit,  bạn luôn cần phải chỉ ra những file cần được bao gồm trong commit. Việc này được thực hiện bằng lệnh `git add`.
+
+Việc **commit** có thể được thực hiện nhiều lần trong 1 bản dịch. Mỗi khi file bị thay đổi, bạn phải dùng lệnh `git add` trước khi commit mới.
+
+Mỗi **commit** chỉ nên phục vụ 1 mục đích duy nhất được miêu tả trong phần tin nhắn (message). Phần tin nhắn nên được ghi bằng Tiếng Anh để những thành viên bảo trì quốc tế có thể theo dõi dự án.
+
+**Ví dụ về cách commit:**
+
+```bash
+git add CONTRIBBUTING.md
+git commit -m "Add CONTRIBUTING.md with basic structure"
+```
+
+```bash
+git add CONTRIBBUTING.md
+git commit -m "Update fork/clone instruction for CONTRIBUTING.md"
+```
+
+```bash
+git add CONTRIBBUTING.md
+git commit -m "Complete CONTRIBUTING.md translation"
+```
+
+#### Push
+
+Sau khi đã hoàn thành bản dịch của một tại liệu, việc bạn cần làm là **push** (đẩy) những thay đổi bạn thực hiện lên kho lưu trữ Github của bạn sở hữu. Việc này được thực hiện bằng lệnh sau với `<TÊN-NHÁNH>` là tên nhánh bạn đặt ban đầu.
+
+```bash
+git push origin <TÊN-NHÁNH>
+```
+
+Cách nhanh nhất để xem tên nhánh hiện tại của bạn là dùng lệnh `git branch`, tên nhánh hiện tại của bạn sẽ được đánh dấu bằng ký tự `*`. Nếu bạn dùng terminal Git Bash, tên nhánh của bạn sẽ được hiển thị ở cuối tên bạn.
+
+**Lưu ý:**
+
+Bạn không nên chạy lệnh `git push origin master` để push chỉnh sửa của bạn lên nhánh `master`. Bạn chỉ nên push lên nhánh riêng của bạn.
+
+Phần tiếp theo, chúng tôi sẽ hướng dẫn cách tạo một Pull Request trên Github để nộp bản dịch tài liệu của bạn. Khi đó, các thành viên bảo trì sẽ xem qua bản dịch của bạn để gộp vào nhánh `master` của kho lưu trữ gốc.
+
+#### Tạo Pull Request
+
+Phần cuối cùng bạn cần làm trong quy trình này là tạo 1 Pull Request (PR) để nộp bản dịch của bạn cho kho lưu trữ chính thức từ kho do bạn sở hữu. Việc này rất đơn giản và được thực hiện thông qua website của Github.
+
+1. Điều hướng đến kho lưu trữ gốc tại [đây](https://github.com/gatsbyjs/gatsby-vi).
+
+1. Nếu bạn đã push những commit từ máy bạn lên kho lưu trữ do bạn sở hữu, Github sẽ hiển thị 1 dòng thông báo trên nền màu vàng nhạt ngay phía dưới phần mô tả của kho lưu trữ. Nhấm vào nút **Compare and Pull Reuqest** màu xanh lá tại cuối dòng thông báo. Bạn sẽ được điều hướng đến trang tạo PR.
+
+1. Nhập vào tiêu đề của PR và mô tả của những thay đổi quan trọng bạn đã thực hiện (nếu cần thiết).
+
+    Tiêu đề của PR được đặt theo cú pháp sau **bằng Tiếng Anh**:
+
+    ```text
+    [Translation] <LOẠI-TÀI-LIỆU>/<TÊN-TÀI-LIỆU>
     ```
 
-1. Navigate into the new clone
+    với
 
-    ```bash
-    cd gatsby-vi
-    ```
+    * `<LOẠI-TÀI-LIỆU>` có thể là `community`, `tutorial` hoặc `docs`.
+    * `<TÊN-TÀI-LIỆU>` là tên file Markdown của tài liệu bạn đã dịch (loại trừ phần mở rộng `.md`).
 
-1. Checkout to a new branch
+    Ví dụ tiêu đề PR:
 
-    ```bash
-    git checkout -b <branch-name>
-    ```
+    * `[Translation] tutorial/index`
+    * `[Translation] tutorial/part-zero`
+    * `[Translation] docs/gatsby-cli`
 
-1. Do your translation or modification.
-1. Commit your changes
+    Mô tả của PR có thể là câu hỏi cho những điểm bạn không chắc chắn trong tài liệu bạn dịch hoặc cần ý kiến từ cộng đồng.
 
-    ```bash
-    git add <filename>
-    git commit -m "change description"
-    ```
+    Những thành viên đóng góp và bảo trì khác được khuyến khích tích cực xem qua PR của những thành viên khác để đảm bảo chất lượng cho những bản dịch.
 
-1. Push the change to your own branch
+1. Sau khi đã nhập vào tiêu đề và mô tả cho PR. Hãy đảm bảo rằng...
 
-    ```bash
-    git push origin <branch-name>
-    ```
+    * Mục `base` hiển thị giá trị `master`
+    * Mục `compare` hiển thị giá trị `<TÊN-GITHUB>/<TÊN-NHÁNH>`
 
-1. Go to the [translation repository](https://github.com/gatsbyjs/gatsby-vi) and make a Pull Request -->
+    Điều này có nghĩa rằng bạn đang tạo một Pull Request để yêu cầu gộp thay đổi trong nhánh mới của bạn ở kho lưu trữ do bạn sở hữu vào nhánh `master` của kho lưu trữ gốc.
+
+1. Khi đã kiểm tra đầy đủ các trường dữ liệu trên, bấm nút **Create a Pull Request**.
+
+1. Cuối cùng, yêu cầu gộp thay đổi bạn thực hiện đã được tạo. Vui lòng đợi nhóm bảo trì của Gatsby duyệt qua và gộp vào kho lưu trữ chính thức.
+
+### Nhận phản hồi từ nhóm bảo trì và cộng đồng
+
+Khi PR của bạn đã được tạo, nhóm bảo trì sẽ dành thời gian xem qua PR của bạn và đảm bảo rằng bản dịch của bạn phù hợp với phong cách và quy định chung của Gatsby. Khi nhóm bảo trì muốn đề xuất chỉnh sửa bản dịch của bạn, chúng tôi sẽ comment vào PR của bạn với những đề xuất đó.
+
+Bạn có thể áp dụng những đề xuất đó, commit những thay đổi bạn cần thực hiện và push lên kho lưu trữ do bạn sở hữu. PR bạn tạo sẽ được Github theo dõi và cập nhật tự động với những thay đổi bạn vừa thực hiện.
+
+## Khuyến cáo cho người đóng góp
+
+
+
+
