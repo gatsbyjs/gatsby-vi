@@ -4,7 +4,7 @@ Chào mừng bạn đến với kho tài liệu Tiếng Việt của Gatsby! Tr�
 
 Đây là một tài liệu quan trọng, hữu ích và cũng là hướng dẫn mà mọi người phải tuân theo để có thể bắt đầu đóng góp cho Gatsby.
 
-## Giới thiệu về kho lưu trữ
+## Giới thiệu
 
 Tài liệu cho Gatsby là tập hợp những trang được viết bằng [Markdown](https://dillinger.io/) (một ngôn ngữ đánh dấu đơn giản và dễ tiếp cận). Những trang này khi hoàn tất sẽ được hiển thị trên website tài liệu chính thức của [Gatsby](https://www.gatsbyjs.org/). Từng tập tin Markdown (*.md) tương ứng với một trang tài liệu và cần được dịch sang Tiếng Việt. Nhóm bảo trì của Gatsby đã và đang cố gắng làm việc này, bạn có thể xem [tiến độ phiên dịch](https://github.com/gatsbyjs/gatsby-vi/issues/1) trong mục [Vấn đề](https://github.com/gatsbyjs/gatsby-vi/issues) của kho lưu trữ này. Trang tiến độ phiên dịch sẽ cho bạn thấy những trang đã được dịch và những trang cần được dịch.
 
@@ -12,7 +12,7 @@ Tài liệu cho Gatsby là tập hợp những trang được viết bằng [Mar
 
 Chúng tôi biết rằng bạn muốn giúp đỡ chúng tôi trong việc phiên dịch một cách nhanh chóng nhưng chúng tôi có một quy trình để đảm bảo rằng việc dịch thuật diễn ra trôi chảy.
 
-### Nhận trang cần dịch
+### Nhận tài liệu cần dịch
 
 Hãy vui lòng thực hiện theo những bước sau sau để nhận trang cần dịch. Chúng tôi mong muốn rằng thời gian và công sức bạn bỏ ra thực sự có ích và tránh việc nhiều người đóng góp cùng dịch những tài liệu bị trùng lặp.
 
@@ -24,11 +24,11 @@ Hãy vui lòng thực hiện theo những bước sau sau để nhận trang c�
 
 1. Khi bạn đã có trang bạn mong muốn dịch, hãy để lại một comment bên dưới phần bình luận để nhóm bảo trì có thể chỉ định bạn cho trang đó. Nếu có thể, hãy đính tên một thành viên nhóm bảo trì trong comment. Ví dụ:
 
-    @vitokhangnguyen Mình muốn dịch trang  `tutorial/part-seven`.
+    > [@vitokhangnguyen](https://github.com/vitokhangnguyen) Mình muốn dịch trang  `tutorial/part-seven`.
 
 1. Chờ đến khi một thành viên của nhóm bảo trì trả lời comment và chỉ định trang cần dịch cho bạn. Bạn sẽ thấy tên Github của bạn được đặt cạnh tên trang cần dịch trong trang tiến độ phiên dịch. Ví dụ:
 
-    * [x] tutorial/part-seven
+    * [ ] tutorial/part-seven (@akitak1290)
 
 1. Bắt đầu dịch  :white_check_mark:
 
@@ -166,7 +166,7 @@ Phần cuối cùng bạn cần làm trong quy trình này là tạo 1 Pull Requ
     * `<LOẠI-TÀI-LIỆU>` có thể là `community`, `tutorial` hoặc `docs`.
     * `<TÊN-TÀI-LIỆU>` là tên file Markdown của tài liệu bạn đã dịch (loại trừ phần mở rộng `.md`).
 
-    Ví dụ tiêu đề PR:
+    **Một số tiêu đề PR mẫu:**
 
     * `[Translation] tutorial/index`
     * `[Translation] tutorial/part-zero`
@@ -193,7 +193,11 @@ Khi PR của bạn đã được tạo, nhóm bảo trì sẽ dành thời gian 
 
 Bạn có thể áp dụng những đề xuất đó, commit những thay đổi bạn cần thực hiện và push lên kho lưu trữ do bạn sở hữu. PR bạn tạo sẽ được Github theo dõi và cập nhật tự động với những thay đổi bạn vừa thực hiện.
 
-## Khuyến cáo :thumbsup:
+Nếu PR của bạn đã ổn, nhóm bảo trì sẽ merge gộp thay đổi của bạn vào kho lưu trữ chính thức. Bạn sẽ nhận được thông báo khi điều này xảy ra. Khi đó, tên tài liệu bạn đã dịch trên trang theo dõi tiến độ phiên dịch sẽ được đánh dấu hoàn thành.
+
+* [x] tutorial/part-seven (@akitak1290)
+
+## Ghi chú và khuyến cáo :thumbsup:
 
 1. Bạn có thể tìm thấy chi tiết về cách dịch một số từ thông dụng và phong cách dịch tham khảo tại [đây](https://github.com/gatsbyjs/gatsby-vi/blob/master/style-guide.md). Đó là những quy tắc dịch rất hiển nhiên nhưng rất quan trọng và luôn cần được cân nhắc kỹ.
 
@@ -204,6 +208,8 @@ Bạn có thể áp dụng những đề xuất đó, commit những thay đổi
 1. Luôn giữ ngôn ngữ trung lập, tránh phụ thuộc vào giới tính, tuổi tác, vùng miền, sắc tộc, văn hóa, tôn giáo, tư tưởng chính trị...
 
 1. Khi người đóng góp không thể dịch 1 từ nào đó, bạn hoàn toàn có thể dùng [Google Dịch](https://translate.google.com.vn/#view=home&op=translate&sl=en&tl=vi). Vui lòng đừng dịch cả trang bằng Google Dịch vì sẽ bị mất đi ý nghĩa của trang.
+
+1. Bạn luôn được khuyến khích để giao tiếp với nhóm dịch thuật, nhóm bảo trì và cộng đồng Gatsby thông qua server Discord chính thức của Gatsby tại [đây](https://discordapp.com/invite/gatsby). Chúng tôi có một kênh dành riêng cho phiên dịch Tiếng Việt của Gatsby.
 
 1. Bên cạnh việc dịch thuật, các bạn cũng có thể đọc qua các tài liệu đã được dịch và đóng góp bằng cách phát hiện ra những lỗi như lỗi đánh máy, cách dùng từ, dịch sai hoặc cả kể khi bạn có cách dịch tốt hơn cách hiện tại. Chỉ cần tạo một Pull Reuqest để sửa lỗi và chúng tôi sẽ trân trọng đóng góp của bạn.
 
@@ -230,6 +236,8 @@ Rất tuyệt phải không nào? Bạn có thể tìm hiểu thêm tại [đây
 
 Nếu bạn đã đọc đến đây thì còn chần chờ gì nữa? Hãy nhận một trang và bắt đầu đóng góp cho cộng đồng Gatsby thôi nào!
 
-# Phụ lục: Những trang theo dõi tiến độ :bar_chart:
+## Phụ lục: Những trang theo dõi tiến độ :bar_chart:
 
-* [Tiền độ dịch thuật: Trước tiên](https://github.com/gatsbyjs/gatsby-vi/issues/1)
+Dưới đây là danh sách những *Vấn đề* (Github issues) nhằm theo dõi tiến độ dịch thuật và cho phép những người đóng góp nhận các trang dịch:
+
+* [Tiền độ dịch thuật: Quan trọng](https://github.com/gatsbyjs/gatsby-vi/issues/1) (đang thực hiện, **cần giúp đỡ**)
