@@ -2,11 +2,11 @@
 title: Quy Tắc Ứng Xử Của Người Đóng Góp Cho Gatsby
 ---
 
-## Cam Kết
+## Cam kết của chúng tôi
 
 Vì lợi ích của việc thúc đẩy một môi trường cởi mở và chào đón, chúng tôi với tư cách là người đóng góp và duy trì nền tảng cam kết mang đến cho mọi người tham gia vào dự án và cộng đồng của chúng tôi một trải nghiệm bình đẳng, không phân biệt tuổi tác, tầm vóc cơ thể, sự khuyết tật, dân tộc, bản sắc, giới tính, mức độ kinh nghiệm, quốc tịch, ngoại hình, chủng tộc, tôn giáo hay định hướng tình dục.
 
-## Tiêu Chuẩn
+## Tiêu chuẩn của chúng tôi
 
 Ví dụ về các hành động góp phần tạo ra một môi trường tích cực bao gồm:
 
@@ -24,17 +24,17 @@ Ví dụ về hành vi không được chấp nhận của người tham gia bao
 - Công khai những thông tin riêng tư của người khác, như địa chỉ nhà riêng hoặc thông tin liên lạc điện tử, mà không có sự cho phép rõ ràng
 - Các hành vi khác có thể được coi là không phù hợp trong môi trường chuyên nghiệp
 
-## Trách Nhiệm
+## Trách nhiệm của chúng tôi
 
 Người duy trì dự án có nhiệm vụ nêu rõ mức tiêu chuẩn của hành vi của nhóm và thực thi một cách minh khai, công bằng và hợp lý cho những hành vi không đủ tiêu chuẩn.
 
 Người duy trì dự án có quyền và nghĩa vụ để xoá, sửa và không đồng ý các lời bình luận, commits, code, sửa wiki, issues, và các đóng góp khác mà không theo đủ tiêu chuẩn, và có thể tạm thời hoặc vĩnh viễn nhưng người đóng góp có hành vi không đàng hoàng, hăm doạ, súc phạm và tổn thương người khác.
 
-## Scope
+## Phạm vi của chúng tôi
 
 Quy tắc ứng xử này áp dụng đối với cả trong không gian dự án và không gian công cộng khi cá nhân làm đại diện cho dự án hoặc cộng đồng. Ví dụ về đại diện cho một dự án hoặc một cộng đồng bao gồm việc sử dụng địa chỉ email chính thức của dự án, đăng tin qua tài khoản mạng xã hội chính thức hoặc đóng vai trò đại diện được chỉ định tại một sự kiện trực tuyến hoặc gặp gỡ trực tiếp. Đại diện của một dự án có thể được xác định và làm rõ hơn bởi những người duy trì dự án.
 
-## Thực Thi
+## Quyền Thực Thi
 
 Các trường hợp lạm dụng, quấy rối hoặc hành vi không thể chấp nhận được có thể được báo cáo bằng cách liên hệ với nhóm dự án tại [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). Tất cả các khiếu nại sẽ được xem xét và điều tra và đưa ra phản hồi cần thiết và phù hợp với hoàn cảnh. Nhóm dự án có nghĩa vụ duy trì bảo mật liên quan đến báo cáo sự cố. Thông tin chi tiết về các chính sách thực thi cụ thể có thể được đăng riêng biệt.
 
