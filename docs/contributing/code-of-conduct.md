@@ -1,50 +1,50 @@
 ---
-title: Gatsby Contributor Covenant Code of Conduct
+title: Quy Tắc Ứng Xử Của Người Đóng Góp Cho Gatsby
 ---
 
-## Our Pledge
+## Cam Kết
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+Vì lợi ích của việc thúc đẩy một môi trường cởi mở và chào đón, chúng tôi với tư cách là người đóng góp và duy trì nền tảng cam kết mang đến cho mọi người tham gia vào dự án và cộng đồng của chúng tôi một trải nghiệm bình đẳng, không phân biệt tuổi tác, tầm vóc cơ thể, sự khuyết tật, dân tộc, bản sắc, giới tính, mức độ kinh nghiệm, quốc tịch, ngoại hình, chủng tộc, tôn giáo hay định hướng tình dục.
 
-## Our Standards
+## Tiêu Chuẩn
 
-Examples of behavior that contributes to creating a positive environment include:
+Ví dụ về các hành động góp phần tạo ra một môi trường tích cực bao gồm:
 
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints and experiences
-- Gracefully accepting constructive criticism
-- Focusing on what is best for the community
-- Showing empathy towards other community members
+- Sử dụng ngôn ngữ chào đón và có tính trung lập.
+- Tôn trọng các quan điểm và kinh nghiệm khác nhau
+- Cởi mở đón nhận những lời chỉ trích mang tính xây dựng
+- Tập trung vào những gì tốt nhất cho cộng đồng
+- Thể hiện sự đồng cảm với các thành viên khác trong cộng đồng
 
-Examples of unacceptable behavior by participants include:
+Ví dụ về hành vi không được chấp nhận của người tham gia bao gồm:
 
-- The use of sexualized language or imagery and unwelcome sexual attention or advances
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or electronic address, without explicit permission
-- Other conduct which could reasonably be considered inappropriate in a professional setting
+- Việc sử dụng ngôn ngữ hoặc hình ảnh kích dục và có ý định hoặc hành động kích dục không được mong muốn.
+- Nói xấu, xúc phạm / bình luận xúc phạm, và có hành vi tấn công cá nhân hoặc chính trị
+- Quấy rối công khai hoặc riêng tư
+- Công khai những thông tin riêng tư của người khác, như địa chỉ nhà riêng hoặc thông tin liên lạc điện tử, mà không có sự cho phép rõ ràng
+- Các hành vi khác có thể được coi là không phù hợp trong môi trường chuyên nghiệp
 
-## Our Responsibilities
+## Trách Nhiệm
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
+Người duy trì dự án có nhiệm vụ nêu rõ mức tiêu chuẩn của hành vi của nhóm và thực thi một cách minh khai, công bằng và hợp lý cho những hành vi không đủ tiêu chuẩn.
 
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this code of conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, threatening, offensive, or harmful.
+Người duy trì dự án có quyền và nghĩa vụ để xoá, sửa và không đồng ý các lời bình luận, commits, code, sửa wiki, issues, và các đóng góp khác mà không theo đủ tiêu chuẩn, và có thể tạm thời hoặc vĩnh viễn nhưng người đóng góp có hành vi không đàng hoàng, hăm doạ, súc phạm và tổn thương người khác.
 
 ## Scope
 
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.
+Quy tắc ứng xử này áp dụng đối với cả trong không gian dự án và không gian công cộng khi cá nhân làm đại diện cho dự án hoặc cộng đồng. Ví dụ về đại diện cho một dự án hoặc một cộng đồng bao gồm việc sử dụng địa chỉ email chính thức của dự án, đăng tin qua tài khoản mạng xã hội chính thức hoặc đóng vai trò đại diện được chỉ định tại một sự kiện trực tuyến hoặc gặp gỡ trực tiếp. Đại diện của một dự án có thể được xác định và làm rõ hơn bởi những người duy trì dự án.
 
-## Enforcement
+## Thực Thi
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+Các trường hợp lạm dụng, quấy rối hoặc hành vi không thể chấp nhận được có thể được báo cáo bằng cách liên hệ với nhóm dự án tại [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). Tất cả các khiếu nại sẽ được xem xét và điều tra và đưa ra phản hồi cần thiết và phù hợp với hoàn cảnh. Nhóm dự án có nghĩa vụ duy trì bảo mật liên quan đến báo cáo sự cố. Thông tin chi tiết về các chính sách thực thi cụ thể có thể được đăng riêng biệt.
 
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+Những người duy trì dự án không có thiện chí tuân theo hoặc thực thi Bộ quy tắc ứng xử có thể phải đối mặt với những cách xử lí hậu quả mang tính tạm thời hoặc vĩnh viễn tùy theo quyết định của các thành viên khác trong ban lãnh đạo dự án.
 
-When faced with repeated bad faith comments or harassment after an earnest attempt to mediate an issue, the Gatsby team reserves the right to remove someone from the GitHub repository and/or block them on social media. This decision will always be made with consensus from more than one team member.
+Nếu sau nỗ lực để hòa giải vấn đề mà vẫn nhận được phản hồi về những bình luận tiêu cực hoặc quấy rối mang tính lặp đi lặp lại, nhóm Gatsby có quyền xóa ai đó khỏi kho lưu trữ GitHub và / hoặc chặn họ trên phương tiện truyền thông xã hội. Quyết định này sẽ luôn được đưa ra với sự đồng thuận từ nhiều thành viên trong nhóm.
 
-## Attribution
+## Đóng Góp
 
-This Code of Conduct is adapted from the Contributor Covenant, version 1.4.
+Quy tắc ứng xử này được điều chỉnh từ Contributor Covenant, phiên bản 1.4.
 
-- homepage: https://contributor-covenant.org
-- version: https://contributor-covenant.org/version/1/4/
+- Trang Chủ: https://contributor-covenant.org
+- Phiên Bản: https://contributor-covenant.org/version/1/4/
