@@ -3,37 +3,37 @@ title: Gatsby.js Tutorials
 disableTableOfContents: true
 ---
 
-Welcome to Gatsby! We’re glad you’re here. The goal of this tutorial is to guide you through setting up and deploying your first Gatsby site using a starter template. As we walk through that process, we’ll introduce some more general web development topics, and go over the underlying structure of a Gatsby site.
+Chào mừng đến với Gatsby! Chúng tôi rất vui mừng vì bạn đang ở đây. Mục tiêu của hướng dẫn này là để hướng dẫn các bạn cách thiết lập và triển khai trang web Gatsby đầu tiên của bạn bằng cách sử dụng starter template. Trong quá trình đó, chúng tôi sẽ giới thiệu khái quát hơn một số chủ đề phát triên web và đi qua cấu trúc cơ bản của trang web Gatsby.
 
-> The full tutorial is intended to be as accessible as possible to people without much web development experience (yet!) — no need to be an expert. If you prefer to jump straight to code, feel free to skip the step-by-step tutorial and see the [quick start](/docs/quick-start/) page.
+> Hướng dẫn hoàn chỉnh nhằm mục đích dễ tiếp cận với mọi người dù không có nhiều kinh nghiệm phát triển web - không cần phải là một chuyên gia. Nếu bạn muốn chuyển thẳng qua phần mã, hãy bỏ qua phần hướng dẫn từng bước và xem trang [Bắt đầu nhanh](/docs/quick-start/).
 
-## Gatsby fundamentals
+## Nguyên tắc cơ bản của Gatsby
 
-0.  [Set up your development environment](/tutorial/part-zero/): We'll introduce you to core technologies that power Gatsby, and guide you through setting up your development environment.
-1.  [Get to know Gatsby building blocks](/tutorial/part-one/): Starting new projects, developing, and deploying sites.
-1.  [Introduction to using CSS in Gatsby](/tutorial/part-two/): Explore libraries like Typography.js and CSS Modules.
-1.  [Building nested layouts in Gatsby](/tutorial/part-three/): Layouts are sections of your site that are reused across multiple pages like headers and footers.
+0.  [Cài đặt môi trường làm việc](/tutorial/part-zero/): Chúng tôi sẽ giới thiệu với bạn về công nghệ cốt lõi mà mang lại sức mạnh cho Gatsby và hướng dẫn bạn cài đặt môi trường làm việc.
+1.  [Làm quen với các thành phần trong Gatsby](/tutorial/part-one/): Bắt đầu một project mới, phát triển và triển khai các trang web.
+2.  [Giới thiệu về cách sử dụng CSS trong Gatsby](/tutorial/part-two/): Khám phá các thư viện như Typography.js và CSS Modules.
+3.  [Xây dựng layout lồng nhau trong Gatsby](/tutorial/part-three/): Layout là các phần của trang web mà bạn có thể tái sử dụng ở nhiều trang khác như tiêu dề và cuối trang.
 
-## Intermediate tutorials
+## Hướng dẫn trung cấp
 
-In these intermediate tutorials, you'll learn how to pull data from almost anywhere into your Gatsby site with GraphQL.
+Trong những phần hướnh dẫn trung cấp này, bạn sẽ học cách kéo dữ liệu từ hầu hết mọi nơi vào trang web Gatsby của mình bằng GraphQL.
 
-4.  [Querying for data in a blog](/tutorial/part-four/): Create a blog and use a GraphQL query to pull your site title into the blog header.
-5.  [Source plugins and rendering queried data](/tutorial/part-five/): Use a source plugin to pull Markdown blog posts into your site and create an index page with a list of blog posts.
-6.  [Transformer plugins](/tutorial/part-six/): Use a transformer plugin to transform your Markdown blog posts into a form the blog can render.
-7.  [Programmatically create pages from data](/tutorial/part-seven/): Learn how to programmatically create a set of pages for your blog posts.
-8.  [Preparing a site to go live](/tutorial/part-eight/): Learn how to audit your site for performance and best practices for accessibility, SEO, and more.
+4.  [Query dữ liệu trong blog](/tutorial/part-four/): Tạo blog và sử dụng QraphQL query để kéo tiêu đề trang web của bạn vào tiêu đề blog.
+5.  [Source plugins và hiển thị dữ liệu đươc truy  vấn](/tutorial/part-five/): Sử dụng source plugin để kéo những bài blog Markdown vào trang web của bạn và tạo một trang mục lục với danh sách tất cả những bài đăng trên blog.
+6.  [Transformer plugins](/tutorial/part-six/): Sử dụng một transformer plugin để chuyển đổi các bài blog Markdown thành một dạng mà blog có thể kết xuất.
+7.  [Tạo trang từ dữ liệu một cách lập trình](/tutorial/part-seven/): Tìm hiểu cách tạo một tập hợp các trang từ những bài đăng trên blog một cách lập trình.
+8.  [Chuẩn bị một trang web để phát hành trực tiếp](/tutorial/part-eight/): Tìm hiểu cách kiểm tra trang web của bạn về hiệu suất và các thực tiễn tốt nhất về khả năng truy cập, SEO và hơn thế nữa.
 
-## Theme tutorials
+## Hướng dẫn về theme
 
-Gatsby themes abstract all of your default configuration (shared functionality, data sourcing, design) out of your site and into an installable package.
+Gatsby themes tóm tắt tất cả cấu hình mặc định của bạn (chức năng cùng chia sẻ, nguồn dữ liệu, thiết kế) ra khỏi trang web của bạn và làm nó thành một package có thể cài đặt.
 
-This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+Điều này có nghĩa là cấu hình và chức năng không được ghi trực tiếp vào project của bạn, nhưng được phiên bản, quản lý tập trung và được cài đặt như một dependency. Bạn có thể cập nhật một theme liền mạch, kết hợp các themes với nhau và thậm chí trao đổi một theme tương thích cho một theme khác.
 
-Learn more about using and building themes with the [Gatsby theme tutorials](/tutorial/theme-tutorials/).
+Tìm hiểu thêm về sử dụng và xây dựng các themes với [Hướng dẫn Gatsby theme](/tutorial/theme-tutorials/).
 
-## Additional tutorials
+## Hướng dẫn bổ sung
 
-There are many use cases for Gatsby, some of which aren't covered in the first set of tutorials to keep you focused while learning. Gatsby's Additional Tutorials section is a collection of resources showing how to complete even more Gatsby tasks step-by-step, such as using source plugins for images and CMS content.
+Có rất nhiều trường hợp sử dụng cho Gatsby, một số không dược đề cập trong phần hướng dẫn đầu tiên để giúp bạn tập trung khi tìm hiểu. Phần hướng dẫn bổ sung của Gatsby là một tập hợp các resource hướng dẫn cách hoàn thành nhiều hơn nữa những bài làm Gatsby theo từng bước, như là sử dụng source plugins cho hình ảnh and nội dung CMS.
 
-Go deeper with [additional Gatsby tutorials](/tutorial/additional-tutorials/).
+Đi sâu hơn với [Hướng dẫn bổ sung Gatsby](/tutorial/additional-tutorials/).
