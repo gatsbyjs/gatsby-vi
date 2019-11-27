@@ -28,7 +28,7 @@ Trong những phần hướng dẫn trung cấp này, bạn sẽ học cách ké
 
 Gatsby themes (chủ đề) trừu tượng hoá tất cả cấu hình mặc định của bạn (tính năng dùng chung, nguồn dữ liệu, thiết kế) ra khỏi trang web của bạn và làm nó thành một gói có thể cài đặt.
 
-Điều này có nghĩa là cấu hình và chức năng không được ghi trực tiếp vào dự án của bạn, nhưng được phiên bản, quản lý tập trung và được cài đặt như một gói phụ thuộc. Bạn có thể cập nhật liền mạch một theme, kết hợp các themes với nhau và thậm chí trao đổi một theme tương thích cho một theme khác.
+Điều này có nghĩa là cấu hình và chức năng không được ghi trực tiếp vào dự án của bạn, nhưng được phiên bản, quản lý tập trung và được cài đặt như một dependency (gói phụ thuộc). Bạn có thể cập nhật liền mạch một theme, kết hợp các themes với nhau và thậm chí trao đổi một theme tương thích cho một theme khác.
 
 Tìm hiểu thêm về sử dụng và xây dựng các themes với [Hướng dẫn Gatsby theme](/tutorial/theme-tutorials/).
 
