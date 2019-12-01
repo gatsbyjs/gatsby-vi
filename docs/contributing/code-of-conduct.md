@@ -26,15 +26,15 @@ Ví dụ về hành vi không được chấp nhận của người tham gia bao
 
 ## Trách nhiệm của chúng tôi
 
-Người bảo trì dự án có nhiệm vụ nêu rõ mức tiêu chuẩn của những hành vi chấp nhận được và được kỳ vọng rằng họ sẽ thực hiện những hành động sửa chữa phù hợp và công bằng nhầm đáp lại những hành vi không được chấp nhận.
+Người bảo trì dự án có nhiệm vụ nêu rõ mức tiêu chuẩn của những hành vi chấp nhận được và được kỳ vọng rằng họ sẽ thực hiện những hành động sửa chữa phù hợp và công bằng nhằm đáp lại những hành vi không được chấp nhận.
 
-Người bảo trì dự án có quyền và nghĩa vụ để xoá, sửa và từ chối các lời bình luận, commits, code, sửa wiki, issues, và các đóng góp khác mà không tuân theo với bộ quy tắc ứng xử này, hoặc có thể tạm thời hoặc vĩnh viễn nhưng người đóng góp có hành vi được họ cho là không phù hợp, hăm doạ, xúc phạm và tổn thương người khác.
+Người bảo trì dự án có quyền và nghĩa vụ để xoá, sửa và từ chối các lời bình luận, commits, code, sửa wiki, issues, và các đóng góp khác mà không tuân theo với bộ quy tắc ứng xử này, hoặc có thể tạm thời hoặc vĩnh viễn cấm người đóng góp có hành vi được họ cho là không phù hợp, hăm doạ, xúc phạm và tổn thương người khác.
 
 ## Phạm vi của chúng tôi
 
 Quy tắc ứng xử này áp dụng đối với cả trong không gian dự án và không gian công cộng khi cá nhân làm đại diện cho dự án hoặc cộng đồng. Ví dụ về đại diện cho một dự án hoặc một cộng đồng bao gồm việc sử dụng địa chỉ email chính thức của dự án, đăng tin qua tài khoản mạng xã hội chính thức hoặc đóng vai trò đại diện được chỉ định tại một sự kiện trực tuyến hoặc gặp gỡ trực tiếp. Đại diện của một dự án có thể được xác định và làm rõ hơn bởi những người bảo trì dự án.
 
-## Sự thi hành
+## Thi hành
 
 Các trường hợp lạm dụng, quấy rối hoặc hành vi không thể chấp nhận được có thể được báo cáo bằng cách liên hệ với nhóm dự án tại [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). Tất cả các khiếu nại sẽ được xem xét và điều tra và đưa ra phản hồi cần thiết và phù hợp với hoàn cảnh. Nhóm dự án có nghĩa vụ duy trì tình bảo mật liên quan đến người báo cáo sự việc. Thông tin chi tiết về các chính sách thực thi cụ thể có thể được đăng riêng biệt.
 
