@@ -1,5 +1,5 @@
 ---
-title: Introduction to Styling in Gatsby
+Tiêu đề: Giới thiệu về cách sử dụng CSS trong Gatsby 
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,32 +14,32 @@ disableTableOfContents: true
 
 -->
 
-Welcome to part two of the Gatsby tutorial!
+Chào mừng bạn đến với phần hai của trương mục hướng dẫn về Gatsby
 
-## What's in this tutorial?
+## Hướng dẫn này sẽ nói về điều gì?
 
-In this part, you're going to explore options for styling Gatsby websites and dive deeper into using React components for building sites.
+Trong phần này, các bạn sẽ được tìm hiểu về những lựa chọn nhằm tạo kiểu các trang web Gatsby và hiểu sâu hơn về sử dụng React components trong việc xây dựng các trang web.   
 
-## Using global styles
+## Sử dụng tạo kiểu toàn cục
 
-Every site has some sort of global style. This includes things like the site's typography and background colors. These styles set the overall feel of the site — much like the color and texture of a wall sets the overall feel of a room.
+Mỗi trang web đều có một tạo kiểu toàn cục. Chúng bao gồm những đặc trưng như kiểu chữ và tông màu nền. Các kiểu mẫu này đặt ra góc nhìn tổng thể về trang web - giống như là màu và kết cấu của một bức tường cho góc nhìn tổng thể về một căn phòng.  
 
-### Creating global styles with standard CSS files
+### Tạo ra những định dạng toàn cục với các tập tin CSS tiêu chuẩn
 
-One of the most straightforward ways to add global styles to a site is using a global `.css` stylesheet.
+Một trong những cách trực tiếp nhất để thêm tạo kiểu toàn cục là sử dụng một bản định kiểu (stylesheet) `.css` toàn cục 
 
-#### ✋ Create a new Gatsby site
+#### ✋ Tạo một trang web Gatsby mới
 
-Start by creating a new Gatsby site. It may be best (especially if you're new to the command line) to close the terminal windows you used for [part one](/tutorial/part-one/) and start a new terminal session for part two.
+Bắt đầu bằng việc tạo một trang web Gatsby. Cách tốt nhất (đặc biệt nếu bạn chưa quen với sử dụng dòng lệnh) là đóng cửa sổ terminal bạn đã sử dụng cho [phần một](/tutorial/part-one/) và mở một cửa sổ terminal mới cho phần hai.
 
-Open a new terminal window, create a new "hello world" gatsby site, and start the development server:
+Mở một cửa sổ terminal mới, tạo một trang web Gatsby "hello world" mới, và chạy máy chủ phát triển:
 
 ```shell
 gatsby new tutorial-part-two https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-two
 ```
 
-You now have a new Gatsby site (based on the Gatsby "hello world" starter) with the following structure:
+Bây giờ bạn đã có một trang web Gatsby (dựa trên mẫu khởi động Gatsby "hello world") với cấu trúc như sau:
 
 ```text
 ├── package.json
@@ -48,9 +48,9 @@ You now have a new Gatsby site (based on the Gatsby "hello world" starter) with 
 │       └── index.js
 ```
 
-#### ✋ Add styles to a css file
+#### ✋ Thêm định dạng vào tập tin css
 
-1. Create a `.css` file in your new project:
+1. Tạo một tập tin `.css` bên trong dự án của bạn:
 
 ```shell
 cd src
@@ -59,9 +59,9 @@ cd styles
 touch global.css
 ```
 
-> Note: Feel free to create these directories and files using your code editor, if you'd prefer.
+> Chú ý: Bạn có thể thoải mái tạo các thư mục và tập tin này bằng trình soạn thảo code của bạn nếu muốn.
 
-You should now have a structure like this:
+Bây giờ bạn sẽ có một cấu trúc như sau:
 
 ```text
 ├── package.json
@@ -72,7 +72,7 @@ You should now have a structure like this:
 │       └── global.css
 ```
 
-2. Define some styles in the `global.css` file:
+2. Định nghĩa một vài định dạng trong tập tin `global.css`:
 
 ```css:title=src/styles/global.css
 html {
@@ -80,18 +80,18 @@ html {
 }
 ```
 
-> Note: The placement of the example css file in a `/src/styles/` folder is arbitrary.
+> Chú ý: Vị trí đặt tập tin css như ví dụ trên bên trong thư mục `/src/styles/` là tùy ý của bạn.
 
-#### ✋ Include the stylesheet in `gatsby-browser.js`
+#### ✋ Tích hợp bản định kiểu vào trong `gatsby-browser.js`
 
-1. Create the `gatsby-browser.js`
+1. Tạo tập tin `gatsby-browser.js`
 
 ```shell
 cd ../..
 touch gatsby-browser.js
 ```
 
-Your project's file structure should now look like this:
+Cấu trúc tập tin của dự án của bạn sẽ như sau:
 
 ```text
 ├── package.json
@@ -103,54 +103,54 @@ Your project's file structure should now look like this:
 ├── gatsby-browser.js
 ```
 
-> 💡 What is `gatsby-browser.js`? Don't worry about this too much and for now, just know that `gatsby-browser.js` is one of a handful of special files that Gatsby looks for and uses (if they exist). Here, the naming of the file **is** important. If you do want to explore more now, check out [the docs](/docs/browser-apis/).
+> 💡 Vậy `gatsby-browser.js` là gì? Bạn không cần phải quan tâm về nó quá nhiều bây giờ, bạn chỉ cần biết `gatsby-browser.js` là một trong số ít những tập tin đặc biệt mà Gatsby tìm và sử dụng (nếu có tồn tại). Ở đây, cách đặt tên cho tập tin **là** quan trọng. Nếu bạn muốn tìm hiểu thêm ngay bây giờ, bạn có thể xem ở [tài liệu này](/docs/browser-apis/).
 
-2. Import your recently-created stylesheet in the `gatsby-browser.js` file:
+2. Nhúng bản định kiểu được tạo gần đây của bạn vào tập tin `gatsby-browser.js`:
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
 
-// or:
+// hoặc là:
 // require('./src/styles/global.css')
 ```
 
-> Note: Both CommonJS (`require`) and ES Module (`import`) syntax work here. If you’re not sure which to choose, `import` is usually a good default. When working with files that are only run in a Node.js environment however (like `gatsby-node.js`), `require` will need to be used.
+> Chú ý: Cú pháp CommonJS (`require`) và ES Module (`import`) đều có thể sử đụng được ở đây. Nếu bạn không biết phải chọn cú pháp nào, thì thường `import` là một mặc định tốt. Tuy nhiên, khi làm việc với các tập tin chỉ chạy trong môi trường Node.js (như là `gatsby-node.js`), bạn phải cần sử dụng cú pháp `require` .
 
-3. Start the development server:
+3. Chạy máy chủ phát triển:
 
 ```shell
 gatsby develop
 ```
 
-If you take a look at your project in the browser, you should see a lavender background applied to the "hello world" starter:
+Nếu bạn quan sát dự án của bạn trên trình duyệt, bạn có thể thấy màu tím Lavender được áp dụng cho mẫu khởi động "hello world":
 
 ![Lavender Hello World!](global-css.png)
 
-> Tip: This part of the tutorial has focused on the quickest and most straightforward way to get started styling a Gatsby site — importing standard CSS files directly, using `gatsby-browser.js`. In most cases, the best way to add global styles is with a shared layout component. [Check out the docs](/docs/global-css/) for more on that approach.
+> Thông tin thêm: Mục này của hướng dẫn tập trung vào cách nhanh nhất và trực tiếp nhất để bắt đầu tạo kiểu một trang web Gatsby — nhúng các tập tin CSS tiêu chuẩn một cách trực tiếp, thông qua `gatsby-browser.js`. Trong đa số các trường hợp, cách tốt nhất để thêm vào định dạng toàn cục là dùng những component bố cục dùng chung. [Tham khảo tài liệu](/docs/global-css/) để biết thêm thông tin về cách thức đó.
 
-## Using component-scoped CSS
+## Sử dụng CSS trong phạm vi của component
 
-So far, we've talked about the more traditional approach of using standard css stylesheets. Now, we'll talk about various methods of modularizing CSS to tackle styling in a component-oriented way.
+Cho đến nay, chúng ta đã bàn về phương pháp tiếp cận truyền thống về việc sử dụng những bản định mẫu css tiêu chuẩn. Bây giờ, chúng ta sẽ bàn về những phương pháp mô-đun hóa CSS về nhiều dạng để giải quyết vấn đề tạo kiểu nằng cách định hướng theo component.
 
 ### CSS Modules
 
-Let's explore **CSS Modules**. Quoting from
+Cùng tìm hiểu **CSS Modules**. trích dẫn từ
 [the CSS Module homepage](https://github.com/css-modules/css-modules):
 
-> A **CSS Module** is a CSS file in which all class names and animation names
-> are scoped locally by default.
+> Một **CSS Module** là một tập tin CSS mà ở đó tất cả các tên gọi class và hiệu ứng.
+> được mặc định giới hạn trong phạm vi cục bộ.
 
-CSS Modules are very popular because they let you write CSS normally but with a lot more safety. The tool automatically generates unique class and animation names, so you don't have to worry about selector name collisions.
+Những CSS Modules rất phổ biến vì chúng cho phép bạn viết CSS như bình thường nhưng an toàn hơn. Công cụ sẽ tự động tạo ra tên gọi độc nhất dành cho class và hiệu ứng, cho nên bạn không cần phải lo lắng về vấn đề đụng chạm tên gọi của bộ chọn.
 
-Gatsby works out of the box with CSS Modules. This approach is highly recommended for those new to building with Gatsby (and React in general).
+Với CSS Modules, Gatsby có thể được sử dụng ngay lập tức. Phương pháp này được khuyến nghị sử dụng cho những ai mới bắt đầu phát triển trên nền tảng Gatsby nói riêng (cũng như là React nói chung).
 
-#### ✋ Build a new page using CSS Modules
+#### ✋ Xây dựng một trang web mới sử dụng CSS Modules
 
-In this section, you'll create a new page component and style that page component using a CSS Module.
+Trong mục này, bạn sẽ tạo một component của một trang mới và tạo kiểu component đó bằng việc sử dụng CSS Modules.
 
-First, create a new `Container` component.
+Đầu tiên, tạo một component mới tên là `Container`.
 
-1. Create a new directory at `src/components` and then, in this new directory, create a file named `container.js` and paste the following:
+1. Tạo một thư mục mới tại `src/components` và sau đó, trong thư mục vừa tạo này, tạo một tập tin gọi là `container.js` và sao chép những dòng sau đây:
 
 ```javascript:title=src/components/container.js
 import React from "react"
@@ -161,9 +161,9 @@ export default ({ children }) => (
 )
 ```
 
-You'll notice you imported a css module file named `container.module.css`. Let's create that file now.
+Bạn sẽ thấy rằng bạn đã nhúng một tập tin mô-đun css tên là `container.module.css`. Cùng tạo tập tin đó nào.
 
-2. In the same directory (`src/components`), create a `container.module.css` file and copy/paste the following:
+2. Trong cùng thư mục (`src/components`), tạo tập tin `container.module.css` và sao chép những dòng sau đây:
 
 ```css:title=src/components/container.module.css
 .container {
@@ -172,9 +172,9 @@ You'll notice you imported a css module file named `container.module.css`. Let's
 }
 ```
 
-You'll notice that the file name ends with `.module.css` instead of the usual `.css`. This is how you tell Gatsby that this CSS file should be processed as a CSS module rather than plain CSS.
+Bạn sẽ thấy rằng tên của tập tin kết thúc với `.module.css` thay vì thường là `.css`. Đây là cách để bạn cho Gatsby biết rằng tập tin CSS này nên được xử lý như là một mô-đun CSS thay vì là một tập tin CSS thông thường.
 
-3. Create a new page component by creating a file at
+3. Tạo một component trang mới tại
    `src/pages/about-css-modules.js`:
 
 ```javascript:title=src/pages/about-css-modules.js
@@ -190,17 +190,17 @@ export default () => (
 )
 ```
 
-Now, if you visit `http://localhost:8000/about-css-modules/`, your page should look something like this:
+Bây giờ, nếu bạn mở `http://localhost:8000/about-css-modules/`, trang của bạn sẽ nhìn giống như sau:
 
-![Page with CSS module styles](css-modules-basic.png)
+![Trang web với định dạng mô-đun CSS](css-modules-basic.png)
 
-#### ✋ Style a component using CSS Modules
+#### ✋ Tạo kiểu cho một component sử dụng CSS Modules
 
-In this section, you'll create a list of people with names, avatars, and short Latin biographies. You'll create a `<User />` component and style that component using a CSS module.
+Trong mục này, bạn sẽ tạo một danh sách về người với tên, ảnh đại diện, và tiểu sử cá nhân. Bạn sẽ tạo một component tên là `<User />` và tạo kiểu component này sử dụng CSS Modules.
 
-1. Create the file for the CSS at `src/pages/about-css-modules.module.css`.
+1. Tạo tập tin CSS tại `src/pages/about-css-modules.module.css`.
 
-2. Paste the following into the new file:
+2. Sao chép những dòng sau vào một tập tin mới:
 
 ```css:title=src/pages/about-css-modules.module.css
 .user {
@@ -236,7 +236,7 @@ In this section, you'll create a list of people with names, avatars, and short L
 }
 ```
 
-3. Import the new `src/pages/about-css-modules.module.css` file into the `about-css-modules.js` page you created earlier by editing the first few lines of the file like so:
+3. Nhúng tập tin `src/pages/about-css-modules.module.css` vào trang `about-css-modules.js` mà bạn tạo trước đó bằng việc thay đổi những dòng đầu tiên của tập tin như sau:
 
 ```javascript:title=src/pages/about-css-modules.js
 import React from "react"
@@ -248,14 +248,14 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
-The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools) in your browser, you'll see:
+Mã lệnh `console.log(styles)` sẽ in kết quả của việc nhúng tập tin để bạn có thể thấy kết quả của tập tin `./about-css-modules.module.css` đã qua xử lý. Nếu bạn mở bảng điều khiển (console) của nhà lập trình (ví dụ như developer tools của Firefox hay là Chrome) trên trình duyệt của bạn, bạn sẽ thấy:
 
-![Import result of CSS module in console](css-modules-console.png)
+![Kết quả của việc nhúng mô-đun CSS trong console](css-modules-console.png)
 
-If you compare that to your CSS file, you'll see that each class is now a key in the imported object pointing to a long string e.g. `avatar` points to `src-pages----about-css-modules-module---avatar---2lRF7`. These are the class names CSS Modules generates. They're guaranteed to be unique across your site. And because you have to import them to use the classes, there's never any question about where some CSS is being used.
+Nếu bạn so sánh với tập tin CSS của mình, bạn sẽ thấy mỗi class bây giờ là một trường (key) bên trong đối tượng được nh1ung và mỗi trường chỉ đến một chuỗi kí tự dài. Ví dụ `avatar` chỉ đến `src-pages----about-css-modules-module---avatar---2lRF7`. Những trường này là những tên class mà CSS Modules tạo ra. Chúng được bảo đảm về sự duy nhất xuyên suốt trang web của bạn. Và vì bạn nhúng các tập tin này để sử dụng các class, cho nên sẽ không có thắc mắc về vị trí sử dụng của một số CSS.
 
-4. Create a new `<User />` component inline in the `about-css-modules.js` page
-   component. Modify `about-css-modules.js` so it looks like the following:
+4. Tạo một inline component mới gọi là `<User />` bên trong trang `about-css-modules.js`.
+Điều chỉnh `about-css-modules.js` sao cho giống như sau:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
@@ -296,27 +296,27 @@ export default () => (
 )
 ```
 
-> Tip: Generally, if you use a component in multiple places on a site, it should be in its own module file in the `components` directory. But, if it's used only in one file, create it inline.
+> Thông tin thêm: Nhìn chung, nếu bạn sử dụng một component ở nhiều vị trí khác nhau trên cùng một trang web, nó nên được đặt thành 1 mô-đun riêng trong thư mục "components". Nhưng nếu nó chỉ được sử dụng trong 1 tập tin duy nhất, hãy tạo nó "inline" (trong cùng file mà nó được sử dụng).
 
-The finished page should now look like:
+Trang kết quả cuối cùng nên trông giống như sau:
 
-![User list page with CSS modules](css-modules-userlist.png)
+![Trang danh sách người dùng tạo với CSS Modules](css-modules-userlist.png)
 
 ### CSS-in-JS
 
-CSS-in-JS is a component-oriented styling approach. Most generally, it is a pattern where [CSS is composed inline using JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
+CSS-in-JS là một phương pháp tạo kiểu định hướng theo component. Một cách chung nhất, nó là một kiểu mẫu mà ở đó [CSS được viết inline bằng cách sử dụng JavaScript](https://reactjs.org/docs/faq-styling.html#what-is-css-in-js).
 
-#### Using CSS-in-JS with Gatsby
+#### Sử dụng CSS-in-JS với Gatsby
 
-There are many different CSS-in-JS libraries and many of them have Gatsby plugins already. We won't cover an example of CSS-in-JS in this initial tutorial, but we encourage you to [explore](/docs/styling/) what the ecosystem has to offer. There are mini-tutorials for two libraries, in particular, [Emotion](/docs/emotion/) and [Styled Components](/docs/styled-components/).
+Có rất nhiều thư viện CSS-in-JS và nhiều trong số chúng đã có plugins của Gatsby. Chúng ta sẽ không bàn về một ví dụ của CSS-in-JS trong phần hướng dẫn này, tuy nhiên chúng tôi khuyến khích bạn [tìm hiểu](/docs/styling/) về những gì hệ sinh thái này có thể cung cấp. Chúng tôi có các hướng dẫn ngắn về 2 thư viện tiêu biểu là [Emotion](/docs/emotion/) và [Styled Components](/docs/styled-components/).
 
-#### Suggested reading on CSS-in-JS
+#### Tài liệu tham khảo về CSS-in-JS
 
-If you're interested in further reading, check out [Christopher "vjeux" Chedeau's 2014 presentation that sparked this movement](https://speakerdeck.com/vjeux/react-css-in-js) as well as [Mark Dalgleish's more recent post "A Unified Styling Language"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
+Nếu bạn muốn tìm hiểu thêm, hãy xem [Bài huyết trình năm 2014 đã khởi động trào lưu này của Christopher "vjeux" Chedeau](https://speakerdeck.com/vjeux/react-css-in-js) và [Phát biểu gần đây hơn của Mark Dalgleish về "Một ngôn ngữ tạo kiểu thống nhất"](https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660).
 
-### Other CSS options
+### Những lựa chọn CSS khác
 
-Gatsby supports almost every possible styling option (if there isn't a plugin yet for your favorite CSS option, [please contribute one!](/contributing/how-to-contribute/))
+Gatsby hỗ trợ gần như tất cả các lựa chọn tạo kiểu (Nếu như lựa chọn CSS yêu thích của bạn chưa có Gatsby plugin, [vui lòng đóng góp nếu có thể!](/contributing/how-to-contribute/))
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
@@ -324,8 +324,8 @@ Gatsby supports almost every possible styling option (if there isn't a plugin ye
 - [Stylus](/packages/gatsby-plugin-stylus/)
 - [PostCSS](/packages/gatsby-plugin-postcss/)
 
-and more!
+và nhiều hơn nữa!
 
-## What's coming next?
+## Tiếp theo là gì?
 
-Now continue on to [part three of the tutorial](/tutorial/part-three/), where you'll learn about Gatsby plugins and layout components.
+Bây giờ ta sẽ tiếp tục đến với [phần ba của hướng dẫn](/tutorial/part-three/), nơi mà bạn sẽ được học về Gatsby plugins và cách bố trí các component.
