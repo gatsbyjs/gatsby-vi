@@ -1,57 +1,57 @@
 ---
-title: Creating Nested Layout Components
+title: Tạo Nested Layout Components
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to part three!
+Chào mừng đến với phần 3!
 
-## What's in this tutorial?
+## Có gì trong bài hướng dẫn này?
 
-In this part, you'll learn about Gatsby plugins and creating "layout" components.
+Ở phần này, bạn sẽ học về plugins của Gatsby và tạo "layout" components.
 
-Gatsby plugins are JavaScript packages that help add functionality to a Gatsby site. Gatsby is designed to be extensible, which means plugins are able to extend and modify just about everything Gatsby does.
+Gatsby plugins là những gói JavaScript nhằm bổ sung chức năng cho một Gatsby site. Gatsby được thiết kế với khả năng nâng cấp, tức là các plugins này có thể mở rộng và thay đổi hầu như mọi thứ mà Gatsby thực hiện.
 
-Layout components are for sections of your site that you want to share across multiple pages. For example, sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.org's layout component.
+Layout components được dùng cho từng vùng của site mà bạn muốn chia sẻ giữa nhiều trang. Ví dụ, sites thường sẽ có một layout component với một shared header và footer. Một số yếu tố khác cũng thường được thêm vào trong các layouts như sidebar và/hoặc menu điều hướng. Ở trang ví dụ này, phần header đầu trang là một phần của layout component của gatsbyjs.org.
 
-Let's dive into part three.
+Cùng tìm hiểu sâu hơn về phần 3.
 
-## Using plugins
+## Sử dụng plugins
 
-You’re probably familiar with the idea of plugins. Many software systems support adding custom plugins to add new functionality or even modify the core workings of the software. Gatsby plugins work the same way.
+Có lẽ bạn đã quen thuộc với ý tưởng của plugins. Nhiều hệ thống phần mềm hỗ trợ việc thêm vào các plugins tùy chỉnh để bổ sung các chức năng mới hoặc thay đổi các hoạt động cốt lõi của phần mềm. Plugins của Gatsby hoạt động tương tự như vậy.
 
-Community members (like you!) can contribute plugins (small amounts of JavaScript code) that others can then use when building Gatsby sites.
+Những thành viên cộng đồng (tương tự như bạn!) có thể đóng góp các plugins (các đoạn code nhỏ được viết bằng JavaScript) để những người khác có thể sử dụng khi xây dựng các Gatsby sites.
 
-> There are already hundreds of plugins! Explore the Gatsby [Plugin Library](/plugins/).
+> Đã có hàng trăm plugins rồi! Tìm hiểu thêm về Gatsby [Thư viện Plugin](/plugins/).
 
-Our goal with plugins is to make them straightforward to install and use. You will likely be using plugins in almost every Gatsby site you build. While working through the rest of the tutorial you’ll have many opportunities to practice installing and using plugins.
+Mục đích của chúng tôi là làm cho các plugins dễ cài đặt và sử dụng. Bạn sẽ có thể sử dụng các plugins trong hầu hết các Gatsby site mà bạn xây dựng. Ở phần còn lại của bài hướng dẫn, bạn sẽ có cơ hội thực hành việc cài đặt và sử dụng các plugins.
 
-For an initial introduction to using plugins, we'll install and implement the Gatsby plugin for Typography.js.
+Trong phần giới thiệu về sử dụng plugins, chúng ta sẽ cài đặt và sử dụng Gatsby plugin cho Typography.js.
 
-[Typography.js](https://kyleamathews.github.io/typography.js/) is a JavaScript library which generates global base styles for your site's typography. The library has a [corresponding Gatsby plugin](/packages/gatsby-plugin-typography/) to streamline using it in a Gatsby site.
+[Typography.js](https://kyleamathews.github.io/typography.js/) là một thư viện JavaScript nhằm tạo ra các kiểu mẵu toàn cục về typography cho site của bạn. Thư viện này có một [Gatsby plugin](/packages/gatsby-plugin-typography/) để đơn giản hóa việc sử dụng nó trong một Gatsby site.
 
-### ✋ Create a new Gatsby site
+### ✋ Tạo một Gatsby site
 
-As we mentioned in [part two](/tutorial/part-two/), at this point it's probably a good idea to close the terminal window(s) and project files from previous parts of the tutorial, to keep things clean on your desktop. Then open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-three` and then move to this new directory:
+Như chúng ta đã đề cập ở [phần 2](/tutorial/part-two/), ngay lúc này bạn nên đóng tất cả các cửa sổ terminal và các project files ở những phần trước của bài hướng dẫn. Sau đó mở một của sổ terminal mới và chạy các lệnh sau để tạo một Gatsby site mới trong thư mục `tutorial-part-three` và truy cập vào thư mục mới này:
 
 ```shell
 gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-three
 ```
 
-### ✋ Install and configure `gatsby-plugin-typography`
+### ✋ Cài đặt và tùy chỉnh `gatsby-plugin-typography`
 
-There are two main steps to using a plugin: Installing and configuring.
+Có 2 bước chính để sử dụng một plugin: Cài đặt và tùy chỉnh.
 
-1. Install the `gatsby-plugin-typography` NPM package.
+1. Cài đặt `gatsby-plugin-typography` NPM package.
 
 ```shell
 npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
 ```
 
-> Note: Typography.js requires a few additional packages, so those are included in the instructions. Additional requirements like this will be listed in the "install" instructions of each plugin.
+> Chú ý: Typography.js yêu cầu thêm một số packages khác đã được bao gồm trong phần hướng dẫn. Các yêu cầu thêm tương tự như vậy sẽ được nêu rõ trong phần hướng dẫn "cài đặt" của mỗi plugin.
 
-2. Edit the file `gatsby-config.js` at the root of your project to the following:
+2. Chỉnh sửa file `gatsby-config.js` tại thư mục gốc của project thành:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -66,11 +66,11 @@ module.exports = {
 }
 ```
 
-The `gatsby-config.js` is another special file that Gatsby will automatically recognize. This is where you add plugins and other site configuration.
+`gatsby-config.js` là một file đặc biệt khác mà Gatsby sẽ tự động nhận diện. Đây là nơi bạn sẽ thêm các plugins và các tùy chỉnh khác của site.
 
-> Check out the [doc on gatsby-config.js](/docs/gatsby-config/) to read more, if you wish.
+> Truy cập [doc on gatsby-config.js](/docs/gatsby-config/) để tìm hiểu thêm, nếu bạn muốn.
 
-3. Typography.js needs a configuration file. Create a new directory called `utils` in the `src` directory. Then add a new file called `typography.js` to `utils` and copy the following into the file:
+3. Typography.js cần một file tùy chỉnh. Tạo một thư mục mới đặt tên `utils` trong thư mục `src`. Sau đó thêm vào `utils` một file mới đặt tên `typography.js` và sao chép đoạn sau vào trong file:
 
 ```javascript:title=src/utils/typography.js
 import Typography from "typography"
@@ -82,20 +82,20 @@ export const { scale, rhythm, options } = typography
 export default typography
 ```
 
-4. Start the development server.
+4. Khởi động development server.
 
 ```shell
 gatsby develop
 ```
 
-Once you load the site, if you inspect the generated HTML using the Chrome developer tools, you’ll see that the typography plugin added a `<style>` element to the `<head>` element with its generated CSS:
+Sau khi bạn tải site, nếu bạn dùng công cụ Chrome developer để kiểm tra HTML được tạo ra, bạn sẽ thấy rằng typography plugin đã thêm một `<style>` element vào `<head>` element cùng với CSS của nó.
 
 ![typography-styles](typography-styles.png)
 
-### ✋ Make some content and style changes
+### ✋ Thay đổi nội dung và kiểu mẫu
 
-Copy the following into your `src/pages/index.js` so you can see the
-effect of the CSS generated by Typography.js better.
+Sao chép đoạn sau vào `src/pages/index.js` để bạn có thể quan sát 
+sự thay đổi trên CSS được tạo ra bởi Typography.js dễ dàng hơn.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -111,12 +111,12 @@ export default () => (
 )
 ```
 
-Your site should now look like this:
+Bây giờ site của bạn sẽ trông như thế này:
 
 ![no-layout](no-layout.png)
 
-Let's make a quick improvement. Many sites have a single column of text centered in the middle of the page. To create this, add the following styles to the
-`<div>` in `src/pages/index.js`.
+Cùng hoàn thiện nhanh nào. Nhiều sites có một cột đơn văn bản được canh ở giữa trang. Để làm được điều này, thêm đoạn sau vào
+`<div>` trong `src/pages/index.js`.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -135,11 +135,11 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-Sweet. You've installed and configured your very first Gatsby plugin!
+Tốt lắm. Bạn đã cài đặt và tùy chỉnh xong Gatsby plugin đầu tiên!
 
-## Creating layout components
+## Tạo layout components
 
-Now let's move on to learning about layout components. To get ready for this part, add a couple new pages to your project: an about page and a contact page.
+Bây giờ chúng ta học tiếp về các layout components. Để chuẩn bị cho phần này, thêm một vài trang mới vào trong project của bạn bao gồm: một trang about và một trang contact.
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -165,19 +165,19 @@ export default () => (
 )
 ```
 
-Let's see what the new about page looks like:
+Trang about mới sẽ trông như thế này:
 
 ![about-uncentered](about-uncentered.png)
 
-Hmm. It would be nice if the content of the two new pages were centered like the index page. And it would be nice to have some sort of global navigation so it's easy for visitors to find and visit each of the sub-pages.
+Hmm. Sẽ tốt hơn nếu nội dung của hai trang mới được canh lề giữa tương tự như trang index. Và sẽ tốt hơn nếu có sự điều hướng toàn cục để khách dễ dàng hơn trong việc tìm kiếm và truy cập các trang sub-pages.
 
-You'll tackle these changes by creating your first layout component.
+Bạn sẽ thực hiện các sự thay đổi này thông qua layout component đầu tiên.
 
-### ✋ Create your first layout component
+### ✋ Tạo layout component đầu tiên
 
-1. Create a new directory at `src/components`.
+1. Tạo một thư mục mới tại `src/components`.
 
-2. Create a very basic layout component at `src/components/layout.js`:
+2. Tạo một layout component rất cơ bản tại `src/components/layout.js`:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -189,7 +189,7 @@ export default ({ children }) => (
 )
 ```
 
-3. Import this new layout component into your `src/pages/index.js` page component:
+3. Nạp layout component mới này vào trong `src/pages/index.js` page component của bạn:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -208,17 +208,17 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-Sweet, the layout is working! The content of your index page is still centered.
+Tốt lắm, bố cục đã xong! Nội dung trang index của bạn vẫn được canh giữa. 
 
-But try navigating to `/about/`, or `/contact/`. The content on those pages still won't be centered.
+Nhưng hãy thực hiện điều hướng vào `/about/`, hoặc `/contact/`. Nội dung của những trang này vẫn chưa được canh giữa.
 
-4. Import the layout component in `about.js` and `contact.js` (as you did for `index.js` in the previous step).
+4. Nạp layout component vào trong `about.js` và `contact.js` (tương tự như bạn đã làm cho `index.js` ở bước trước đó).
 
-The content of all three of your pages is centered thanks to this single shared layout component!
+Nội dung tất cả ba trang của bạn đã được canh giữa bằng cách sử dụng chung một layout component!
 
-### ✋ Add a site title
+### ✋ Thêm tiêu đề cho một site
 
-1. Add the following line to your new layout component:
+1. Thêm đoạn sau vào layout component mới của bạn:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -231,13 +231,13 @@ export default ({ children }) => (
 )
 ```
 
-If you go to any of your three pages, you'll see the same title added, e.g. the `/about/` page:
+Nếu như bạn truy cập vào bất kì trang nào trong số ba trang, bạn sẽ thấy cùng một tiêu đề đã được thêm vào, ví dụ trang `/about/`:
 
 ![with-title](with-title.png)
 
-### ✋ Add navigation links between pages
+### ✋ Thêm vào đường dẫn điều hướng giữa các trang
 
-1. Copy the following into your layout component file:
+1. Thêm đoạn sau vào trong tập tin layout component:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -272,10 +272,10 @@ export default ({ children }) => (
 
 ![with-navigation2](with-navigation2.png)
 
-And there you have it! A three page site with basic global navigation.
+Và bạn đã hoàn thành xong! Một site gồm 3 trang với điều hướng toàn cục cơ bản.
 
-_Challenge:_ With your new "layout component" powers, trying adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
+_Thử thách:_ Với sức mạnh của "layout component" mới, hãy thử thêm các headers, footers, global navigation, sidebars, etc. vào Gatsby sites của bạn!
 
-## What's coming next?
+## Có gì ở phần kế tiếp?
 
-Continue on to [part four of the tutorial](/tutorial/part-four/) where you'll start learning about Gatsby's data layer and programmatically creating pages!
+Tiếp tục [phần 4 của bài hướng dẫn](/tutorial/part-four/) để học thêm về lớp dữ liệu của Gatsby và tạo trang một cách hệ thống.
