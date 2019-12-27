@@ -1,20 +1,20 @@
 ---
-title: Source Plugins
+tiêu đề: Source Plugins
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/) before continuing here.
+> Mục hướng dẫn này nằm trong chuỗi hướng dẫn về lớp dữ liệu của Gatsby. Bạn cần bảo đảm thông qua [phần 4](/tutorial/part-four/) trước khi tiếp tục ở đây.
 
-## What's in this tutorial?
+## Hướng dẫn này sẽ nói về điều gì?
 
-In this tutorial, you'll be learning about how to pull data into your Gatsby site using GraphQL and source plugins. Before you learn about these plugins, however, you'll want to know how to use something called GraphiQL, a tool that helps you structure your queries correctly.
+Trong mục hướng dẫn này, bạn sẽ học về phương pháp kéo dữ liệu về trang web Gatsby của bạn sử dụng GraphQL và Source Plugins. Tuy nhiên, trước khi bạn học những plugins này, bạn sẽ muốn biết phương pháp sử dụng GraphiQL, một công cụ dùng để hỗ trợ tạo kết cấu đúng cho những lệnh truy vấn (query) của bạn.
 
-## Introducing GraphiQL
+## Giới thiệu GraphiQL
 
-GraphiQL is the GraphQL integrated development environment (IDE). It's a powerful (and all-around awesome) tool you'll use often while building Gatsby websites.
+GraphiQL là môi trường phát triển tích hợp (IDE) của GraphQL. Nó là một công cụ mạnh mẽ (và toàn diện) mà bạn sẽ sử dụng thường xuyên khi xây dựng những trang web Gatsby.
 
-You can access it when your site's development server is running—normally at
+Bạn có thể truy cập nó khi máy chủ phát triển của trang web của bạn đang vận hành như bình thường tại 
 <http://localhost:8000/___graphql>.
 
 <video controls="controls" autoplay="true" loop="true">
@@ -22,11 +22,11 @@ You can access it when your site's development server is running—normally at
   <p>Your browser does not support the video element.</p>
 </video>
 
-Poke around the built-in `Site` "type" and see what fields are available on it -- including the `siteMetadata` object you queried earlier. Try opening GraphiQL and play with your data! Press <kbd>Ctrl + Space</kbd> (or use <kbd>Shift + Space</kbd> as an alternate keyboard shortcut) to bring up the autocomplete window and <kbd>Ctrl + Enter</kbd> to run the GraphQL query. You'll be using GraphiQL a lot more through the remainder of the tutorial.
+Khám phá tìm hiểu về "loại" `Site` được xây dựng sẵn và xem những trường nào có sẵn trong nó -- bao hàm object `siteMetadata` mà bạn đã truy vấn trước đó. Hãy thử mở GraphiQL và thử nghiệm với dữ liệu của bạn! Nhấn <kbd>Ctrl + Space</kbd> (hay sử dụng <kbd>Shift + Space</kbd> như là một tổ hợp phím tắt thay thế) để hiển thị cửa sổ tự động hoành thành và <kbd>Ctrl + Enter</kbd> để chạy lệnh truy vần GraphQL. Bạn sẽ sự dụng GraphiQL nhiều hơn trong phần còn lại của hướng dẫn.
 
-## Using the GraphiQL Explorer
+## Sử dụng GraphiQL Explorer
 
-The GraphiQL Explorer enables you to interactively construct full queries by clicking through available fields and inputs without the repetitive process of typing these queries out by hand.
+GraphiQL Explorer cho phép bạn xây dựng một cách tương tác những truy vần hoàn thiện bằng việc click những trường có sẵn và dữ liệu đầu vào mà không phải thông qua quá trình gõ lại những lệnh truy vấn này.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-build-a-graphql-query-using-gatsby-s-graphiql-explorer"
@@ -35,19 +35,19 @@ The GraphiQL Explorer enables you to interactively construct full queries by cli
 
 ## Source plugins
 
-Data in Gatsby sites can come from anywhere: APIs, databases, CMSs, local files, etc.
+Dữ liệu trong những trang web Gatsby có thể đến từ bất kì nơi nào: APIs, cơ sở dữ liệu (databases), CMSs, những tập tin cục bộ, vâng vâng.
 
-Source plugins fetch data from their source. E.g. the filesystem source plugin knows how to fetch data from the file system. The WordPress plugin knows how to fetch data from the WordPress API.
+Source plugins tải dữ liệu từ mã nguồn của chúng. Ví dụ, source plugin về hệ thống tập tin biết làm cách nào để tải dữ liệu từ hệ thống tập tin. Plugin về WordPress biết làm cách nào tải dữ liệu từ API của WordPress.
 
-Add [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) and explore how it works.
+Thêm vào [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) và khám phá cách hoạt động của nó.
 
-First, install the plugin at the root of the project:
+Đầu tiên, cài đặt plugin tại thư mục gốc của dự án:
 
 ```shell
 npm install --save gatsby-source-filesystem
 ```
 
-Then add it to your `gatsby-config.js`:
+Sau đó thêm vào tập tin `gatsby-config.js` của bạn:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -75,42 +75,42 @@ module.exports = {
 }
 ```
 
-Save that and restart the gatsby development server. Then open up GraphiQL again.
+Lưu lại và tái khởi động máy chủ phát triển gatsby. Sau đó mở GraphQL again.
 
-In the explorer pane, you'll see `allFile` and `file` available as selections:
+Trong khung Explorer, bạn sẽ thấy `allFile` và `file` sẵn có là những lựa chọn:
 
-![graphiql-filesystem](graphiql-filesystem.png)
+![hệ thống tập tin graphiql](graphiql-filesystem.png)
 
-Click the `allFile` dropdown. Position your cursor after `allFile` in the query area, and then type <kbd>Ctrl + Enter</kbd>. This will pre-fill a query for the `id` of each file. Press "Play" to run the query:
+Click thanh thả xuống `allFile`. Định vị con trỏ của bạn phía sau của `allFile` trong khu vực của lệnh truy vấn, và sau đó gõ <kbd>Ctrl + Enter</kbd>. Việc làm này sẽ giúp điền trước một lệnh truy vấn cho `id` của từng tập tin. Nhấn "Play" để chạy lệnh truy vấn:
 
-![filesystem-query](filesystem-query.png)
+![hệ thống tập tin-lệnh truy vấn](filesystem-query.png)
 
-In the Explorer pane, the `id` field has automatically been selected. Make selections for more fields by checking the field's corresponding checkbox. Press "Play" to run the query again, with the new fields:
+Trong khung Explorer, trường `id` đã được tự động chọn. Lựa chọn thêm nhiều trường bằng việc chọn hộp kiểm tương ứng với trường đó. Nhấn "Play" để chạy lệnh truy vấn lần nữa, với những trường mới:
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
-Alternatively, you can add fields by using the autocomplete shortcut (<kbd>Ctrl + Space</kbd>). This will show queryable fields on the `File` nodes.
+Hoặc là, bạn có thể thêm vào các trường bằng phím tắt tự động hoàn thành (<kbd>Ctrl + Space</kbd>). Việc làm này hiển thị những trường có thể truy vấn trên những node của `File`.
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-Try adding a number of fields to your query, pressing <kbd>Ctrl + Enter</kbd>
-each time to re-run the query. You'll see the updated query results:
+Thử thêm vào một số trường vào lệnh truy vấn của bạn, nhấn tổ hợp <kbd>Ctrl + Enter</kbd>
+mỗi khi muốn chạy lại lệnh truy vấn. Bạn sẽ được thấy kết quả của lệnh truy vấn đã được cập nhật:
 
-![allfile-query](allfile-query.png)
+![allfile-lệnh truy vấn](allfile-query.png)
 
-The result is an array of `File` "nodes" (node is a fancy name for an object in a
-"graph"). Each `File` node object has the fields you queried for.
+Kết quả là một danh sách của `File` "nodes" (node là một tên gọi hoa mỹ dành cho một object trong một
+"graph"). Mỗi node object của `File` có những trường mà bạn đã truy vấn.
 
-## Build a page with a GraphQL query
+## Xây dưng một trang web với lệnh truy vấn GraphQL
 
-Building new pages with Gatsby often starts in GraphiQL. You first sketch out
-the data query by playing in GraphiQL then copy this to a React page component
-to start building the UI.
+Xây dựng những trang web mới với Gatsby thường bắt đầu với GraphiQL. Đầu tiên bạn dựng
+lệnh truy vấn dữ liệu bằng thử nghiệm trong GraphiQL sau đó sao chép thông tin này vào vào một component trang của React
+để bắt đầu xây dựng giao diện người dùng.
 
-Let's try this.
+Hãy cùng thử việc này nào.
 
-Create a new file at `src/pages/my-files.js` with the `allFile` GraphQL query you just
-created:
+Tạo một tập tin mới tại `src/pages/my-files.js` với lệnh truy vần GraphQL `allFile` và bạn vừa
+tạo:
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -142,18 +142,18 @@ export const query = graphql`
 `
 ```
 
-The `console.log(data)` line is highlighted above. It's often helpful when
-creating a new component to console out the data you're getting from the GraphQL query
-so you can explore the data in your browser console while building the UI.
+Dòng lệnh `console.log(data)` được làm nổi bật ở trên. Nó thường có ích khi
+tạo một component mới để hiển thị dữ liêu bạn đang tải từ lệnh truy vấn GraphQL
+để bạn có thể mày mò dữ liệu trong bàng điều khiển trình duyệt trong khi đang xây dựng giao diện người dùng.
 
-If you visit the new page at `/my-files/` and open up your browser console
-you will see something like:
+Nếu bạn dẫn tới một trang web mới tại `/my-files/` và mở bảng điều khiển trình duyệt
+bạn sẽ thấy như sau:
 
-![data-in-console](data-in-console.png)
+![dữ liệu-trong-bàng điều khiển](data-in-console.png)
 
-The shape of the data matches the shape of the GraphQL query.
+Cấu trúc của dữ liệu giống như cấu trúc của lệnh truy vấn GraphQL.
 
-Add some code to your component to print out the File data.
+Thêm một vài code vào component của bạn để in ra dữ liệu của File.
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -209,10 +209,10 @@ export const query = graphql`
 `
 ```
 
-And now visit [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+Và bây giờ dẫn tới [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
 
 ![my-files-page](my-files-page.png)
 
-## What's coming next?
+## Tiếp theo là gì?
 
-Now you've learned how source plugins bring data _into_ Gatsby’s data system. In the next tutorial, you'll learn how transformer plugins _transform_ the raw content brought by source plugins. The combination of source plugins and transformer plugins can handle all data sourcing and data transformation you might need when building a Gatsby site. Learn about transformer plugins in [part six of the tutorial](/tutorial/part-six/).
+Hiện tại bạn đã được học cách thức source plugins mang dữ liệu _vào_ hệ thống dữ liệu của Gatsby. Trong hướng dẫn tiếp theo, bạn sẽ được học cách thức transformer plugins _biến đổi_ nội dung gốc được truyển tải bởi source plugins. Sự kết hợp giữa source plugins and transformer plugins có thể xử lý mọi cung ứng dữ liệu và chuyển đội dữ liệu mà bạn cần khi xây dựng trang web Gatsby. Tìm hiểu về transformer plugins tại [phần 6 của hướng dẫn](/tutorial/part-six/).
