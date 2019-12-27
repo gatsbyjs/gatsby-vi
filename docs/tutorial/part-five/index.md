@@ -215,4 +215,4 @@ Và bây giờ dẫn tới [http://localhost:8000/my-files](http://localhost:800
 
 ## Tiếp theo là gì?
 
-Hiện tại bạn đã được học cách thức source plugins mang dữ liệu _vào_ hệ thống dữ liệu của Gatsby. Trong hướng dẫn tiếp theo, bạn sẽ được học cách thức transformer plugins _biến đổi_ nội dung gốc được truyển tải bởi source plugins. Sự kết hợp giữa source plugins and transformer plugins có thể xử lý mọi cung ứng dữ liệu và chuyển đội dữ liệu mà bạn cần khi xây dựng trang web Gatsby. Tìm hiểu về transformer plugins tại [phần 6 của hướng dẫn](/tutorial/part-six/).
+Hiện tại bạn đã được học cách thức source plugins mang dữ liệu _vào_ hệ thống dữ liệu của Gatsby. Trong hướng dẫn tiếp theo, bạn sẽ được học cách thức transformer plugins _chuyển-đổi_ nội dung gốc được truyển tải bởi source plugins. Sự kết hợp giữa source plugins and transformer plugins có thể xử lý mọi cung ứng dữ liệu và chuyển đội dữ liệu mà bạn cần khi xây dựng trang web Gatsby. Tìm hiểu về transformer plugins tại [phần 6 của hướng dẫn](/tutorial/part-six/).
