@@ -48,7 +48,7 @@ Khi câu lệnh này chạy, bạn có thể xem website của bạn trực ti�
 
 ### Dùng công cụ kiểm toán Lighthouse
 
-Tới đây bạn sẽ lần đầu tiên chạy thử Lighthouse. 
+Tới đây bạn sẽ chạy thử Lighthouse lần đầu. 
 
 1. Nếu chưa thực hiện, bạn hãy mở website bằng Chrome ẩn danh để không có bất kì tiện ích mở rộng nào làm gián đoạn quá trình kiểm toán. Sau đó, hãy mở công cụ cho nhà phát triển Chrome.
 
