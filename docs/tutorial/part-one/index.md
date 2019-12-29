@@ -4,23 +4,23 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Trong [**phần trước**](/tutorial/part-zero/), bạn đã chuẩn bị môi trường phát triển cục bộ bằng cách cài đặt những phầm mềm cần thiết và tạo trang Gatsby đầu tiên sử dụng [**mẫu khởi động “hello world”**](https://github.com/gatsbyjs/gatsby-starter-hello-world). Bây giờ, hãy đi sâu hơn nữa vào phần code được tạo bởi mẫu khởi động đó.
+Trong [**phần trước**](/tutorial/part-zero/), bạn đã chuẩn bị môi trường phát triển cục bộ bằng cách cài đặt những phầm mềm cần thiết và tạo trang web Gatsby đầu tiên sử dụng [**mẫu khởi động “hello world”**](https://github.com/gatsbyjs/gatsby-starter-hello-world). Bây giờ, hãy đi sâu hơn nữa vào phần code được tạo bởi mẫu khởi động đó.
 
-## Sử dụng bộ khởi động Gatsby
+## Sử dụng những bộ khởi động cho Gatsby
 
-Trong [**bài hướng dẫn phần 0**](/tutorial/part-zero/), bạn đã tạo một trang mới dựa trên mẫu khởi động "hello world" sử dụng lệnh sau:
+Trong [**bài hướng dẫn phần 0**](/tutorial/part-zero/), bạn đã tạo một trang web mới dựa trên mẫu khởi động "hello world" sử dụng lệnh sau:
 
 ```shell
 gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-Khi tạo một trang Gatsby mới, bạn có thể sử dụng những cấu trục lệnh sau để tạo một trang mới dựa trên bất kì mẫu khởi động Gatsby hiện có:
+Khi tạo một trang web Gatsby mới, bạn có thể sử dụng cấu trục lệnh sau để tạo một trang web mới dựa trên bất kì mẫu khởi động Gatsby nào hiện có:
 
 ```shell
-gatsby new [Tên thư mục trang web(SITE_DIRECTORY_NAME)] [URL của mẫu khởi động trên Github(URL_OF_STARTER_GITHUB_REPO)]
+gatsby new [TÊN_THƯ_MỤC_CHỨA_TRANG_WEB] [URL_CỦA_KHO_LƯU_TRỮ_CHỨA_MẪU_KHỞI_ĐỘNG]
 ```
 
-Nếu bạn bỏ qua phần URL ở cuối, Gatsby sẽ tự động tạo một trang cho bạn dựa vào [**bản mẫu mặc định**](https://github.com/gatsbyjs/gatsby-starter-default). Đối với phần này của bài hướng dẫn, hãy gắn bó với mẫu "Hello World" mà bạn đã tạo trong bài hướng dẫn phần 0. Bạn có thể tìm hiểu thêm về [chỉnh sửa mẫu khởi động](/docs/modifying-a-starter) trong tài liệu.
+Nếu bạn bỏ qua phần URL ở cuối, Gatsby sẽ tự động tạo một trang cho bạn dựa vào [**mẫu khởi động mặc định**](https://github.com/gatsbyjs/gatsby-starter-default). Đối với phần này của bài hướng dẫn, hãy sử dụng mẫu "Hello World" mà bạn đã tạo trong bài hướng dẫn phần 0. Bạn có thể tìm hiểu thêm về [chỉnh sửa mẫu khởi động](/docs/modifying-a-starter) trong tài liệu.
 
 ### ✋ Mở code
 
@@ -32,13 +32,13 @@ _Lưu ý: Một lần nữa, trình soạn thảo được hiển thị ở đâ
 
 Hãy cùng xem phần code tạo nên trang chủ.
 
-> 💡 Nếu như bạn đã dừng máy chủ phát triển sau khi chạy lệnh `gatsby develop` trong phần trước, hãy khởi động nó lại bây giờ - đã đến lúc để thực hiện một số thay đổi cho trang hello-world!
+> 💡 Nếu như bạn đã dừng máy chủ phát triển sau khi chạy lệnh `gatsby develop` trong phần trước, hãy khởi động nó lại bây giờ - đã đến lúc để thực hiện một số thay đổi cho trang web hello-world!
 
-## Làm quen với các trang Gatsby
+## Làm quen với các trang của Gatsby
 
 Mở thư mục `/src` trong trình soạn thảo code của bạn. Bên trong là một thư mục duy nhất: `/pages`.
 
-Mở tập tin tại `src/pages/index.js`.Phần code trong tập tin này tạo ra một component (thành phần) chứa một div và vài dòng văn bản, “Hello world!”
+Mở tập tin tại `src/pages/index.js`. Phần code trong tập tin này tạo ra một component (thành phần) chứa một div và vài dòng văn bản, “Hello world!”
 
 ### ✋ Thay đổi trang chủ của "Hello World"
 
@@ -49,7 +49,7 @@ Mở tập tin tại `src/pages/index.js`.Phần code trong tập tin này tạo
   <p>Xin lỗi! Trình duyệt của bạn không hỗ trợ video này.</p>
 </video>
 
-> 💡 Gatsby sử dụng **hot reloading** để tăng tốc quá trình phát triển của bạn. Về cơ bản, khi bạn đang chạy máy chủ (server) phát triển Gatsby, các tập tin của trang Gatsby được theo dõi ở phía hậu trường (background) - bất cứ khi nào bạn lưu tập tin, các thay đổi của bạn sẽ lập tức được phản ánh trong trình duyệt. Bạn không cần phải làm mới trang hoặc khởi động lại máy chủ phát triển - các thay đổi của bạn sẽ xuất hiện.
+> 💡 Gatsby sử dụng **hot reloading** để tăng tốc quá trình phát triển của bạn. Về cơ bản, khi bạn đang chạy máy chủ phát triển Gatsby, các tập tin của trang Gatsby được “theo dõi” ở phía hậu trường (background) - bất cứ khi nào bạn lưu một tập tin, các thay đổi của bạn sẽ lập tức được phản ánh trong trình duyệt. Bạn không cần phải làm mới trang hoặc khởi động lại máy chủ phát triển - các thay đổi của bạn sẽ xuất hiện.
 
 2.  Bây giờ bạn có thể làm những thay đổi của bạn rõ hơn một chút. Hãy thử thay thế code trong tập tin `src/pages/index.js` với code bên dưới và lưu lần nữa. Bạn sẽ thấy những thay đổi trong văn bản - màu văn bản sẽ có màu tím và kích thước phông chữ sẽ lớn hơn.
 
@@ -61,9 +61,9 @@ export default () => (
 )
 ```
 
-> 💡 Chúng tôi sẽ giới thiệu nhiều hơn về tạo kiểu (styling) trong Gatsby trong [**phần 2**](/tutorial/part-two/) của bài hướng dẫn.
+> 💡 Chúng tôi sẽ bao quát thêm về tạo kiểu (styling) trong Gatsby trong [**phần 2**](/tutorial/part-two/) của loạt bài hướng dẫn.
 
-3.  Xóa tạo kiểu kích thước phông chữ, thay văn bản "Hello Gatsby!" thành tiêu đề cấp một (h1), và thêm một đoạn văn (p) bên dưới tiêu đề.
+3.  Xóa tạo kiểu kích thước phông chữ, thay văn bản "Hello Gatsby!" thành tiêu đề cấp một, và thêm một đoạn văn bên dưới tiêu đề.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -99,7 +99,7 @@ export default () => (
 
 ### Đợi đã... HTML trong JavaScript?
 
-_Nếu như bạn quen thuộc với React và JSX, bạn có thể thoải mái bỏ qua phần này._ Nếu như bạn chưa từng làm việc với bộ khung (framework) React trước đây, bạn có thể tự hỏi HTML làm gì trong một hàm JavaScript. Hoặc là tại sao chúng ta import `react` ở dòng đầu nhưng dường như không sử dụng nó ở bất cứ đâu. Phiên bản lai "HTML trong JS" này trên thực tế là một cú pháp mở rộng của JavaScript, đối với React, được gọi là JSX. Bạn có thể làm theo bài hướng dẫn này mà không cần kinh nghiệm với React, nhưng nếu bạn tò mò, đây là một đoạn trích ngắn gọn…
+_Nếu như bạn quen thuộc với React và JSX, bạn có thể thoải mái bỏ qua phần này._ Nếu như bạn chưa từng làm việc với framework React trước đây, bạn có thể tự hỏi HTML đang làm gì trong một hàm JavaScript. Hoặc là tại sao chúng ta import `react` ở dòng đầu nhưng dường như không sử dụng nó ở bất cứ đâu. Phiên bản lai "HTML trong JS" này trên thực tế là một cú pháp mở rộng của JavaScript, đối với React, được gọi là JSX. Bạn có thể làm theo bài hướng dẫn này mà không cần có kinh nghiệm trước đây với React, nhưng nếu bạn tò mò, đây là một đoạn giới thiệu ngắn gọn…
 
 Xem xét nội dung ban đầu của tập tin `src/pages/index.js`:
 
@@ -117,38 +117,38 @@ import React from "react"
 export default () => React.createElement("div", null, "Hello world!")
 ```
 
-Bây giờ bạn có thể phát hiện ra việc sử dụng import `'react'`! Nhưng chờ đã, Bạn đang viết JSX, không phải thuần HTML và JavaScript. Làm cách nào mà trình duyệt đọc được? Câu trả lời ngắn ngọn là: Nó không đọc được. Các trang Gatsby đi kèm với công cụ đã được thiết lập sẵn để chuyển đổi mã nguồn của bạn thành một cái gì đó mà trình duyệt có thể diễn giải.
+Bây giờ bạn có thể phát hiện ra việc sử dụng import `'react'`! Nhưng chờ đã, Bạn đang viết JSX, không phải HTML thuần túy và JavaScript. Làm cách nào mà trình duyệt đọc được? Câu trả lời ngắn ngọn: Nó không đọc được. Các trang web Gatsby đi kèm với công cụ đã được thiết lập sẵn để chuyển đổi mã nguồn của bạn thành một cái gì đó mà trình duyệt có thể diễn giải.
 
 ## Xây dựng với các component
 
-Trang chủ bạn vừa mới thực hiên chỉnh sửa được tạo ra bằng cách định nghĩa một component trang. Chính xác thì “component” là gì?
+Trang chủ bạn vừa mới thực hiên chỉnh sửa xong được tạo ra bằng cách định nghĩa một component trang. Vậy chính xác thì một “component” là gì?
 
-Được định nghĩa một cách rộng rãi, một component là một khối cấu tạo (building block) nên trang web của bạn; Nó là một đoạn code khép kín mô tả một phần của UI (user interface - giao diện người dùng).
+Một component được định nghĩa một cách rộng rãi là một khối cấu tạo nên trang web của bạn; Nó là một đoạn code khép kín mô tả một bộ phận của giao diện người dùng (User Interface - UI).
 
-Gatsby được xây dựng trên React. Khi chúng ta nói về việc sử dụng và định nghĩa **component**, chúng ta thực sự đang nói về **Các component React** — đoạn code khép kín (thường được viết bằng JSX) có thể chấp nhận đầu vào và trả về các phần tử React mô tả một phần của UI.
+Gatsby được xây dựng trên nền React. Khi chúng ta nói về việc sử dụng và định nghĩa **component**, chúng ta thực sự đang nói về **Các component của React** — những đoạn code khép kín (thường được viết bằng JSX) có thể nhận dữ liệu vào và trả về các phần tử React mô tả một bộ phận của UI.
 
-Một trong những thay đổi lớn nhất về mặt tinh thần mà bạn thực hiện khi bắt đầu xây dựng với các component (nếu bạn đã là một nhà phát triển) là bây giờ CSS, HTML, và JavaScript của bạn được kết hợp chặt chẽ và thường sống chung trong một tập tin.
+Một trong những thay đổi lớn nhất về mặt nhìn nhận mà bạn có khi bắt đầu xây dựng với các component (nếu bạn đã là một nhà phát triển) là bây giờ CSS, HTML, và JavaScript của bạn được kết nối chặt chẽ và thường tồn tại chung trong một tập tin.
 
-Mặc dù một thay đổi có vẻ đơn giản, điều này có ý nghĩa sâu sắc đối với với cách bạn nghĩ về xây dựng trang web.
+Mặc dù một thay đổi trông có vẻ đơn giản, điều này có ý nghĩa sâu sắc đối với với cách bạn nghĩ về xây dựng trang web.
 
-Lấy ví dụ về tạo một nút tùy chỉnh. Trong quá khứ, bạn sẽ tạo một lớp CSS (có lẽ là: `.primary-button`) với các kiểu tùy chỉnh của bạn và sau đó sử dụng bất cứ khi nào bạn muốn áp dụng các kiểu đó. Ví dụ:
+Lấy ví dụ về việc tạo ra một nút bấm tùy chỉnh. Trong quá khứ, bạn sẽ tạo một CSS class (có lẽ là: `.primary-button`) với các định dạng tùy chỉnh của bạn và sau đó sử dụng nó bất cứ khi nào bạn muốn áp dụng các định dạng đó. Ví dụ:
 
 ```html
 <button class="primary-button">Click me</button>
 ```
 
-Trong thế giới của các component, thay vào đó bạn tạo một component `PrimaryButton` với các kiểu nút của bạn và sử dụng xuyên suốt trang của bạn như:
+Trong thế giới của các component, bạn thay vào đó tạo một component `PrimaryButton` với các định dạng nút bấm của bạn và sử dụng nó xuyên suốt trang web của bạn như là:
 
 <!-- prettier-ignore -->
 ```jsx
 <PrimaryButton>Click me</PrimaryButton>
 ```
 
-Các component trở thành khối xây dựng cơ sở của trang của bạn. Thay vì bị giới hạn trong các khối cấu tạo mà trình duyệt cung cấp, ví dụ `<button />`, bạn có thể dễ dàng tạo các khối khối cấu tạo thanh lịch đáp ứng các nhu cầu của các dự án của bạn.
+Các component trở thành những khối xây dựng cơ sở trong trang web của bạn. Thay vì bị giới hạn trong các khối cấu tạo mà trình duyệt cung cấp, ví dụ `<button />`, bạn có thể dễ dàng tạo ra các khối khối cấu tạo mới đáp ứng một cách trang trọng các nhu cầu của các dự án của bạn.
 
 ### ✋ Sử dụng các component trang
 
-Bất cứ component React nào được định nghĩa trong `src/pages/*.js` sẽ tự động trở thành một trang. Hãy xem điều này trong hành động.
+Bất cứ component React nào được định nghĩa trong `src/pages/*.js` sẽ tự động trở thành một trang. Hãy xem điều này được thực hiện.
 
 Bạn đã có một tập tin `src/pages/index.js` đi kèm với mẫu khởi động "Hello World". Hãy tạo một trang about.
 
@@ -165,15 +165,15 @@ export default () => (
 )
 ```
 
-2.  Hướng đến http://localhost:8000/about/.
+2.  Điều hướng đến http://localhost:8000/about/.
 
 ![Trang about mới](05-about-page.png)
 
-Chỉ với đặt một component React vào tập tin `src/pages/about.js`, bạn bây giờ có thể truy cập tại `/about`.
+Chỉ với việc đặt một component React vào tập tin `src/pages/about.js`, bạn giờ đây đã có một trang truy cập được tại `/about`.
 
 ### ✋ Sử dụng các component phụ
 
-Hãy nói rằng trang chủ và trang about cả hai đều khá lớn và bạn đã viết lại rất nhiều thứ. Bạn có thể sử dụng các component phụ để chia UI thành các phần có thể tái sử dụng. Cả hai trang của bạn có các tiêu đề `<h1>` - tạo một component mô tả một `Header`.
+Hãy nói rằng trang chủ và trang about cả hai đều đã trở nên khá lớn và bạn đã viết lại rất nhiều thứ. Bạn có thể sử dụng các component phụ để chia UI đó thành các phần có thể tái sử dụng. Cả hai trang của bạn có các tiêu đề `<h1>` - tạo một component mà sẽ mô tả một `Header`.
 
 1.  Tạo một thư mục mới tại `src/components` và một tập tin trong thư mục đó gọi là `header.js`.
 2.  Thêm code sau vào tập tin mới `src/components/header.js`.
@@ -184,7 +184,7 @@ import React from "react"
 export default () => <h1>Đây là tiêu đề.</h1>
 ```
 
-3.  Sửa đổi tập tin `about.js` để import component `Header`. Thay thế đánh dấu `h1` với `<Header />`:
+3.  Sửa đổi tập tin `about.js` để import component `Header`. Thay thế thẻ `h1` với `<Header />`:
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -200,7 +200,7 @@ export default () => (
 
 ![Thêm component Header](06-header-component.png)
 
-Trong trình duyệt, văn bản tiêu đề "Giới thiệu về Gatsby" bây giờ nên được thay bằng "Đây là tiêu đề." Nhưng bạn không muốn trang "About" hiển thị là "Đây là tiêu đề.". Bạn muốn nó hiển thị, "Giới thiệu về Gatsby".
+Trong trình duyệt, dòng tiêu đề "Giới thiệu về Gatsby" bây giờ nên được thay bằng "Đây là tiêu đề." Nhưng bạn không muốn trang "About" hiển thị là "Đây là tiêu đề.". Bạn muốn nó hiển thị, "Giới thiệu về Gatsby".
 
 4.  Trờ về tập tin `src/components/header.js` và thực hiện những thay đổi sau:
 
@@ -224,37 +224,40 @@ export default () => (
 )
 ```
 
-![Truyền dữ liệu đến tiêu đề](07-pass-data-header.png)
+![Truyền dữ liệu vào tiêu đề](07-pass-data-header.png)
 
-Bây giờ bạn nên thấy văn bản tiêu đề "Giới thiệu về Gatsby" của bạn một lần nữa!
+Bây giờ bạn sẽ lại thấy dòng tiêu đề "Giới thiệu về Gatsby" của bạn!
 
 ### “props” là gì?
 
-Trước đó bạn định nghĩa các component React là những đoạn code có thể tái sử dụng mô tả UI. Để làm cho các đoạn code có thể tái sử dụng này động bạn cần có khả năng cung cấp cho chúng với dữ liệu khác nhau. Bạn làm điều đó bằng đầu vào được gọi “props". Props là (đủ thích hợp) các thuộc tính được cung cấp cho các component React.
+Trước đó bạn định nghĩa các component React là những đoạn code có thể tái sử dụng mà mô tả UI. Để làm cho các đoạn code có thể tái sử dụng này linh động, bạn cần có khả năng cung cấp cho chúng với các dữ liệu khác nhau. Bạn làm điều đó bằng đầu vào được gọi “props". Props (một cách đơn giản nhất) là những thuộc tính được cung cấp cho các React component.
 
-Trong `about.js` bạn truyền một `headerText` prop với giá trị của `"Giới thiệu về Gatsby"` cho component phụ `Header` được nhập:
+Trong `about.js` bạn truyền một thuộc tính `headerText` với giá trị `"Giới thiệu về Gatsby"` cho component phụ `Header` được nhúng vào:
 
 ```jsx:title=src/pages/about.js
 <Header headerText="Giới thiệu về Gatsby" />
 ```
 
-Trong `header.js`, component tiêu đề hy vọng nhận được `headerText` prop (bởi vì bạn đã viết nó để mong đợi điều đó). Vì vậy bạn có thể truy cập nó như thế này:
+Trong `header.js`, component tiêu đề mong chờ sẽ nhận được `headerText` prop (bởi vì bạn đã viết nó để mong chờ điều đó). Vì vậy bạn có thể truy cập nó như thế này:
 
 ```jsx:title=src/components/header.js
 <h1>{props.headerText}</h1>
 ```
 
-> 💡 Trong JSX, bạn có thể nhúng bất kì biểu thức JavaScript nào bằng cách gói nó với `{}`. Đây là cách bạn có thể truy cập vào thuộc tính `headerText` (hoặc là “prop!”) từ đối tượng “props”.
+> 💡 Trong JSX, bạn có thể nhúng bất kì biểu thức JavaScript nào bằng cách gói nó trong `{}`. Đây là cách bạn có thể truy cập vào thuộc tính `headerText` (hoặc là “prop!”) từ đối tượng “props”.
 
 Nếu bạn đã truyền một prop khác tới component `<Header />` của bạn, như vậy...
 
 ```jsx:title=src/pages/about.js
-<Header headerText="Giới thiệu về Gatsby" arbitraryPhrase="is arbitrary" />
+<Header
+  headerText="Giới thiệu về Gatsby"
+  motCumBatKi="một đoạn văn bản ngẫu nhiên"
+/>
 ```
 
-...bạn có thể truy cập vào `arbitraryPhrase` prop: `{props.arbitraryPhrase}`.
+...bạn có thể truy cập vào thuộc tính `motCumBatKi`: `{props.motCumBatKi}`.
 
-6.  Để nhấn mạnh cách làm cho component của bạn có thể tái sử dụng, thêm một component `<Header />` vào trang about, thêm code sau đây vào tập tin `src/pages/about.js`, và lưu lại.
+6.  Để nhấn mạnh cho cách mà điều này làm cho component của bạn có thể tái sử dụng, thêm một component `<Header />` vào trang about, thêm code sau đây vào tập tin `src/pages/about.js`, và lưu lại.
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -269,23 +272,23 @@ export default () => (
 )
 ```
 
-![Trùng lặp tiêu đề để thể hiện khả năng tái sử dụng](08-duplicate-header.png)
+![Lặp lại tiêu đề để thể hiện khả năng tái sử dụng](08-duplicate-header.png)
 
 Và bạn có nó rồi đấy; Một tiêu đề thứ hai - không cần viết lại bất kì code gì - bằng cách truyền dữ liệu khác nhau sử dụng props.
 
 ### Sử dụng các component bố cục
 
-Các component bố cục dành cho các phần của trang mà bạn muốn chia sẻ cho nhiều trang khác nhau. Ví dụ, các trang Gatsby thường sẽ có một component bố cục với một tiêu đề và cuối trang được chia sẻ. Những điều phổ biến khác để thêm vào bố cục bao gồm thanh bên (sidebar) và/hoặc một menu điều hướng.
+Các component bố cục dành cho các bộ phận của trang mà bạn muốn chia sẻ xuyên suốt nhiều trang khác nhau. Ví dụ, các trang Gatsby thường sẽ có một component bố cục với một đầu trang (header) và cuối trang (footer) được chia sẻ. Những điều phổ biến khác để thêm vào bố cục bao gồm thanh bên (sidebar) và/hoặc một menu điều hướng.
 
 Bạn sẽ tìm hiểu thêm về các component bố cục trong [**phần 3**](/tutorial/part-three/).
 
 ## Linking between pages
 
-Bạn sẽ thường muốn kết nối giữa các trang — Hãy xem định tuyến trong một trang Gatsby.
+Bạn sẽ thường muốn kết nối giữa các trang — Hãy xem qua routing (định tuyến) trong một trang Gatsby.
 
 ### ✋ Sử dụng component `<Link />`
 
-1.  Mở component trang mục lục (`src/pages/index.js`), import component `<Link />` từ Gatsby, thêm một component `<Link />` ở trên tiêu đề, và cung cấp cho nó một thuộc tính `to` với giá trị của `"/contact/"` cho tên đường dẫn:
+1.  Mở component trang index (`src/pages/index.js`), import component `<Link />` từ Gatsby, thêm một component `<Link />` ở trên tiêu đề, và cung cấp cho nó một thuộc tính `to` với giá trị `"/contact/"` cho tên đường dẫn:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -302,11 +305,11 @@ export default () => (
 )
 ```
 
-Khi bạn bấm vào liên kết mới "Contact" trong trang chủ, bạn sẽ thấy...
+Khi bạn bấm vào liên kết "Contact" mới trong trang chủ, bạn sẽ thấy...
 
 ![Trang Gatsby dev 404](09-dev-404.png)
 
-...Trang Gatsby phát triển 404. Tại sao? Bởi vì bạn đang cố liên kết tới một trang chưa tồn tại.
+...trang 404 của môi trường phát triển Gatsby. Tại sao? Bởi vì bạn đang cố liên kết tới một trang chưa tồn tại.
 
 2.  Bây giờ bạn sẽ phải tạo một component trang cho trang "Contact" mới tại `src/pages/contact.js` và để nó liên kết với trang chủ:
 
@@ -324,45 +327,45 @@ export default () => (
 )
 ```
 
-Sau khi bạn lưu tập tin, bạn sẽ thấy trang contact và có thể theo liên kết để trở về trang chủ.
+Sau khi bạn lưu tập tin, bạn sẽ thấy trang contact và có thể đi theo liên kết để trở về trang chủ.
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
   <p>Xin lỗi! Trình duyệt của bạn không hỗ trợ video này.</p>
 </video>
 
-Component `<Link />` của Gatsby là để liên kết giữa các trang trong trang web của bạn. Đối với các liên kết bên ngoài không được xử lí bởi trang Gatsby của bạn, sử dụng thẻ `<a>` HTML thông thường.
+Component `<Link />` của Gatsby là để liên kết giữa các trang trong trang web của bạn. Đối với các liên kết bên ngoài không được xử lí bởi trang web Gatsby của bạn, hãy sử dụng thẻ `<a>` thông thường của HTML.
 
 ## Triển khai một trang Gatsby
 
-Gatsby.js là một trình tạo web hiện đại, có nghĩa là không có máy chủ để thiết lập hoặc cơ sở dữ liệu phức tạp để triển khai. Thay vào đó, lệnh `build` của Gatsby tạo ra một thư mục chứa các tập tin HTML và JavaScript tĩnh mà bạn có thể triển khai đến một dịch vụ lưu trữ trang web tĩnh.
+Gatsby.js là một _trình tạo web hiện đại_, có nghĩa là nó không cần máy chủ để thiết lập hoặc cơ sở dữ liệu phức tạp để triển khai. Thay vào đó, lệnh `build` của Gatsby tạo ra một thư mục chứa các tập tin HTML và JavaScript tĩnh mà bạn có thể triển khai đến một dịch vụ hosting trang web tĩnh.
 
-Thử sử dụng [Surge](http://surge.sh/) để triển khai trang web Gatsby đầu tiên của bạn. Surge là một trong nhiều "máy chủ trang web tĩnh" cho phép triển khai các trang web Gatsbyis.
+Hãy thử sử dụng [Surge](http://surge.sh/) để triển khai trang web Gatsby đầu tiên của bạn. Surge là một trong nhiều "host cho các trang web tĩnh" cho phép triển khai các trang web Gatsby.
 
 Nếu trước đó bạn vẫn chưa cài đặt &amp; thiết lập Surge, mở một cửa sở terminal và cài đặt công cụ dòng lệnh của họ:
 
 ```shell
 npm install --global surge
 
-# Then create a (free) account with them
+# Sau đó hãy tạo một tài khoản (miễn phí) với họ
 surge login
 ```
 
-Kế tiếp, xây dựng trang web của bạn bằng cách chạy lệnh sau trong terminal ở gốc của trang web của bạn (mẹo: đảm bảo bạn đang chạy lệnh này ở gốc của trang web của bạn, trong trường hợp này là thư mục hello-world, bạn có thể làm bằng cách mở một tab mới trong cùng một cửa sổ bạn đã sử dụng để chạy `gatsby develop`):
+Kế tiếp, build trang web của bạn bằng cách chạy lệnh sau trong terminal ở thư mục gốc của trang web của bạn (mẹo: đảm bảo bạn đang chạy lệnh này ở thư mục gốc của trang web của bạn, trong trường hợp này là thư mục hello-world, bạn có thể làm điều này bằng cách mở một tab mới trong cùng một cửa sổ bạn đã sử dụng để chạy `gatsby develop`):
 
 ```shell
 gatsby build
 ```
 
-Việc xây dựng sẽ mất khoảng 15-30 giây. Một khi việc xây dựng hoàn tất, thật thú vị khi xem các tập tin mà lệnh `gatsby build` vừa chuẩn bị để triển khai.
+Việc build sẽ mất khoảng 15-30 giây. Một khi bản build đã hoàn tất, nó thật thú vị khi xem qua các tập tin mà lệnh `gatsby build` vừa chuẩn bị để triển khai.
 
-Hãy xem danh sách các tập tin được tạo bằng cách nhập lệnh sau vào thư mục gốc của trang web của bạn, điều này cho phép bạn xem thư mục `public`:
+Hãy xem qua danh sách các tập tin được tạo bằng cách nhập lệnh sau vào terminal trong thư mục gốc của trang web của bạn, điều này sẽ cho phép bạn nhìn vào thư mục `public`:
 
 ```shell
 ls public
 ```
 
-Sau đó, cuối cùng triển khai trang web của bạn bằng cách xuất bản các tập tin được tạo ra tới surge.sh.
+Rồi cuối cùng triển khai trang web của bạn bằng cách xuất bản các tập tin vừa được tạo ra cho surge.sh.
 
 ```shell
 surge public/
@@ -372,16 +375,17 @@ Khi điều này kết thúc, bạn sẽ thấy trong terminal của bạn một
 
 ![Ảnh chụp màn hình của việc xuất bản trang web Gatsby với Surge](surge-deployment.png)
 
-Mở địa chỉ trang web được liệt kê ở dòng cuối (`lowly-pain.surge.sh` trong trường hợp này) và bạn sẽ thấy trang web mới được xuất bản của bạn! Tuyệt vời!
+Mở địa chỉ trang web được liệt kê ở dòng cuối (`lowly-pain.surge.sh` trong
+trường hợp này) và bạn sẽ thấy trang web mới được xuất bản của bạn! Làm tốt lắm!
 
 ## ➡️ Điều gì tiếp theo?
 
-Trong phần này bạn:
+Trong phần này bạn đã:
 
 - Học về mẫu khởi động Gatsby, và làm thế nào để sử dụng chúng để tạo dự án mới
 - Học về cú pháp JSX
 - Học về các component
-- Học về các component trang Gatsby và các component phụ
-- Học về React “props” và tái sử dụng các component React
+- Học về các component trang và các component phụ trong Gatsby
+- Học về React “props” và tái sử dụng các React component
 
-Bây giờ, chuyển sang [**thêm kiểu vào trang web của bạn**](/tutorial/part-two/)!
+Bây giờ, hãy di chuyển tiếp đến phần [**thêm định dạng vào trang web của bạn**](/tutorial/part-two/)!
