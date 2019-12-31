@@ -101,8 +101,8 @@ npm install --save gatsby-plugin-manifest
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Bật thông báo "Thêm vào màn hình chính" và ngắt UI của trình duyệt (bao gồm cả núi lùi vè) 
+        // Xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
@@ -140,13 +140,13 @@ npm install --save gatsby-plugin-offline
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Bật thông báo "Thêm vào màn hình chính" và ngắt UI của trình duyệt (bao gồm cả núi lùi vè) 
+        // Xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    // highlight-next-line
+    // Tô màu dòng kế tiếp
     `gatsby-plugin-offline`,
   ]
 }
@@ -158,30 +158,30 @@ npm install --save gatsby-plugin-offline
 
 ## Thêm siêu dữ liệu (metadata) của trang
 
-Adding metadata to pages (such as a title or description) is key in helping search engines like Google understand your content and decide when to surface it in search results.
+Thêm siêu dữ liệu vào trang (ví dụ như tiêu đề hoặc miêu tả) là chìa khóa giúp cho các công cụ tìm kiếm như Google hiểu được nội dung của bạn và quyết định khi nào nó sẽ trồi lên trong kết quả tìm kiếm.
 
-[React Helmet](https://github.com/nfl/react-helmet) is a package that provides a React component interface for you to manage your [document head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+[Mũ bảo hiểm React (React Helmet)](https://github.com/nfl/react-helmet) là một gói cung cấp giao diện hợp phần React (React component interface) giúp bạn quản lý [tựa đề trang](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
-Gatsby's [react helmet plugin](/packages/gatsby-plugin-react-helmet/) provides drop-in support for server rendering data added with React Helmet. Using the plugin, attributes you add to React Helmet will be added to the static HTML pages that Gatsby builds.
+[Plugin mũ bảo hiểm react (react helmet plugin)](/packages/gatsby-plugin-react-helmet/) của Gatsby cung cấp hỗ trợ nhanh cho dữ liệu kết xuất đồ họa máy chủ (server rendering data) cùng với Mũ bảo hiểm React. Thông qua plugin này, những thuộc tính bạn thêm vào Mũ bảo hiểm React cũng sẽ được thêm vào các trang HTML tĩnh được xây bằng Gatsby.
 
-### ✋ Using `React Helmet` and `gatsby-plugin-react-helmet`
+### ✋ Sử dụng `React Helmet` và `gatsby-plugin-react-helmet`
 
-1.  Install both packages:
+1.  Cài đặt cả hai gói:
 
 ```shell
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2.  Make sure you have a `description` and an `author` configured inside your `siteMetadata` object. Also, add the `gatsby-plugin-react-helmet` plugin to the `plugins` array in your `gatsby-config.js` file.
+2.  Hãy chắc chắn rằng bạn đã có  `miêu tả` và một `tác giả` được thiết lập bên trong vật thể `siteMetadata` của bạn. Đồng thời, thêm plugin `gatsby-plugin-react-helmet` vào trong tập hợp `plugins` trong tệp tin của bạn `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
-    // highlight-start
+    // Đánh dấu bắt đầu
     description: `A simple description about pandas eating lots...`,
     author: `gatsbyjs`,
-    // highlight-end
+    // Đánh dấu kết thúc
   },
   plugins: [
     {
@@ -192,20 +192,20 @@ module.exports = {
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Bật thông báo "Thêm vào màn hình chính" và ngắt UI của trình duyệt (bao gồm cả núi lùi vè) 
+        // Xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
-    // highlight-next-line
+    // Tô mày dòng tiếp theo
     `gatsby-plugin-react-helmet`,
   ],
 }
 ```
 
-3. In the `src/components` directory, create a file called `seo.js` and add the following:
+3. Bên trong thư mục `src/components`, tạo một tệp tin mới tên `seo.js` và thêm những dòng sau:
 
 ```jsx:title=src/components/seo.js
 import React from "react"
@@ -291,9 +291,9 @@ SEO.propTypes = {
 export default SEO
 ```
 
-The above code sets up defaults for your most common metadata tags and provides you an `<SEO>` component to work with in the rest of your project. Pretty cool, right?
+Dòng code trên thiết lập mặc định cho các thẻ siêu dữ liệu (metadata tags) phổ biên nhất và cung cấp cho bạn một hợp phần `<SEO>` để làm việc cùng xuyên suốt dự án. Rất tiện dụng, phải không?
 
-4.  Now, you can use the `<SEO>` component in your templates and pages and pass props to it. For example, add it to your `blog-post.js` template like so:
+4.  Ngay bây giờ, bạn có thể dùng hợp phần `<SEO>` trong các bố cục mẫu và trang web và chuyền các đặc tính cho nó. Ví dụ, bạn thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
