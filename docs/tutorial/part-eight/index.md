@@ -359,7 +359,7 @@ Lighthouse là một công cụ tuyệt vời cho các cải tiến website và 
 2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời ông mặt trời và nhanh chơp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
 3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới nhưng đã được tối giản vừa đủ để xây một website Gatsby. _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
-## Chỉ vậy thôiTh, các bằng hữu
+## Chỉ vậy thôi, các bằng hữu
 
 Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm nhiều hướng dẫn cho các trường hợp cụ thể.
 
