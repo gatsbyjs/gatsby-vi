@@ -355,7 +355,7 @@ Lighthouse là một công cụ tuyệt vời cho các cải tiến website và 
 
 ### Tài liệu chính thức cho người mới học
 
-1.  [Tài liệu Gatsby mặc định cho người mới học](https://github.com/gatsbyjs/gatsby-starter-default): Bắt tay ngay vào dự án của bạn với bộ tài liệu về boiletplate mặc định này. Bộ sườn này đã bao gồm các tập tin tinh chỉnh Gatsby cần thiết cho bạn. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-default/)_
+1.  [Tài liệu Gatsby mặc định cho người mới học](https://github.com/gatsbyjs/gatsby-starter-default): Bắt tay ngay vào dự án của bạn với bố cục mẫu này. Bộ sườn này đã bao gồm các tập tin tinh chỉnh Gatsby cần thiết cho bạn. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-default/)_
 2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời ông mặt trời và nhanh chơp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
 3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới nhưng đã được tối giản vừa đủ để xây một trang web Gatsby. _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
