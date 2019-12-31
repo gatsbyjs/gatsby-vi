@@ -361,7 +361,7 @@ Lighthouse là một công cụ tuyệt vời cho các cải tiến website và 
 
 ## Chỉ vậy thôi, các bằng hữu
 
-Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm nhiều hướng dẫn cho các trường hợp cụ thể.
+Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm hướng dẫn cho các trường hợp cụ thể.
 
 Đây chỉ là khởi đầu. Tiến lên!
 
