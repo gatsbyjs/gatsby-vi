@@ -1,5 +1,5 @@
 ---
-tiêu đề: Preparing a Site to Go Live
+tiêu đề: Chuẩn bị cho website trực tuyến
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -14,7 +14,7 @@ Wow! Bạn đã vượt qua cả một chặng đường dài ! Hãy cùng nhìn
 - dùng GraphQL để lấy dữ liệu cho trang
 - tạo trang từ dữ liệu của bạn bằng phương pháp lập trình
 
-Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát sóng một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugins phổ biến mà bạn sẽ cần khi xây dựng các website Gatsby.
+Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát trực tiếp một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugins phổ biến mà bạn sẽ cần khi xây dựng các website Gatsby.
 
 ## Kiểm toán với Lighthouse
 
@@ -22,7 +22,7 @@ Trích từ [Lighthouse website](https://developers.google.com/web/tools/lightho
 
 > Lighthouse là một mã nguồn mở, một công cụ tự động giúp nâng cao chất lượng các trang web. Bạn có thể dùng nó trên bất kì trang web nào, bất kể công khai hay cần xác thực. Nó có kiểm toán cho hiệu suất, hỗ trợ tiếp cận, ứng dụng web nâng cao (progressive web apps - PWAs), và hơn thế nữa.
 
-Lighthouse đã được tích hợp trong công cụ cho nhà phát triển Chrome (Chrome DevTools). Chạy công cụ kiểm toán -- và rồi xem qua các lỗi nó tìm được và thay đổi theo các nâng cấp được gợi ý -- là phương pháp tối ưu để chuẩn bị cho website của bạn trước khi phát sóng. Nó giúp bạn tự tin có một website nhanh nhất và dễ tiếp cận nhất có thể.
+Lighthouse đã được tích hợp trong công cụ cho nhà phát triển Chrome (Chrome DevTools). Chạy công cụ kiểm toán -- và rồi xem qua các lỗi nó tìm được và thay đổi theo các nâng cấp được gợi ý -- là phương pháp tối ưu để chuẩn bị cho website của bạn trước khi phát trực tiếp. Nó giúp bạn tự tin có một website nhanh nhất và dễ tiếp cận nhất có thể.
 
 Thử ngay đi nào!
 
@@ -293,7 +293,7 @@ export default SEO
 
 Dòng code trên thiết lập mặc định cho các thẻ siêu dữ liệu (metadata tags) phổ biên nhất và cung cấp cho bạn một hợp phần `<SEO>` để làm việc cùng xuyên suốt dự án. Rất tiện dụng, phải không?
 
-4.  Ngay bây giờ, bạn có thể dùng hợp phần `<SEO>` trong các bố cục mẫu và trang web và chuyền các đặc tính cho nó. Ví dụ, bạn thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
+4.  Ngay bây giờ, bạn có thể dùng hợp phần `<SEO>` trong các bố cục mẫu và trang web và chuyển các đặc tính qua cho nó. Ví dụ, bạn thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -331,44 +331,44 @@ export const query = graphql`
 `
 ```
 
-The above example is based off the [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/). By passing props to the `<SEO>` component, you can dynamically change the metadata for a post. In this case, the blog post `title` and `excerpt` (if it exists in the blog post markdown file) will be used instead of the default `siteMetadata` properties in your `gatsby-config.js` file.
+Ví dụ trên dựa vào [Blog về Gatsby cho lính mới](/starters/gatsbyjs/gatsby-starter-blog/). Bằng cách chuyển các đặc tính sang cho hợp phần `<SEO>`, bạn có thể thay đổi siêu dữ liệu của một bài đăng một cách linh động. Trong trường hợp này, `title` và `excerpt` của bài đăng (nếu nó có tồn tại trong tập tin markdown của bài) sẽ được dung thay cho đặc tính mặc định là `siteMetadata` trong tập tin `gatsby-config.js`.
 
-Now, if you run the Lighthouse audit again as laid out above, you should get close to--if not a perfect-- 100 score!
+Ngay bây giờ, nếu bạn chạy kiểm toán Lighthouse một lần nữa như đã được hướng dẫn trước đó, bạn sẽ gần như đạt được--thậm chí có thể đạt được cả-- 100 điểm!
 
-> 💡 For further reading and examples, check out [Adding an SEO Component](/docs/add-seo-component/) and the [React Helmet docs](https://github.com/nfl/react-helmet#example)!
+> 💡 Để tìm thêm thông tin và các ví dụ, tham khảo [Thêm một hợp phần SEO](/docs/add-seo-component/) và [Tài liệu về Mũ bảo hiểm React](https://github.com/nfl/react-helmet#example)!
 
-## Keep making it better
+## Không ngừng tiến bộ
 
-In this section, we've shown you a few Gatsby-specific tools to improve your site's performance and prepare to go live.
+Trong chương này, chúng tôi đã cho bạn biết qua một vài công cụ chuyên dụng cho Gatsby để giúp cải thiện điểm số hiệu suất của website của bạn và săn sàng để phát trực tiếp.
 
-Lighthouse is a great tool for site improvements and learning -- Continue looking through the detailed feedback it provides and keep making your site better!
+Lighthouse là một công cụ tuyệt vời cho các cải tiến website và để học hỏi -- Tiếp tục xem qua các đóng góp tỉ mỉ nó cung cấp và không ngừng cải thiện website!
 
-## Next Steps
+## Những bước tiếp theo
 
-### Official Documentation
+### Tài liệu chính thức
 
-- [Official Documentation](https://www.gatsbyjs.org/docs/): View our Official Documentation for _[Quick Start](https://www.gatsbyjs.org/docs/quick-start/)_, _[Detailed Guides](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[API References](https://www.gatsbyjs.org/docs/gatsby-link/)_, and much more.
+- [Bộ tài liệu chính thức](https://www.gatsbyjs.org/docs/): Xem tài liệu chính thức cho _[Làm quen](https://www.gatsbyjs.org/docs/quick-start/)_, _[Hướng dẫn chi tiết](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[API tham khảo](https://www.gatsbyjs.org/docs/gatsby-link/)_, và nhiều hơn thế nữa.
 
-### Official Plugins
+### Những Plugin chính thức
 
-- [Official Plugins](https://github.com/gatsbyjs/gatsby/tree/master/packages): The complete list of all the Official Plugins maintained by Gatsby.
+- [Những Plugin chính thức](https://github.com/gatsbyjs/gatsby/tree/master/packages): Danh sách đầy đủ mọi Plugin chính thức được bảo trì bởi Gatsby.
 
-### Official Starters
+### Tài liệu chính thức cho người mới học
 
-1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Gatsby Starter with the bare essentials needed for a Gatsby site. _[working example](https://gatsby-starter-hello-world-demo.netlify.com/)_
+1.  [Tài liệu Gatsby mặc định cho người mới học](https://github.com/gatsbyjs/gatsby-starter-default): Bắt tay ngay vào dự án của bạn với bộ tài liệu về boiletplate mặc định này. Bộ sườn này đã bao gồm các tập tin tinh chỉnh Gatsby cần thiết cho bạn. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời ông mặt trời và nhanh chơp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới nhưng đã được tối giản vừa đủ để xây một website Gatsby. _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
-## That's all, folks
+## Chỉ vậy thôiTh, các bằng hữu
 
-Well, not quite; just for this tutorial. There are [Additional Tutorials](/tutorial/additional-tutorials/) to check out for more guided use cases.
+Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm nhiều hướng dẫn cho các trường hợp cụ thể.
 
-This is just the beginning. Keep going!
+Đây chỉ là khởi đầu. Tiến lên!
 
-- Did you build something cool? Share it on Twitter, tag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), and [@mention us](https://twitter.com/gatsbyjs)!
-- Did you write a cool blog post about what you learned? Share that, too!
-- Contribute! Take a stroll through [open issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) on the gatsby repo and [become a contributor](/contributing/how-to-contribute/).
+- Bạn vừa tạo được một cái gì đó thú vị? Chia sẻ ngay trên Twitter, gắn thẻ [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), và [@cho chúng tôi biết](https://twitter.com/gatsbyjs)!
+- Bạn có một bài đăng về những gì đã học được? Chia sẻ cả điều đó!
+- Đóng góp! Dạo quanh [bàn luận các sự cố](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) trên repo của gatsby và [trở thành cộng tác](/contributing/how-to-contribute/).
 
-Check out the ["how to contribute"](/contributing/how-to-contribute/) docs for even more ideas.
+Tham khảo tài liệu["đóng góp như thế nào"](/contributing/how-to-contribute/) để có thêm nhiều ý tưởng.
 
-We can't wait to see what you do 😄.
+Chúng tôi không thể đợi xem những thành quả của bạn 😄.
