@@ -28,7 +28,7 @@ Thử ngay đi nào!
 
 Đầu tiên, bạn cần lập một phiên bản hoàn thiện cho trang Gatsby của bạn. Máy chủ thử nghiệm Gatsby được phát triển phù hợp cho việc triển khai nhanh. Tuy nhiên, website mà nó tạo ra, dù rất giống với các trang xây theo phiên bản thương mại, không tối ưu như bạn nghĩ.
 
-### ✋ Lập một phiên bản hoàn thiện
+### ✋ Tạo production build (phiên bản hoàn thiện)
 
 1.  Dừng máy chủ thử nghiệm (trong trường hợp nó đang chạy) và chạy câu lệnh sau:
 
@@ -36,9 +36,9 @@ Thử ngay đi nào!
 gatsby build
 ```
 
-> 💡 Như bạn đã học trong [phần 1](/tutorial/part-one/), câu lệnh này xây một phiên bản hoàn thiện cho website của bạn và xuất các file tĩnh hoàn thiện vào trong thư mục `public`.
+> 💡 Như bạn đã học trong [phần 1](/tutorial/part-one/), câu lệnh này xây một production build cho website của bạn và xuất các file tĩnh hoàn thiện vào trong thư mục `public`.
 
-2.  Để xem phiên bản hoàn thiện của website trên máy tính cục bộ, chạy lệnh:
+2.  Để xem production build của website trên máy tính cục bộ, chạy lệnh:
 
 ```shell
 gatsby serve
@@ -52,15 +52,15 @@ Tới đây bạn sẽ chạy thử Lighthouse lần đầu.
 
 1. Nếu chưa thực hiện, bạn hãy mở website bằng Chrome ẩn danh để không có bất kì tiện ích mở rộng nào làm gián đoạn quá trình kiểm toán. Sau đó, hãy mở công cụ cho nhà phát triển Chrome.
 
-2.  Ấn vào tab "Audits", bạn sẽ thấy trên màn hình như sau:
+2.  Ấn vào tab "Audits"<!-- DevTools không có phiên bản Tiếng Việt -->, bạn sẽ thấy trên màn hình như sau:
 
 ![Bắt đầu kiểm toán với Lighthouse](./lighthouse-audit.png)
 
-3.  Chọn "Perform an audit..." <!-- DevTools không có phiên bản Tiếng Việt --> (Mặc định là tất cả các dạng kiểm toán sẽ được chọn). Sau đó chọn "Run audit". (Sẽ mất tầm một phút để hoàn thành bài kiểm toán). Một khi kiểm toán xong, bạn sẽ thấy kết quả hiện trên màn hình như sau:
+3.  Chọn "Perform an audit..." (Mặc định là tất cả các dạng kiểm toán sẽ được chọn). Sau đó chọn "Run audit". (Sẽ mất tầm một phút để hoàn thành bài kiểm toán). Một khi kiểm toán xong, bạn sẽ thấy kết quả hiện trên màn hình như sau:
 
 ![Kết quả kiểm toán từ Lighthouse](./lighthouse-audit-results.png)
 
-Như bạn đã thấy, hiệu suất của Gatsby vô cùng đột phá, nhưng bạn vẫn chưa vận dụng được ứng dụng nâng cao (PWA), hỗ trợ tiếp cận, thông lệ phổ biến, và tối ưu hóa tìm kiếm (Search Engine Optimization - SEO) để cải thiện điểm số kiểm toán (đồng thời giúp website của bạn thân thiện hơn với người dùng và các công cụ tìm kiếm).
+Như bạn đã thấy, hiệu suất của Gatsby vô cùng đột phá, nhưng bạn vẫn chưa vận dụng được ứng dụng nâng cao (PWA), hỗ trợ tiếp cận, thông lệ phổ biến, và tối ưu hóa công cụ tìm kiếm (Search Engine Optimization - SEO) để cải thiện điểm số kiểm toán (đồng thời giúp website của bạn thân thiện hơn với người dùng và các công cụ tìm kiếm).
 
 ## Thêm tập tin kê khai (manifest file)
 
@@ -117,11 +117,11 @@ npm install --save gatsby-plugin-manifest
 
 Một yêu cầu khác để website được công nhận là một PWA chính là vận dụng [máy chủ úy nhiệm (service worker)](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Máy chủ ủy nhiệm sẽ chạy nền, quyết định phương thức sử dụng mạng và nội dung cache (cached content) dựa trên hiện trạng kết nối, cho một trải nghiệm ngoại tuyết không gián đoạn và trong kiểm soát.
 
-[Plugin Gatsby ngoại tuyến](/packages/gatsby-plugin-offline/) giúp website Gatsby có thể hoạt động ngoại tuyến và trơn tru hơn khi gặp kết nối kém bằng cách tạo một máy chủ ủy nhiệm cho trang web của bạn.
+[Plugin Gatsby ngoại tuyến](/packages/gatsby-plugin-offline/) giúp website Gatsby có thể hoạt động ngoại tuyến và trở nên trơn tru hơn khi gặp kết nối kém bằng cách tạo một máy chủ ủy nhiệm cho trang web của bạn.
 
 ### ✋ Sử dụng `gatsby-plugin-offline`
 
-1.  Install the plugin:
+1.  Cài đặt plugin:
 
 ```shell
 npm install --save gatsby-plugin-offline
@@ -152,11 +152,11 @@ npm install --save gatsby-plugin-offline
 }
 ```
 
-That's all you need to get started with service workers with Gatsby.
+Đó là tất cả những gì bạn cần biết để thiết lập một máy chủ úy nhiệm trên Gatsby.
 
-> 💡 The offline plugin should be listed _after_ the manifest plugin so that the offline plugin can cache the created `manifest.webmanifest`.
+> 💡 Tiện ích ngoại tuyến này nên được liệt kê _sau_ plugin kê khai (manifest plugin) để nó có thể cache `manifest.webmanifest` được tạo ra.
 
-## Add page metadata
+## Thêm siêu dữ liệu (metadata) của trang
 
 Adding metadata to pages (such as a title or description) is key in helping search engines like Google understand your content and decide when to surface it in search results.
 
