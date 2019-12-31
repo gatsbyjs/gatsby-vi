@@ -14,15 +14,15 @@ Wow! Bạn đã vượt qua cả một chặng đường dài ! Hãy cùng nhìn
 - dùng GraphQL để lấy dữ liệu cho trang
 - tạo trang từ dữ liệu của bạn bằng phương pháp lập trình
 
-Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát trực tiếp một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugins phổ biến mà bạn sẽ cần khi xây dựng các trang web Gatsby.
+Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát trực tiếp một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugin phổ biến mà bạn sẽ cần khi xây dựng các trang web Gatsby.
 
 ## Kiểm toán với Lighthouse
 
 Trích từ [Lighthouse website](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse là một mã nguồn mở, một công cụ tự động giúp nâng cao chất lượng các trang web. Bạn có thể dùng nó trên bất kì trang web nào, bất kể công khai hay cần xác thực. Nó có kiểm toán cho hiệu suất, hỗ trợ tiếp cận, ứng dụng web nâng cao (progressive web apps - PWAs), và hơn thế nữa.
+> Lighthouse là một mã nguồn mở, một công cụ tự động giúp nâng cao chất lượng các trang web. Bạn có thể dùng nó trên bất kì trang web nào, bất kể công khai hay cần xác thực. Nó có kiểm toán cho hiệu suất, hỗ trợ tiếp cận, progressive web apps (PWAs - ứng dụng web nâng cao), và hơn thế nữa.
 
-Lighthouse đã được tích hợp trong công cụ cho nhà phát triển Chrome (Chrome DevTools). Chạy công cụ kiểm toán -- và rồi xem qua các lỗi nó tìm được và thay đổi theo các nâng cấp được gợi ý -- là phương pháp tối ưu để chuẩn bị cho website của bạn trước khi phát trực tiếp. Nó giúp bạn tự tin có một website nhanh nhất và dễ tiếp cận nhất có thể.
+Lighthouse đã được tích hợp trong Chrome DevTools (công cụ cho nhà phát triển Chrome). Chạy công cụ kiểm toán -- và rồi xem qua các lỗi nó tìm được và thay đổi theo các nâng cấp được gợi ý -- là phương pháp tối ưu để chuẩn bị cho website của bạn trước khi phát trực tiếp. Nó giúp bạn tự tin có một website nhanh nhất và dễ tiếp cận nhất có thể.
 
 Thử ngay đi nào!
 
