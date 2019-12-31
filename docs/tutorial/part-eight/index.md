@@ -1,20 +1,20 @@
 ---
-tiêu đề: Chuẩn bị cho website trực tuyến
+title: Chuẩn bị cho website trực tuyến
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
 Wow! Bạn đã vượt qua cả một chặng đường dài ! Hãy cùng nhìn lại những gì bạn học được:
 
-- tạo một website bằng Gatsby
-- xây dựng trang và hợp phần
-- trang trí các hợp phần
+- tạo các trang web Gatsby
+- xây dựng trang và component
+- trang trí các component
 - thêm plugins cho trang web
 - nguồn & biến đổi dữ liệu
 - dùng GraphQL để lấy dữ liệu cho trang
 - tạo trang từ dữ liệu của bạn bằng phương pháp lập trình
 
-Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát trực tiếp một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugins phổ biến mà bạn sẽ cần khi xây dựng các website Gatsby.
+Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát trực tiếp một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugins phổ biến mà bạn sẽ cần khi xây dựng các trang web Gatsby.
 
 ## Kiểm toán với Lighthouse
 
@@ -26,7 +26,7 @@ Lighthouse đã được tích hợp trong công cụ cho nhà phát triển Chr
 
 Thử ngay đi nào!
 
-Đầu tiên, bạn cần lập một phiên bản hoàn thiện cho trang Gatsby của bạn. Máy chủ thử nghiệm Gatsby được phát triển phù hợp cho việc triển khai nhanh. Tuy nhiên, website mà nó tạo ra, dù rất giống với các trang xây theo phiên bản thương mại, không tối ưu như bạn nghĩ.
+Đầu tiên, bạn cần lập một phiên bản hoàn thiện cho trang web Gatsby của bạn. Máy chủ thử nghiệm Gatsby được phát triển phù hợp cho việc triển khai nhanh. Tuy nhiên, website mà nó tạo ra, dù rất giống với các trang xây theo phiên bản thương mại, không tối ưu như bạn nghĩ.
 
 ### ✋ Tạo production build (phiên bản hoàn thiện)
 
@@ -101,8 +101,8 @@ npm install --save gatsby-plugin-manifest
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Bật thông báo "Thêm vào màn hình chính" và ngắt UI của trình duyệt (bao gồm cả núi lùi vè) 
-        // Xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button) 
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
@@ -111,13 +111,13 @@ npm install --save gatsby-plugin-manifest
 }
 ```
 
-Đó là tất cả những gì bạn cần để bắt đầu thêm một bản kê khai web vào một website Gatsby. Ví dụ ở trên gợi nhắc một thiết lập cơ bản -- Truy cập [tài liệu tham khảo về plugin](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) để tìm thêm lựa chọn.
+Đó là tất cả những gì bạn cần để bắt đầu thêm một bản kê khai web vào một trang web Gatsby. Ví dụ ở trên gợi nhắc một thiết lập cơ bản -- Truy cập [tài liệu tham khảo về plugin](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) để tìm thêm lựa chọn.
 
 ## Thêm hỗ trợ ngoại tuyến
 
 Một yêu cầu khác để website được công nhận là một PWA chính là vận dụng [máy chủ úy nhiệm (service worker)](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Máy chủ ủy nhiệm sẽ chạy nền, quyết định phương thức sử dụng mạng và nội dung cache (cached content) dựa trên hiện trạng kết nối, cho một trải nghiệm ngoại tuyết không gián đoạn và trong kiểm soát.
 
-[Plugin Gatsby ngoại tuyến](/packages/gatsby-plugin-offline/) giúp website Gatsby có thể hoạt động ngoại tuyến và trở nên trơn tru hơn khi gặp kết nối kém bằng cách tạo một máy chủ ủy nhiệm cho trang web của bạn.
+[Plugin Gatsby ngoại tuyến](/packages/gatsby-plugin-offline/) giúp trang web Gatsby có thể hoạt động ngoại tuyến và trở nên trơn tru hơn khi gặp kết nối kém bằng cách tạo một máy chủ ủy nhiệm cho trang web của bạn.
 
 ### ✋ Sử dụng `gatsby-plugin-offline`
 
@@ -140,13 +140,13 @@ npm install --save gatsby-plugin-offline
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Bật thông báo "Thêm vào màn hình chính" và ngắt UI của trình duyệt (bao gồm cả núi lùi vè) 
-        // Xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button) 
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
-    // Tô màu dòng kế tiếp
+    // highlight-next-line
     `gatsby-plugin-offline`,
   ]
 }
@@ -160,7 +160,7 @@ npm install --save gatsby-plugin-offline
 
 Thêm siêu dữ liệu vào trang (ví dụ như tiêu đề hoặc miêu tả) là chìa khóa giúp cho các công cụ tìm kiếm như Google hiểu được nội dung của bạn và quyết định khi nào nó sẽ trồi lên trong kết quả tìm kiếm.
 
-[Mũ bảo hiểm React (React Helmet)](https://github.com/nfl/react-helmet) là một gói cung cấp giao diện hợp phần React (React component interface) giúp bạn quản lý [tựa đề trang](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+[Mũ bảo hiểm React (React Helmet)](https://github.com/nfl/react-helmet) là một gói cung cấp giao diện component React (React component interface) giúp bạn quản lý [tựa đề trang](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
 [Plugin mũ bảo hiểm react (react helmet plugin)](/packages/gatsby-plugin-react-helmet/) của Gatsby cung cấp hỗ trợ nhanh cho dữ liệu kết xuất đồ họa máy chủ (server rendering data) cùng với Mũ bảo hiểm React. Thông qua plugin này, những thuộc tính bạn thêm vào Mũ bảo hiểm React cũng sẽ được thêm vào các trang HTML tĩnh được xây bằng Gatsby.
 
@@ -178,10 +178,10 @@ npm install --save gatsby-plugin-react-helmet react-helmet
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
-    // Đánh dấu bắt đầu
+    // highlight-start
     description: `A simple description about pandas eating lots...`,
     author: `gatsbyjs`,
-    // Đánh dấu kết thúc
+    // highlight-end
   },
   plugins: [
     {
@@ -192,14 +192,14 @@ module.exports = {
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Bật thông báo "Thêm vào màn hình chính" và ngắt UI của trình duyệt (bao gồm cả núi lùi vè) 
-        // Xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
-    // Tô mày dòng tiếp theo
+    // highlight-next-line
     `gatsby-plugin-react-helmet`,
   ],
 }
@@ -291,9 +291,9 @@ SEO.propTypes = {
 export default SEO
 ```
 
-Dòng code trên thiết lập mặc định cho các thẻ siêu dữ liệu (metadata tags) phổ biên nhất và cung cấp cho bạn một hợp phần `<SEO>` để làm việc cùng xuyên suốt dự án. Rất tiện dụng, phải không?
+Dòng code trên thiết lập mặc định cho các thẻ siêu dữ liệu (metadata tags) phổ biên nhất và cung cấp cho bạn một component `<SEO>` để làm việc cùng xuyên suốt dự án. Rất tiện dụng, phải không?
 
-4.  Ngay bây giờ, bạn có thể dùng hợp phần `<SEO>` trong các bố cục mẫu và trang web và chuyển các đặc tính qua cho nó. Ví dụ, bạn thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
+4.  Ngay bây giờ, bạn có thể dùng component `<SEO>` trong các bố cục mẫu và trang web và chuyển các đặc tính qua cho nó. Ví dụ, bạn thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -331,11 +331,11 @@ export const query = graphql`
 `
 ```
 
-Ví dụ trên dựa vào [Blog về Gatsby cho lính mới](/starters/gatsbyjs/gatsby-starter-blog/). Bằng cách chuyển các đặc tính sang cho hợp phần `<SEO>`, bạn có thể thay đổi siêu dữ liệu của một bài đăng một cách linh động. Trong trường hợp này, `title` và `excerpt` của bài đăng (nếu nó có tồn tại trong tập tin markdown của bài) sẽ được dung thay cho đặc tính mặc định là `siteMetadata` trong tập tin `gatsby-config.js`.
+Ví dụ trên dựa vào [Blog về Gatsby cho lính mới](/starters/gatsbyjs/gatsby-starter-blog/). Bằng cách chuyển các đặc tính sang cho component `<SEO>`, bạn có thể thay đổi siêu dữ liệu của một bài đăng một cách linh động. Trong trường hợp này, `title` và `excerpt` của bài đăng (nếu nó có tồn tại trong tập tin markdown của bài) sẽ được dung thay cho đặc tính mặc định là `siteMetadata` trong tập tin `gatsby-config.js`.
 
 Ngay bây giờ, nếu bạn chạy kiểm toán Lighthouse một lần nữa như đã được hướng dẫn trước đó, bạn sẽ gần như đạt được--thậm chí có thể đạt được cả-- 100 điểm!
 
-> 💡 Để tìm thêm thông tin và các ví dụ, tham khảo [Thêm một hợp phần SEO](/docs/add-seo-component/) và [Tài liệu về Mũ bảo hiểm React](https://github.com/nfl/react-helmet#example)!
+> 💡 Để tìm thêm thông tin và các ví dụ, tham khảo [Thêm một component SEO](/docs/add-seo-component/) và [Tài liệu về Mũ bảo hiểm React](https://github.com/nfl/react-helmet#example)!
 
 ## Không ngừng tiến bộ
 
@@ -357,7 +357,7 @@ Lighthouse là một công cụ tuyệt vời cho các cải tiến website và 
 
 1.  [Tài liệu Gatsby mặc định cho người mới học](https://github.com/gatsbyjs/gatsby-starter-default): Bắt tay ngay vào dự án của bạn với bộ tài liệu về boiletplate mặc định này. Bộ sườn này đã bao gồm các tập tin tinh chỉnh Gatsby cần thiết cho bạn. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-default/)_
 2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời ông mặt trời và nhanh chơp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới nhưng đã được tối giản vừa đủ để xây một website Gatsby. _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
+3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới nhưng đã được tối giản vừa đủ để xây một trang web Gatsby. _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
 ## Chỉ vậy thôi, các bằng hữu
 
