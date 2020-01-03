@@ -4,11 +4,11 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> Bài hướng dẫn này nằm trong loạt bài hướng dẫn về lớp dữ liệu của Gatsby. Hãy bảo đảm rằng bạn đã thông qua [phần 4](/tutorial/part-four/) trước khi tiếp tục ở đây.
+> Bài hướng dẫn này là một phần trong chuỗi bài về lớp dữ liệu của Gatsby. Hãy bảo đảm rằng bạn đã thông qua [phần 4](/tutorial/part-four/) trước khi tiếp tục ở đây.
 
-## Có gì trong bài hướng dẫn này?
+## Bài hướng dẫn này có những gì?
 
-Trong mục hướng dẫn này, bạn sẽ học về cách kéo dữ liệu vào trong trang web Gatsby của bạn sử dụng GraphQL và các plugin nguồn (source plugin). Tuy nhiên, trước khi bạn học về những plugin này, bạn sẽ muốn biết về cách sử dụng một thứ gọi là GraphiQL, một công cụ hỗ trợ bạn cấu trúc nên những câu truy vấn của bạn một cách đúng đắn.
+Trong mục hướng dẫn này, bạn sẽ học về cách kéo dữ liệu vào trong trang web Gatsby của bạn sử dụng GraphQL và các source plugin. Tuy nhiên, trước khi bạn học về những plugin này, bạn sẽ muốn biết về cách sử dụng một thứ gọi là GraphiQL, một công cụ hỗ trợ bạn cấu trúc nên những câu truy vấn của bạn một cách đúng đắn.
 
 ## Giới thiệu GraphiQL
 
@@ -33,11 +33,11 @@ GraphiQL Explorer cho phép bạn xây dựng những truy vần hoàn thiện m
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## Những plugin nguồn
+## Các source plugin
 
 Dữ liệu trong những trang web Gatsby có thể đến từ bất kì nơi nào: APIs, cơ sở dữ liệu (databases), CMSs, những tập tin tại chỗ, vâng vâng.
 
-Những plugin nguồn (source plugin) lấy dữ liệu từ nguồn của chúng. Ví dụ, plugin nguồn filesystem biết làm cách nào để lấy dữ liệu từ hệ thống tập tin. Plugin WordPress biết làm cách nào để lấy dữ liệu từ WordPress API.
+Những source plugin lấy dữ liệu từ nguồn của chúng. Ví dụ, source plugin filesystem biết làm cách nào để lấy dữ liệu từ hệ thống tập tin. Plugin WordPress biết làm cách nào để lấy dữ liệu từ WordPress API.
 
 Hãy thêm [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) vào và khám phá cách hoạt động của nó.
 
@@ -215,4 +215,4 @@ Và bây giờ dẫn tới [http://localhost:8000/my-files](http://localhost:800
 
 ## Tiếp theo là gì?
 
-Hiện tại bạn đã được học cách thức những source plugin mang dữ liệu _vào_ hệ thống dữ liệu của Gatsby. Trong hướng dẫn tiếp theo, bạn sẽ được học cách thức những transformer plugin _biến đổi_ nội dung thô được truyển tải bởi các source plugin. Sự kết hợp giữa các source plugin và các transformer plugin có thể xử lý mọi cung ứng dữ liệu và chuyển đội dữ liệu mà bạn cần khi xây dựng một trang web Gatsby. Tìm hiểu về những transformer plugin tại [phần 6 của hướng dẫn](/tutorial/part-six/).
+Hiện tại bạn đã được học cách thức những source plugin mang dữ liệu _vào_ hệ thống dữ liệu của Gatsby. Trong hướng dẫn tiếp theo, bạn sẽ được học cách thức những transformer plugin _biến đổi_ nội dung thô được truyển tải bởi các source plugin. Sự kết hợp giữa các source plugin và các transformer plugin có thể xử lý mọi sự cung ứng dữ liệu và chuyển đội dữ liệu mà bạn cần khi xây dựng một trang web Gatsby. Tìm hiểu về những transformer plugin tại [phần 6 của hướng dẫn](/tutorial/part-six/).
