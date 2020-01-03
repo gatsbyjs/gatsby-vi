@@ -9,10 +9,10 @@ Chào mừng đến với Gatsby! Chúng tôi rất vui mừng vì bạn đang �
 
 ## Gatsby căn bản
 
-0.  [Cài đặt môi trường làm việc](/tutorial/part-zero/): Chúng tôi sẽ giới thiệu với bạn về công nghệ cốt lõi mà mang lại sức mạnh cho Gatsby và hướng dẫn bạn cài đặt môi trường làm việc.
-1.  [Làm quen với các thành phần trong Gatsby](/tutorial/part-one/): Bắt đầu một project mới, phát triển và triển khai các trang web.
-1.  [Giới thiệu về cách sử dụng CSS trong Gatsby](/tutorial/part-two/): Khám phá các thư viện như Typography.js và CSS Modules.
-1.  [Xây dựng layout lồng nhau trong Gatsby](/tutorial/part-three/): Layout (bố cục) là các phần của trang web mà bạn có thể tái sử dụng ở nhiều trang khác như tiêu dề và cuối trang.
+0. [Thiết lập môi trường phát triển](/tutorial/part-zero/): Chúng tôi sẽ giới thiệu với bạn về công nghệ cốt lõi mà mang lại sức mạnh cho Gatsby và hướng dẫn bạn cài đặt môi trường làm việc.
+1. [Làm quen với các thành phần cấu tạo của Gatsby](/tutorial/part-one/): Bắt đầu một project mới, phát triển và triển khai các trang web.
+1. [Giới thiệu về cách sử dụng CSS trong Gatsby](/tutorial/part-two/): Khám phá các thư viện như Typography.js và CSS Modules.
+1. [Xây dựng layout lồng nhau trong Gatsby](/tutorial/part-three/): Layout (bố cục) là các phần của trang web mà bạn có thể tái sử dụng ở nhiều trang khác như tiêu dề và cuối trang.
 
 ## Hướng dẫn trung cấp
 
