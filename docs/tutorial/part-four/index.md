@@ -1,106 +1,106 @@
 ---
-title: Data in Gatsby
+title: Dữ liệu trong Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to Part Four of the tutorial! Halfway through! Hope things are starting
-to feel pretty comfortable 😀
+Chào mừng đến Phần Bốn của bản hướng dẫn! Nửa đoạn đường rồi! Hi vọng mọi thứ đang trở
+nên thoải mái hơn 😀
 
-## Recap of the first half of the tutorial
+## Nhắc lại vắn tắt nửa đầu của phần hướng dẫn
 
-So far, you've been learning how to use React.js—how powerful it is to be able to
-create your _own_ components to act as custom building blocks for websites.
+Cho đến giờ, bạn đã học qua cách sử dụng React.js—và công cụ này mạnh mẽ như thế này khi bạn có thể dùng nó để
+tạo nên những component của _chính bạn_ hoạt động như những khối cấu tạo tùy chỉnh cho những trang web.
 
-You’ve also explored styling components using CSS Modules.
+Bạn cũng đã khám phá việc tạo kiểu cho các component bằng CSS Modules.
 
-## What's in this tutorial?
+## Bài hướng dẫn này có những gì?
 
-In the next four parts of the tutorial (including this one), you'll be diving into the Gatsby data layer, which is a powerful feature of Gatsby that lets you easily build sites from Markdown, WordPress, headless CMSs, and other data sources of all flavors.
+Trong bốn phần tiếp theo của hướng dẫn (bao gồm cả phần này), bạn sẽ đi sâu vào lớp dữ liệu của Gatsby, một tính năng mạnh mẽ của Gatsby cho phép bạn dễ dàng xây dựng trang web từ Markdown, WordPress, headless CMSs, và tất cả những nguồn dữ liệu khác từ tất cả các loại.
 
-**NOTE:** Gatsby’s data layer is powered by GraphQL. For an in-depth tutorial on
-GraphQL, we recommend [How to GraphQL](https://www.howtographql.com/).
+**LƯU Ý:** Lớp dữ liệu của Gatsby được hỗ trợ bởi GraphQL. Để được hướng dẫn sâu hơn về
+GraphQL, chúng tôi khuyến cáo bạn xem qua [Cách dùng GraphQL](https://www.howtographql.com/).
 
-## Data in Gatsby
+## Dữ liệu trong Gatsby
 
-A website has four parts: HTML, CSS, JS, and data. The first half of the
-tutorial focused on the first three. Now let’s learn how to use data in Gatsby
-sites.
+Một trang web bao gồm bốn phần: HTML, CSS, JS, và dữ liệu. Nửa phần đầu của
+phần hướng dẫn đã tập trung vào ba phần đầu tiên. Bây giờ chúng ta sẽ học làm thế nào để vận dụng dữ liệu trong
+những trang web Gatsby.
 
-**What is data?**
+**Dữ liệu là gì?**
 
-A very computer science-y answer would be: data is things like `"strings"`,
-integers (`42`), objects (`{ pizza: true }`), etc.
+Một câu trả lời rất chuyên môn trong khoa học máy tính sẽ là: dữ liệu là những thứ như `"strings"`,
+số nguyên (`42`), đối tượng (objects) (`{ pizza: true }`), vân vân.
 
-For the purpose of working in Gatsby, however, a more useful answer is
-"everything that lives outside a React component".
+Tuy nhiên, nhằm mục địch làm việc với Gatsby, một câu trả lời hữu ích hơn là
+"tất cả những gì tồn tại bên ngoài một React component".
 
-So far, you've been writing text and adding images _directly_ in components.
-Which is an _excellent_ way to build many websites. But, often you want to store
-data _outside_ components and then bring the data _into_ the component as
-needed.
+Đến bây giờ, bạn đã viết văn bản và thêm hình ảnh _trực tiếp_ vào những component.
+Đó là một cách _tuyệt vời_ để tạo dựng nhiều trang web. Thế nhưng, thường bạn sẽ muốn lưu trữ
+dữ liệu _bên ngoài_ các component và sau đó mới mang dữ liệu _vào trong_ compoennt khi
+cần.
 
-If you're building a site with WordPress (so other contributors
-have a nice interface for adding & maintaining content) and Gatsby, the _data_
-for the site (pages and posts) are in WordPress and you _pull_ that data, as
-needed, into your components.
+Nếu bạn đang xây dựng một trang web với WordPress (để những người đóng góp khác
+có một giao diện đẹp mắt để thêm và bảo trì nội dung) và Gatsby, _dữ liệu_
+cho trang web (các trang và các bài đăng) đều trong WordPress và bạn _kéo_ dữ liệu đó, khi
+cần, vào trong component của bạn.
 
-Data can also live in file types like Markdown, CSV, etc. as well as databases
-and APIs of all sorts.
+Dữ liệu cũng có thể tồn tại trong định dạng tập tin như Markdown, CSV, v.v.
+cũng như các cơ sở dữ liệu và mọi loại API.
 
-**Gatsby's data layer lets you pull data from these (and any other source)
-directly into your components**—in the shape and form you want.
+**Lớp dữ liệu của Gatsby cho phép bạn kéo dữ liệu từ các nguồn này (và bất cứ một nguồn nào khác)
+trực tiếp vào các component của bạn**—trong hình và dạng mà bạn mong muốn.
 
-## Using Unstructured Data vs GraphQL
+## Sử dụng Dữ Liệu Phi Cấu Trúc so với GraphQL
 
-### Do I have to use GraphQL and source plugins to pull data into Gatsby sites?
+### Tôi có cần phải dùng GraphQL và các source plugin đế kéo dữ liệu vào các trang web Gatsby không?
 
-Absolutely not! You can use the node `createPages` API to pull unstructured data into Gatsby pages directly, rather than through the GraphQL data layer. This is a great choice for small sites, while GraphQL and source plugins can help save time with more complex sites.
+Hoàn toàn không! Bạn có thể dùng node API `createPages` để kéo dữ liệu phi cấu trúc trực tiếp vào những trang Gatsby, thay vì thông qua lớp dữ liệu GraphQL. Đây là lựa chọn tuyệt vời cho những trang web nhỏ, trong khi GraphQL và những source plugin có thể giúp tiết kiệm thời gian với những trang web phức tạp hơn.
 
-See the [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/) guide to learn how to pull data into your Gatsby site using the node `createPages` API and to see an example site!
+Hãy xem qua hướng dẫn [Sử dụng Gatsby mà không cần GraphQL](/docs/using-gatsby-without-graphql/) để học cách kéo dữ liệu vào trang web Gatsby của bạn bằng cách sử dụng node API `createPages` và được thấy một trang web ví dụ!
 
-### When do I use unstructured data vs GraphQL?
+### Khi nào tôi cần dùng dữ liệu phi cấu trúc hay là GraphQL?
 
-If you're building a small site, one efficient way to build it is to pull in unstructured data as outlined in this guide, using `createPages` API, and then if the site becomes more complex later on, you move on to building more complex sites, or you'd like to transform your data, follow these steps:
+Nếu bạn đang xây dựng một trang web nhỏ, một cách hiệu quả để tạo là kéo dữ liệu phi cấu trúc vào như được bày ra trong chỉ dẫn này, bằng API `createPages`, và nếu trang web trở nên phức tạp hơn sau này, bạn tiến đến xây dựng những trang web phức tạp hơn, hoặc bạn muốn biến đổi dữ liệu của bạn, hãy làm theo các bước sau:
 
-1.  Check out the [Plugin Library](/plugins/) to see if the source plugins and/or transformer plugins you'd like to use already exist
-2.  If they don't exist, read the [Plugin Authoring](/docs/creating-plugins/) guide and consider building your own!
+1. Xem qua [Thư viện Plugin](/plugins/) để xem nếu các source plugin và/hoặc transformer plugin mà bạn muốn sử dụng đã tồn tại hay chưa
+2. Nếu chúng không tồn tại, hãy đọc hướng dẫn [Biên soạn Plugin](/docs/creating-plugins/) và cân nhắc việc tự tạo riêng cho bạn!
 
-### How Gatsby's data layer uses GraphQL to pull data into components
+### Cách lớp dữ liệu của Gatsby dùng GraphQL để kéo dữ liệu vào các component
 
-There are many options for loading data into React components. One of the most
-popular and powerful of these is a technology called
+Có rất nhiều lựa chọn để tải dữ liệu vào các React component. Một trong những cách
+phổ biến và mạnh mẽ nhất là một công nghệ gọi là
 [GraphQL](http://graphql.org/).
 
-GraphQL was invented at Facebook to help product engineers _pull_ needed data into
-components.
+GraphQL được phát minh bởi Facebook để giúp các kỹ sư sản phẩm _kéo_ dữ liệu cần thiết vào
+những component.
 
-GraphQL is a **q**uery **l**anguage (the _QL_ part of its name). If you're
-familiar with SQL, it works in a very similar way. Using a special syntax, you describe
-the data you want in your component and then that data is given
-to you.
+GraphQL là một ngôn ngữ truy vấn (**q**uery **l**anguage, _QL_ là một phần của tên nó). Nếu bạn
+quen thuộc với SQL, ngôn ngữ này hoạt động một cách tương tự vậy. Bằng cách sử dụng một cú pháp đặc biệt, bạn mô tả
+dữ liệu mà bạn muốn trong component của bạn và dữ liệu đó sẽ được đưa
+đến bạn.
 
-Gatsby uses GraphQL to enable components to declare the data they need.
+Gatsby vận dụng GraphQL để cho phép các component khai báo dữ liệu mà nó cần.
 
-## Create a new example site
+## Tạo một trang web ví dụ mới
 
-Create another new site for this part of the tutorial. You're going to build a Markdown blog called "Pandas Eating Lots". It's dedicated to showing off the best pictures and videos of pandas eating lots of food. Along the way, you'll be dipping your toes into GraphQL and Gatsby's Markdown support.
+Hãy tạo một trang web mới cho phần hướng dẫn này. Bạn sẽ tạo một trang blog Markdown gọi là "Pandas Eating Lots". Trang blog này sẽ tập trung vào trình bày những bức ảnh và video tuyệt nhất của những chú gấu trúc đang ăn rất nhiều thức ăn. Trong quá trình tạo, bạn sẽ được va chạm với GraphQL và khả năng hỗ trợ Markdown của Gatsby.
 
-Open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-four`. Then navigate to the new directory:
+Hãy mở một cửa sổ terminal mới và chạy những dòng lệnh sau để tạo một trang web Gatsby mới trong một thư mục gọi là `tutorial-part-four`. Sau đó điều hướng tới thư mục mới đó:
 
 ```shell
 gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-four
 ```
 
-Then install some other needed dependencies at the root of the project. You'll use the Typography theme
-"Kirkham", and you'll try out a CSS-in-JS library, ["Emotion"](https://emotion.sh/):
+Tiếp theo hãy cài đặt vài thành phần phụ thuộc (dependencies) cần thiết khác tại thư mục gốc của dự án. Bạn sẽ dùng Kiểu chữ với chủ đề
+"Kirkham", và bạn sẽ thử qua một thư viện CSS-trong-JS, ["Emotion"](https://emotion.sh/):
 
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
 
-Set up a site similar to what you ended with in [Part Three](/tutorial/part-three). This site will have a layout component and two page components:
+Thiết lập một trang web tương tự với những gì bạn có khi dừng lại ở [Phần Ba](/tutorial/part-three). Trang web này sẽ có một component bố cục và hai component trang:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -184,7 +184,7 @@ export default typography
 export const rhythm = typography.rhythm
 ```
 
-`gatsby-config.js` (must be in the root of your project, not under src)
+`gatsby-config.js` (cần phải nằm trong thư mục gốc của dự án của bạn, không được dưới src)
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -200,21 +200,21 @@ module.exports = {
 }
 ```
 
-Add the above files and then run `gatsby develop`, per usual, and you should see the following:
+Hãy thêm những tập tin trên rồi chạy lệnh `gatsby develop`, như thường lệ, và bạn sẽ nhìn thấy như sau:
 
-![start](start.png)
+![bắt đầu](start.png)
 
-You have another small site with a layout and two pages.
+Bạn đã có thêm một trang web nhỏ với 1 bố cục và 2 trang.
 
-Now you can start querying 😋
+Bây giờ bạn có thể bắt đầu truy vấn 😋
 
-## Your first GraphQL query
+## Truy vấn GraphQL đầu tiên của Bạn
 
-When building sites, you'll probably want to reuse common bits of data -- like the _site title_ for example. Look at the `/about/` page. You'll notice that you have the site title (`Pandas Eating Lots`) in both the layout component (the site header) as well as in the `<h1 />` of the `about.js` page (the page header).
+Khi tạo trang web, có thể bạn sẽ muốn tái sử dụng những mẩu dư liệu dùng chung -- như _tiêu đề của trang web_ chẳng hạn. Hãy nhìn vào trang `/about/`. Bạn sẽ để ý rằng bạn có tiêu đề của trang web (`Pandas Eating Lots`) trong cả component bố cục (header của cả trang web) cũng như trong `<h1 />` của trang `about.js` (header riêng của trang).
 
-But what if you want to change the site title in the future? You'd have to search for the title across all your components and edit each instance. This is both cumbersome and error-prone, especially for larger, more complex sites. Instead, you can store the title in one location and reference that location from other files; change the title in a single place, and Gatsby will _pull_ your updated title into files that reference it.
+Nếu nhưng bạn muốn thay đổi tiêu đề của trang web trong tương lai thì sao? Bạn sẽ phải tìm dòng tiêu đề trong khắp mọi component và chỉnh sửa từng trường hợp một. Việc này cực bất tiện và dễ dính lỗi, đặc biệt đối với những trang web lớn hơn, phức tạp hơn. Thay vì thế, bạn có thể lưu trữ tiêu đề tại một vị trí và trỏ đến vị trí đó từ các file khác; thay đổi tiêu đề tại một nơi duy nhất, và Gatsby sẽ _kéo_ tiêu đề đã được thay đổi của bạn vào trong những file được liên kết với tiêu đề đó.
 
-The place for these common bits of data is the `siteMetadata` object in the `gatsby-config.js` file. Add your site title to the `gatsby-config.js` file:
+Nơi để lưu trữ những mẩu dữ liệu chung này là đối tượng `siteMetadata` trong file `gatsby-config.js`. Hãy thêm tiêu đề trang web của bạn vào file `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -235,11 +235,11 @@ module.exports = {
 }
 ```
 
-Restart the development server.
+Hãy khởi động lại máy chủ phát triển.
 
-### Use a page query
+### Sử dụng truy vấn trang
 
-Now the site title is available to be queried; Add it to the `about.js` file using a [page query](/docs/page-query):
+Bây giờ tiêu đề trang web đã sẵn sàng để được truy vấn; Hãy thêm nó vào file `about.js` bằng [truy vấn trang](/docs/page-query):
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -270,11 +270,11 @@ export const query = graphql`
 // highlight-end
 ```
 
-It worked! 🎉
+Thành công rồi! 🎉
 
-![Page title pulling from siteMetadata](site-metadata-title.png)
+![Tiêu đề của trang được kéo từ siteMetadata](site-metadata-title.png)
 
-The basic GraphQL query that retrieves the `title` in your `about.js` changes above is:
+Câu truy vấn GraphQL cơ bản thu hồi `tiêu đề` trong `about.js` đã thay đổi là:
 
 ```graphql:title=src/pages/about.js
 {
@@ -286,16 +286,16 @@ The basic GraphQL query that retrieves the `title` in your `about.js` changes ab
 }
 ```
 
-> 💡 In [part five](/tutorial/part-five/#introducing-graphiql), you'll meet a tool that lets us interactively explore the data available through GraphQL, and help formulate queries like the one above.
+> 💡 Trong [phần năm](/tutorial/part-five/#introducing-graphiql), bạn sẽ gặp một công cụ cho phép chúng ta khám phá và tương tác với dữ liệu sẵn có thông qua GraphQL, và giúp hình thành nên những câu truy vấn giống như ở trên.
 
-Page queries live outside of the component definition -- by convention at the end of a page component file -- and are only available on page components.
+Các câu truy vấn trang tồn tại bên ngoài định nghĩa của component -- theo quy ước là ở cuối tập tin chứa component trang -- và chỉ có trong các component trang.
 
-### Use a StaticQuery
+### Sử dụng StaticQuery
 
-[StaticQuery](/docs/static-query/) is a new API introduced in Gatsby v2 that allows non-page components (like your `layout.js` component), to retrieve data via GraphQL queries.
-Let's use its newly introduced hook version — [`useStaticQuery`](/docs/use-static-query/).
+[StaticQuery](/docs/static-query/) là một API mới được giới thiệu trong Gatsby v2 cho phép các component không-phải-trang (như component `layout.js` của bạn), thu dữ liệu thông qua các câu truy vấn GraphQL.
+Hãy dùng phiên bản hook mới được được giới thiệu — [`useStaticQuery`](/docs/use-static-query/).
 
-Go ahead and make some changes to your `src/components/layout.js` file to use the `useStaticQuery` hook and a `{data.site.siteMetadata.title}` reference that uses this data. When you are done, your file will look like this:
+Hãy thực hiện một vài thay đổi trong file `src/components/layout.js` của bạn để có thể dùng hook `useStaticQuery` và đề cập đến `{data.site.siteMetadata.title}` sử dụng dữ liệu này. Khi bạn đã hoàn thành thay đổi, file của bạn sẽ trông giống như thế này:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -354,26 +354,26 @@ export default ({ children }) => {
 // highlight-end
 ```
 
-Another success! 🎉
+Thêm một thành công nữa! 🎉
 
-![Page title and layout title both pulling from siteMetadata](site-metadata-two-titles.png)
+![Tiêu đề trang và tiêu đề bố cục đều được kéo từ siteMetadata](site-metadata-two-titles.png)
 
-Why use two different queries here? These examples were quick introductions to
-the query types, how they are formatted, and where they can be used. For now,
-keep in mind that only pages can make page queries. Non-page components, such as
-Layout, can use StaticQuery. [Part 7](/tutorial/part-seven/) of the tutorial explains these in greater
-depth.
+Vì sao lại dùng hai câu truy vấn khác nhau ở đây? Những ví dụ này là giới thiệu nhanh cho
+các dạng truy vấn, cách chúng được định dạng, và nơi chúng được vận dụng. Hiện tại,
+hãy ghi nhớ rằng chỉ trang mới có thể tạo câu truy vấn trang. Các component không-phải-trang, như
+Layout, có thể sử dụng StaticQuery. [Phần 7](/tutorial/part-seven/) của hướng dẫn này sẽ giải thích về các dạng truy vấn
+ở mức độ sâu hơn.
 
-But let's restore the real title.
+Nhưng hãy khôi phục lại tiêu đề thật sự.
 
-One of the core principles of Gatsby is that _creators need an immediate connection to what they're creating_ ([hat tip to Bret Victor](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). In other words, when you make any change to code you should immediately see the effect of that change. You manipulate an input of Gatsby and you see the new output showing up on the screen.
+Một trong những nghuyên tắc cốt lõi của Gatsby đó là _những nhà sáng tạo cần một kết nối trực tiếp với những gì họ đang tạo nên_ ([ngã mũ thán phục với Bret Victor](http://blog.ezyang.com/2012/02/transcript-of-inventing-on-principle/)). Nói cách khác, khi bạn thực hiện thay đổi trong code, bạn nên ngay lập tức thấy được hiệu ứng của thay đổi đó. Bạn điều khiển đầu vào của Gatsby và bạn thấy được đầu ra mới hiện lên trên màn hình.
 
-So almost everywhere, changes you make will immediately take effect. Edit the `gatsby-config.js` file again, this time changing the `title` back to "Pandas Eating Lots". The change should show up very quickly in your site pages.
+Nên hầu hết mọi nơi, những thay đổi bạn tạo ra sẽ lập tức có hiệu lực. Hãy sửa file `gatsby-config.js` lần nữa, lần này đổi `title` trở lại thành "Pandas Eating Lots". Sự thay đổi sẽ hiện lên rất nhanh trong các trang web của bạn.
 
-![Both titles say Pandas Eating Lots](pandas-eating-lots-titles.png)
+![Cả hai tiêu đề đều hiện Pandas Eating Lots](pandas-eating-lots-titles.png)
 
-## What's coming next?
+## Tiếp theo là gì?
 
-Next, you'll be learning about how to pull data into your Gatsby site using
-GraphQL with source plugins in [part five](/tutorial/part-five/) of the
-tutorial.
+Tiếp đến, bạn sẽ học về cách kéo dữ liệu vào trang web Gatsby của bạn bằng cách sử dụng
+GraphQL với những source plugin trong [phần năm](/tutorial/part-five/) của
+hướng dẫn.
