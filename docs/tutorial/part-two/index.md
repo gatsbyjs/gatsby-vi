@@ -1,5 +1,5 @@
 ---
-Tiêu đề: Giới thiệu về cách sử dụng CSS trong Gatsby 
+title: Giới thiệu về cách sử dụng CSS trong Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -18,15 +18,15 @@ Chào mừng bạn đến với phần hai của trương mục hướng dẫn v
 
 ## Hướng dẫn này sẽ nói về điều gì?
 
-Trong phần này, các bạn sẽ được tìm hiểu về những lựa chọn nhằm tạo kiểu các trang web Gatsby và hiểu sâu hơn về sử dụng React components trong việc xây dựng các trang web.   
+Trong phần này, các bạn sẽ được tìm hiểu về những lựa chọn nhằm tạo kiểu các trang web Gatsby và hiểu sâu hơn về sử dụng React components trong việc xây dựng các trang web.
 
 ## Sử dụng tạo kiểu toàn cục
 
-Mỗi trang web đều có một tạo kiểu toàn cục. Chúng bao gồm những đặc trưng như kiểu chữ và tông màu nền. Các kiểu mẫu này đặt ra góc nhìn tổng thể về trang web - giống như là màu và kết cấu của một bức tường cho góc nhìn tổng thể về một căn phòng.  
+Mỗi trang web đều có một tạo kiểu toàn cục. Chúng bao gồm những đặc trưng như kiểu chữ và tông màu nền. Các kiểu mẫu này đặt ra góc nhìn tổng thể về trang web - giống như là màu và kết cấu của một bức tường cho góc nhìn tổng thể về một căn phòng.
 
 ### Tạo ra những định dạng toàn cục với các tập tin CSS tiêu chuẩn
 
-Một trong những cách trực tiếp nhất để thêm tạo kiểu toàn cục là sử dụng một bản định kiểu (stylesheet) `.css` toàn cục 
+Một trong những cách trực tiếp nhất để thêm tạo kiểu toàn cục là sử dụng một bản định kiểu (stylesheet) `.css` toàn cục
 
 #### ✋ Tạo một trang web Gatsby mới
 
@@ -255,7 +255,7 @@ Mã lệnh `console.log(styles)` sẽ in kết quả của việc nhúng tập t
 Nếu bạn so sánh với tập tin CSS của mình, bạn sẽ thấy mỗi class bây giờ là một trường (key) bên trong đối tượng được nh1ung và mỗi trường chỉ đến một chuỗi kí tự dài. Ví dụ `avatar` chỉ đến `src-pages----about-css-modules-module---avatar---2lRF7`. Những trường này là những tên class mà CSS Modules tạo ra. Chúng được bảo đảm về sự duy nhất xuyên suốt trang web của bạn. Và vì bạn nhúng các tập tin này để sử dụng các class, cho nên sẽ không có thắc mắc về vị trí sử dụng của một số CSS.
 
 4. Tạo một inline component mới gọi là `<User />` bên trong trang `about-css-modules.js`.
-Điều chỉnh `about-css-modules.js` sao cho giống như sau:
+   Điều chỉnh `about-css-modules.js` sao cho giống như sau:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"
