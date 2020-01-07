@@ -192,10 +192,10 @@ module.exports = {
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Để kính hoạt bản thông báo "Add to Homescreen" vô hiệu hóa UI của trình duyệt (bao gồm nút back)
+        // hãy xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // Đường dẫn này là tương đối so với thư mục gốc của trang web
       },
     },
     `gatsby-plugin-offline`,
@@ -205,7 +205,7 @@ module.exports = {
 }
 ```
 
-3. Bên trong thư mục `src/components`, tạo một tệp tin mới tên `seo.js` và thêm những dòng sau:
+3. Bên trong thư mục `src/components`, tạo một tệp tin mới tên `seo.js` và thêm những thứ sau:
 
 ```jsx:title=src/components/seo.js
 import React from "react"
@@ -291,9 +291,9 @@ SEO.propTypes = {
 export default SEO
 ```
 
-Dòng code trên thiết lập mặc định cho các thẻ siêu dữ liệu (metadata tags) phổ biên nhất và cung cấp cho bạn một component `<SEO>` để làm việc cùng xuyên suốt dự án. Rất tiện dụng, phải không?
+Những dòng lệnh trên thiết lập các mặc định cho các thẻ siêu dữ liệu phổ biên nhất và cung cấp cho bạn một component `<SEO>` để làm việc cùng xuyên suốt dự án. Rất hay, phải không?
 
-4.  Ngay bây giờ, bạn có thể dùng component `<SEO>` trong các bố cục mẫu và trang web và chuyển các đặc tính qua cho nó. Ví dụ, bạn thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
+4.  Bây giờ, bạn có thể dùng component `<SEO>` trong các bố cục mẫu và các trang web và chuyển các đặc tính qua cho nó. Ví dụ, thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -331,17 +331,17 @@ export const query = graphql`
 `
 ```
 
-Ví dụ trên dựa vào [Blog về Gatsby cho lính mới](/starters/gatsbyjs/gatsby-starter-blog/). Bằng cách chuyển các đặc tính sang cho component `<SEO>`, bạn có thể thay đổi siêu dữ liệu của một bài đăng một cách linh động. Trong trường hợp này, `title` và `excerpt` của bài đăng (nếu nó có tồn tại trong tập tin markdown của bài) sẽ được dung thay cho đặc tính mặc định là `siteMetadata` trong tập tin `gatsby-config.js`.
+Ví dụ trên dựa vào [Blog về Gatsby cho người mới](/starters/gatsbyjs/gatsby-starter-blog/). Bằng cách chuyển các đặc tính sang cho component `<SEO>`, bạn có thể thay đổi siêu dữ liệu của một bài đăng một cách linh hoạt. Trong trường hợp này, `title` và `excerpt` của bài đăng (nếu nó tồn tại trong tập tin markdown của bài đăng) sẽ được dung thay cho đặc tính mặc định là `siteMetadata` trong tập tin `gatsby-config.js`.
 
-Ngay bây giờ, nếu bạn chạy kiểm toán Lighthouse một lần nữa như đã được hướng dẫn trước đó, bạn sẽ gần như đạt được--thậm chí có thể đạt được cả-- 100 điểm!
+Bây giờ, nếu bạn chạy đánh giá Lighthouse một lần nữa như đã được hướng dẫn trước đó, bạn sẽ gần như đạt được--nếu không phải là hoàn hảo-- 100 điểm!
 
 > 💡 Để tìm thêm thông tin và các ví dụ, tham khảo [Thêm một component SEO](/docs/add-seo-component/) và [Tài liệu về Mũ bảo hiểm React](https://github.com/nfl/react-helmet#example)!
 
 ## Không ngừng tiến bộ
 
-Trong chương này, chúng tôi đã cho bạn biết qua một vài công cụ chuyên dụng cho Gatsby để giúp cải thiện điểm số hiệu suất của website của bạn và săn sàng để phát trực tiếp.
+Trong chương này, chúng tôi đã cho bạn biết qua một vài công cụ chuyên dụng cho Gatsby để giúp cải thiện điểm số hiệu suất của trang của bạn và chuẩn bị để lên sóng.
 
-Lighthouse là một công cụ tuyệt vời cho các cải tiến website và để học hỏi -- Tiếp tục xem qua các đóng góp tỉ mỉ nó cung cấp và không ngừng cải thiện website!
+Lighthouse là một công cụ tuyệt vời cho các cải tiến website và để học hỏi -- Tiếp tục xem qua các đóng góp chi tiết nó cung cấp và không ngừng cải thiện website!
 
 ## Những bước tiếp theo
 
@@ -356,12 +356,12 @@ Lighthouse là một công cụ tuyệt vời cho các cải tiến website và 
 ### Tài liệu chính thức cho người mới học
 
 1.  [Tài liệu Gatsby mặc định cho người mới học](https://github.com/gatsbyjs/gatsby-starter-default): Bắt tay ngay vào dự án của bạn với bố cục mẫu này. Bộ sườn này đã bao gồm các tập tin tinh chỉnh Gatsby cần thiết cho bạn. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời ông mặt trời và nhanh chớp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới nhưng đã được tối giản vừa đủ để xây một trang web Gatsby. _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
+2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời và nhanh chớp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới với những cốt yếu tối giản cho một trang web Gatsby _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
 ## Chỉ vậy thôi, các bằng hữu
 
-Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm hướng dẫn cho các trường hợp cụ thể.
+Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm các hướng dẫn cho trường hợp cụ thể.
 
 Đây chỉ là khởi đầu. Tiến lên!
 
