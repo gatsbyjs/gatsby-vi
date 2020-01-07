@@ -1,94 +1,94 @@
 ---
-title: Preparing a Site to Go Live
+title: Chuẩn bị cho một trang web Lên Sóng
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Wow! You've come a long way! You've learned how to:
+Wow! Bạn đã đi cả một chặng đường dài! Bạn đã được học cách:
 
-- create new Gatsby sites
-- create pages and components
-- style components
-- add plugins to a site
-- source & transform data
-- use GraphQL to query data for pages
-- programmatically create pages from your data
+- tạo các trang web Gatsby mới
+- tạo các trang và component
+- tạo kiểu cho các component
+- thêm các plugin vào một trang web
+- cung ứng & biến đổi dữ liệu
+- sử dụng GraphQL để truy vấn dữ liệu cho các trang
+- tạo trang từ dữ liệu của bạn bằng phương pháp lập trình
 
-In this final section, you're going to walk through some common steps for preparing a site to go live by introducing a powerful site diagnostic tool called [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Along the way, we'll introduce a few more plugins you'll often want to use in your Gatsby sites.
+Trong phần cuối này, bạn sẽ được xem qua một số bước thông dụng để chuẩn bị cho một website lên sóng bằng cách làm quen với một công cụ chuẩn đoán trang web mạnh mẽ gọi là [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Trong quá trình đó, chúng tôi sẽ giới thiệu một vài plugin nữa mà bạn sẽ thường muốn dùng trong trang web Gatsby của bạn.
 
-## Audit with Lighthouse
+## Đánh giá với Lighthouse
 
-Quoting from the [Lighthouse website](https://developers.google.com/web/tools/lighthouse/):
+Trích từ [website của Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps (PWAs), and more.
+> Lighthouse là một công cụ mã nguồn mở, tự động hóa cho việc nâng cao chất lượng các trang web. Bạn có thể chạy nó trên bất kì trang web nào, dù là công cộng hay yêu cầu xác thực. Nó có các đánh giá cho hiệu suất, khả năng tiếp cận (accessibility), ứng dụng web nâng cao (progressive web apps - PWAs), và hơn thế nữa.
 
-Lighthouse is included in Chrome DevTools. Running its audit -- and then addressing the errors it finds and implementing the improvements it suggests -- is a great way to prepare your site to go live. It helps give you confidence that your site is as fast and accessible as possible.
+Lighthouse được tích hợp trong Chrome DevTools (công cụ cho nhà phát triển của Chrome). Chạy công cụ đánh giá -- sau đó giải quyết các lỗi nó tìm được và thực hiện những cải tiến mà nó đề xuất -- là một cách tuyệt vời để chuẩn bị cho trang web của bạn lên sóng. Nó giúp bạn tự tin rằng trang web của bạn nhanh và dễ tiếp cận nhất có thể.
 
-Try it out!
+Hãy thử ngay đi nào!
 
-First, you need to create a production build of your Gatsby site. The Gatsby development server is optimized for making development fast; But the site that it generates, while closely resembling a production version of the site, isn't as optimized.
+Đầu tiên, bạn cần tạo một production build (phiên bản phát hành) của trang web Gatsby của bạn. Máy chủ phát triển Gatsby được tối ưu hóa cho việc phát triển nhanh; Tuy nhiên, trang web mà nó tạo ra, dù rất giống với phiên bản phát hành của trang web, không được tối ưu bằng.
 
-### ✋ Create a production build
+### ✋ Tạo một production build
 
-1.  Stop the development server (if it's still running) and run the following command:
+1.  Dừng máy chủ phát triển (nếu nó vẫn đang chạy) và chạy câu lệnh sau:
 
 ```shell
 gatsby build
 ```
 
-> 💡 As you learned in [part 1](/tutorial/part-one/), this does a production build of your site and outputs the built static files into the `public` directory.
+> 💡 Như bạn đã học trong [phần 1](/tutorial/part-one/), câu lệnh này dựng một production build của trang web của bạn và xuất các file tĩnh đã được dựng vào trong thư mục `public`.
 
-2.  View the production site locally. Run:
+2.  Xem trang web phát hành một cách cục bộ. Hãy hạy lệnh:
 
 ```shell
 gatsby serve
 ```
 
-Once this starts, you can view your site at [`localhost:9000`](http://localhost:9000).
+Một khi câu lệnh này bắt đầu, bạn có thể xem trang web của bạn tại [`localhost:9000`](http://localhost:9000).
 
-### Run a Lighthouse audit
+### Chạy một đánh giá Lighthouse
 
-Now you're going to run your first Lighthouse test.
+Bây giờ bạn sẽ chạy bài kiểm tra Lighthouse đầu tiên của bạn.
 
-1.  If you haven't already done so, open the site in Chrome Incognito Mode so no extensions interfere with the test. Then, open up the Chrome DevTools.
+1. Nếu chưa thực hiện, bạn hãy mở trang web trong Chế độ Ẩn danh của Chrome để không có tiện ích mở rộng nào can thiệp vào bài kiểm tra. Sau đó, hãy mở Chrome DevTools.
 
-2.  Click on the "Audits" tab where you'll see a screen that looks like:
+2. Ấn vào tab "Audits" nơi bạn sẽ thấy một màn hình như sau:
 
-![Lighthouse audit start](./lighthouse-audit.png)
+![Bắt đầu đánh giá với Lighthouse](./lighthouse-audit.png)
 
-3.  Click "Perform an audit..." (All available audit types should be selected by default). Then click "Run audit". (It'll then take a minute or so to run the audit). Once the audit is complete, you should see results that look like this:
+3.  Click vào "Perform an audit..." (Tất cả các dạng kiểm toán sẽ được chọn theo mặc định). Sau đó click "Run audit". (Nó sẽ mất tầm một phút để chạy bài đánh giá). Một khi đánh giá xong, bạn sẽ thấy kết quả trông giống như thế này:
 
-![Lighthouse audit results](./lighthouse-audit-results.png)
+![Kết quả đánh giá từ Lighthouse](./lighthouse-audit-results.png)
 
-As you can see, Gatsby's performance is excellent out of the box but you're missing some things for PWA, Accessibility, Best Practices, and SEO that will improve your scores (and in the process make your site much more friendly to visitors and search engines).
+Như bạn có thể thấy, hiệu suất của Gatsby là vô cùng đột phá, nhưng bạn vẫn thiếu những thứ cho PWA, Accessibility, Best Practices, và SEO để cải thiện điểm số của bạn (đồng thời làm cho trang web của bạn thân thiện hơn với người dùng và các công cụ tìm kiếm).
 
-## Add a manifest file
+## Thêm một tập tin kê khai
 
-Looks like you have a pretty lackluster score in the "Progressive Web App" category. Let's address that.
+Có vẻ như bạn có một điểm hơi tụt hậu trong mục "Progressive Web App". Cùng giải quyết điều đó nào.
 
-But first, what exactly _are_ PWAs?
+Nhưng trước hết, chính xác thì PWAs _là gì_?
 
-They are regular websites that take advantage of modern browser functionality to augment the web experience with app-like features and benefits. Check out [Google's overview](https://developers.google.com/web/progressive-web-apps/) of what defines a PWA experience.
+Chúng là những trang web thông thường nhưng tận dụng được những chức năng của trình duyệt hiện đại nhằm tăng cường trải nghiệm web thông qua những chức năng và lợi ích như là của một ứng dụng. Hãy xem qua [tổng quan của Google](https://developers.google.com/web/progressive-web-apps/) về những thứ định nghĩa một trải nghiệm PWA.
 
-Inclusion of a web app manifest is one of the three generally accepted [baseline requirements for a PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
+Sự bao gồm của một bản kê khai ứng dụng web (web app manifest) là một trong ba [yêu cầu cơ bản cho một PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1) được chấp nhận rộng rãi.
 
-Quoting [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
+Trích [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-> The web app manifest is a simple JSON file that tells the browser about your web application and how it should behave when 'installed' on the user's mobile device or desktop.
+> Bản kê khai ứng dụng web là một tập tin JSON đơn giản báo cho trình duyệt về ứng dụng web của bạn và cách nó hành xử khi được 'cài đặt' trên điện thoại hay máy tính của người dùng.
 
-[Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configures Gatsby to create a `manifest.webmanifest` file on every site build.
+[Plugin kê khai của Gatsby](/packages/gatsby-plugin-manifest/) cấu hình Gatsby để tạo ra một tập tin `manifest.webmanifest` trên mỗi trang web được dựng.
 
-### ✋ Using `gatsby-plugin-manifest`
+### ✋ Sử dụng `gatsby-plugin-manifest`
 
-1.  Install the plugin:
+1.  Cài đặt plugin:
 
 ```shell
 npm install --save gatsby-plugin-manifest
 ```
 
-2. Add a favicon for your app under `src/images/icon.png`. For the purposes of this tutorial you can use [this example icon](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png), should you not have one available. The icon is necessary to build all images for the manifest. For more information, look at the docs for [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
+2. Thêm một favicon (icon tiêu đề) cho ứng dụng của bạn trong `src/images/icon.png`. Cho mục đích của bài hướng dẫn này bạn có thể dùng [biểu tượng mẫu này](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png), nếu bạn không có sẵn. Biểu tượng này là cần thiết để dựng tất cả các hình ảnh cho bản kê khai. Để biết thêm thông tin, xem qua tài liệu cho [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
 
-3. Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+3. Thêm plugin vào mảng `plugins` trong tập tin `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -101,33 +101,33 @@ npm install --save gatsby-plugin-manifest
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Để kính hoạt bản thông báo "Add to Homescreen" vô hiệu hóa UI của trình duyệt (bao gồm nút back)
+        // hãy xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // Đường dẫn này là tương đối so với thư mục gốc của trang web
       },
     },
   ]
 }
 ```
 
-That's all you need to get started with adding a web manifest to a Gatsby site. The example given reflects a base configuration -- Check out the [plugin reference](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) for more options.
+Đó là tất cả những gì bạn cần để bắt đầu với việc thêm một bản kê khai web vào một trang web Gatsby. Ví dụ ở trên phản ảnh cấu hình cơ bản -- Hãy xem qua [tài liệu tham khảo về plugin](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) để có nhiều tùy chọn hơn.
 
-## Add offline support
+## Thêm hỗ trợ ngoại tuyến
 
-Another requirement for a website to qualify as a PWA is the use of a [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). A service worker runs in the background, deciding to serve network or cached content based on connectivity, allowing for a seamless, managed offline experience.
+Một yêu cầu khác để một trang web đủ điều kiện là một PWA là vận dụng một [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Một service worker sẽ chạy nền, quyết định việc phục vụ mạng hay là những nội dung được cached (lưu trữ sẵn để dùng sau) dựa trên trạng thái kết nối, cho phép một trải nghiệm ngoại tuyết trơn tru và trong kiểm soát.
 
-[Gatsby's offline plugin](/packages/gatsby-plugin-offline/) makes a Gatsby site work offline and more resistant to bad network conditions by creating a service worker for your site.
+[Plugin ngoại tuyến của Gatsby](/packages/gatsby-plugin-offline/) làm cho một trang web Gatsby hoạt động ngoại tuyến và trở nên chống chịu hơn đối với kết nối mạng kém bằng cách tạo một service worker cho trang web của bạn.
 
-### ✋ Using `gatsby-plugin-offline`
+### ✋ Sử dụng `gatsby-plugin-offline`
 
-1.  Install the plugin:
+1.  Cài đặt plugin:
 
 ```shell
 npm install --save gatsby-plugin-offline
 ```
 
-2.  Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+2.  Thêm plugin vào mảng `plugins` trong tập tin `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -140,10 +140,10 @@ npm install --save gatsby-plugin-offline
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Để kính hoạt bản thông báo "Add to Homescreen" vô hiệu hóa UI của trình duyệt (bao gồm nút back)
+        // hãy xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // Đường dẫn này là tương đối so với thư mục gốc của trang web
       },
     },
     // highlight-next-line
@@ -152,27 +152,27 @@ npm install --save gatsby-plugin-offline
 }
 ```
 
-That's all you need to get started with service workers with Gatsby.
+Đó là tất cả những gì bạn cần để bắt đầu với service worker trên Gatsby.
 
-> 💡 The offline plugin should be listed _after_ the manifest plugin so that the offline plugin can cache the created `manifest.webmanifest`.
+> 💡 Plugin ngoại tuyến này nên được liệt kê _sau_ plugin kê khai để plugin ngoại tuyến có thể cache được tập tin `manifest.webmanifest` được tạo ra.
 
-## Add page metadata
+## Thêm siêu dữ liệu vào trang
 
-Adding metadata to pages (such as a title or description) is key in helping search engines like Google understand your content and decide when to surface it in search results.
+Thêm siêu dữ liệu (metadata) vào các trang (ví dụ như tiêu đề hoặc miêu tả) là chìa khóa giúp cho các công cụ tìm kiếm như Google hiểu được nội dung của bạn và quyết định khi nào nó sẽ nổi lên trong kết quả tìm kiếm.
 
-[React Helmet](https://github.com/nfl/react-helmet) is a package that provides a React component interface for you to manage your [document head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+[React Helmet](https://github.com/nfl/react-helmet) là một gói cung cấp một giao diện dưới dạng React component để bạn quản lý [phần đầu của tài liệu](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) của bạn.
 
-Gatsby's [react helmet plugin](/packages/gatsby-plugin-react-helmet/) provides drop-in support for server rendering data added with React Helmet. Using the plugin, attributes you add to React Helmet will be added to the static HTML pages that Gatsby builds.
+[Plugin react helmet](/packages/gatsby-plugin-react-helmet/) của Gatsby cung cấp hỗ trợ drop-in cho dữ liệu kết xuất đồ họa máy chủ (server rendering data) cùng với Mũ bảo hiểm React. Thông qua plugin này, những thuộc tính bạn thêm vào Mũ bảo hiểm React cũng sẽ được thêm vào các trang HTML tĩnh được xây bằng Gatsby.
 
-### ✋ Using `React Helmet` and `gatsby-plugin-react-helmet`
+### ✋ Sử dụng `React Helmet` và `gatsby-plugin-react-helmet`
 
-1.  Install both packages:
+1.  Cài đặt cả hai gói:
 
 ```shell
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2.  Make sure you have a `description` and an `author` configured inside your `siteMetadata` object. Also, add the `gatsby-plugin-react-helmet` plugin to the `plugins` array in your `gatsby-config.js` file.
+2.  Hãy chắc chắn rằng bạn đã có `miêu tả` và một `tác giả` được thiết lập bên trong vật thể `siteMetadata` của bạn. Đồng thời, thêm plugin `gatsby-plugin-react-helmet` vào trong tập hợp `plugins` trong tệp tin của bạn `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -192,10 +192,10 @@ module.exports = {
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Để kính hoạt bản thông báo "Add to Homescreen" vô hiệu hóa UI của trình duyệt (bao gồm nút back)
+        // hãy xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // Đường dẫn này là tương đối so với thư mục gốc của trang web
       },
     },
     `gatsby-plugin-offline`,
@@ -205,7 +205,7 @@ module.exports = {
 }
 ```
 
-3. In the `src/components` directory, create a file called `seo.js` and add the following:
+3. Bên trong thư mục `src/components`, tạo một tệp tin mới tên `seo.js` và thêm những thứ sau:
 
 ```jsx:title=src/components/seo.js
 import React from "react"
@@ -291,9 +291,9 @@ SEO.propTypes = {
 export default SEO
 ```
 
-The above code sets up defaults for your most common metadata tags and provides you an `<SEO>` component to work with in the rest of your project. Pretty cool, right?
+Những dòng lệnh trên thiết lập các mặc định cho các thẻ siêu dữ liệu phổ biên nhất và cung cấp cho bạn một component `<SEO>` để làm việc cùng xuyên suốt dự án. Rất hay, phải không?
 
-4.  Now, you can use the `<SEO>` component in your templates and pages and pass props to it. For example, add it to your `blog-post.js` template like so:
+4.  Bây giờ, bạn có thể dùng component `<SEO>` trong các bố cục mẫu và các trang web và chuyển các đặc tính qua cho nó. Ví dụ, thêm nó vào bố cục mẫu `blog-post.js` của bạn như sau:
 
 ```jsx:title=src/templates/blog-post.js
 import React from "react"
@@ -331,44 +331,44 @@ export const query = graphql`
 `
 ```
 
-The above example is based off the [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/). By passing props to the `<SEO>` component, you can dynamically change the metadata for a post. In this case, the blog post `title` and `excerpt` (if it exists in the blog post markdown file) will be used instead of the default `siteMetadata` properties in your `gatsby-config.js` file.
+Ví dụ trên dựa vào [Blog về Gatsby cho người mới](/starters/gatsbyjs/gatsby-starter-blog/). Bằng cách chuyển các đặc tính sang cho component `<SEO>`, bạn có thể thay đổi siêu dữ liệu của một bài đăng một cách linh hoạt. Trong trường hợp này, `title` và `excerpt` của bài đăng (nếu nó tồn tại trong tập tin markdown của bài đăng) sẽ được dung thay cho đặc tính mặc định là `siteMetadata` trong tập tin `gatsby-config.js`.
 
-Now, if you run the Lighthouse audit again as laid out above, you should get close to--if not a perfect-- 100 score!
+Bây giờ, nếu bạn chạy đánh giá Lighthouse một lần nữa như đã được hướng dẫn trước đó, bạn sẽ gần như đạt được--nếu không phải là hoàn hảo-- 100 điểm!
 
-> 💡 For further reading and examples, check out [Adding an SEO Component](/docs/add-seo-component/) and the [React Helmet docs](https://github.com/nfl/react-helmet#example)!
+> 💡 Để tìm thêm thông tin và các ví dụ, tham khảo [Thêm một component SEO](/docs/add-seo-component/) và [Tài liệu về Mũ bảo hiểm React](https://github.com/nfl/react-helmet#example)!
 
-## Keep making it better
+## Không ngừng tiến bộ
 
-In this section, we've shown you a few Gatsby-specific tools to improve your site's performance and prepare to go live.
+Trong chương này, chúng tôi đã cho bạn biết qua một vài công cụ chuyên dụng cho Gatsby để giúp cải thiện điểm số hiệu suất của trang của bạn và chuẩn bị để lên sóng.
 
-Lighthouse is a great tool for site improvements and learning -- Continue looking through the detailed feedback it provides and keep making your site better!
+Lighthouse là một công cụ tuyệt vời cho các cải tiến website và để học hỏi -- Tiếp tục xem qua các đóng góp chi tiết nó cung cấp và không ngừng cải thiện website!
 
-## Next Steps
+## Những bước tiếp theo
 
-### Official Documentation
+### Tài liệu chính thức
 
-- [Official Documentation](https://www.gatsbyjs.org/docs/): View our Official Documentation for _[Quick Start](https://www.gatsbyjs.org/docs/quick-start/)_, _[Detailed Guides](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[API References](https://www.gatsbyjs.org/docs/gatsby-link/)_, and much more.
+- [Bộ tài liệu chính thức](https://www.gatsbyjs.org/docs/): Xem tài liệu chính thức cho _[Làm quen](https://www.gatsbyjs.org/docs/quick-start/)_, _[Hướng dẫn chi tiết](https://www.gatsbyjs.org/docs/preparing-your-environment/)_, _[API tham khảo](https://www.gatsbyjs.org/docs/gatsby-link/)_, và nhiều hơn thế nữa.
 
-### Official Plugins
+### Những Plugin chính thức
 
-- [Official Plugins](https://github.com/gatsbyjs/gatsby/tree/master/packages): The complete list of all the Official Plugins maintained by Gatsby.
+- [Những Plugin chính thức](https://github.com/gatsbyjs/gatsby/tree/master/packages): Danh sách đầy đủ mọi Plugin chính thức được bảo trì bởi Gatsby.
 
-### Official Starters
+### Tài liệu chính thức cho người mới học
 
-1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Gatsby Starter with the bare essentials needed for a Gatsby site. _[working example](https://gatsby-starter-hello-world-demo.netlify.com/)_
+1.  [Tài liệu Gatsby mặc định cho người mới học](https://github.com/gatsbyjs/gatsby-starter-default): Bắt tay ngay vào dự án của bạn với bố cục mẫu này. Bộ sườn này đã bao gồm các tập tin tinh chỉnh Gatsby cần thiết cho bạn. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Blog Gatsby cho người mới](https://github.com/gatsbyjs/gatsby-starter-blog): Bộ hướng dẫn tạo một blog tuyệt vời và nhanh chớp nhoáng bằng Gatsby. _[ví dụ thực tế](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby Hello-World cho người mới](https://github.com/gatsbyjs/gatsby-starter-hello-world): Bộ Gatsby cho người mới với những cốt yếu tối giản cho một trang web Gatsby _[ví dụ thực tế](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
-## That's all, folks
+## Chỉ vậy thôi, các bằng hữu
 
-Well, not quite; just for this tutorial. There are [Additional Tutorials](/tutorial/additional-tutorials/) to check out for more guided use cases.
+Thật ra, cũng không hẳn là vậy; chỉ vậy cho chương hướng dẫn thôi. Vẫn còn [Phụ lục](/tutorial/additional-tutorials/) để đọc thêm các hướng dẫn cho trường hợp cụ thể.
 
-This is just the beginning. Keep going!
+Đây chỉ là khởi đầu. Tiến lên!
 
-- Did you build something cool? Share it on Twitter, tag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), and [@mention us](https://twitter.com/gatsbyjs)!
-- Did you write a cool blog post about what you learned? Share that, too!
-- Contribute! Take a stroll through [open issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) on the gatsby repo and [become a contributor](/contributing/how-to-contribute/).
+- Bạn vừa tạo được một cái gì đó thú vị? Chia sẻ ngay trên Twitter, gắn thẻ [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), và [@cho chúng tôi biết](https://twitter.com/gatsbyjs)!
+- Bạn có một bài đăng về những gì đã học được? Chia sẻ cả điều đó!
+- Đóng góp! Dạo quanh [bàn luận các sự cố](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) trên repo của gatsby và [trở thành cộng tác](/contributing/how-to-contribute/).
 
-Check out the ["how to contribute"](/contributing/how-to-contribute/) docs for even more ideas.
+Tham khảo tài liệu["đóng góp như thế nào"](/contributing/how-to-contribute/) để có thêm nhiều ý tưởng.
 
-We can't wait to see what you do 😄.
+Chúng tôi không thể đợi xem những thành quả của bạn 😄.
