@@ -1,82 +1,82 @@
 ---
-title: Chuẩn bị cho website trực tuyến
+title: Chuẩn bị cho một trang web Lên Sóng
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Wow! Bạn đã vượt qua cả một chặng đường dài ! Hãy cùng nhìn lại những gì bạn học được:
+Wow! Bạn đã đi cả một chặng đường dài! Bạn đã được học cách:
 
-- tạo các trang web Gatsby
-- xây dựng trang và component
-- trang trí các component
-- thêm plugins cho trang web
-- nguồn & biến đổi dữ liệu
-- dùng GraphQL để lấy dữ liệu cho trang
+- tạo các trang web Gatsby mới
+- tạo các trang và component
+- tạo kiểu cho các component
+- thêm các plugin vào một trang web
+- cung ứng & biến đổi dữ liệu
+- sử dụng GraphQL để truy vấn dữ liệu cho các trang
 - tạo trang từ dữ liệu của bạn bằng phương pháp lập trình
 
-Trong phần cuối này, bạn sẽ được học qua một số bước thông dụng để chuẩn bị phát trực tiếp một website. Hãy làm quen với [Lighthouse](https://developers.google.com/web/tools/lighthouse/) - một công cụ chẩn đoán website vô cùng hữu ích! Bên cạnh đó, chung tôi cũng sẽ cho bạn tiếp xúc với một vài plugin phổ biến mà bạn sẽ cần khi xây dựng các trang web Gatsby.
+Trong phần cuối này, bạn sẽ được xem qua một số bước thông dụng để chuẩn bị cho một website lên sóng bằng cách làm quen với một công cụ chuẩn đoán trang web mạnh mẽ gọi là [Lighthouse](https://developers.google.com/web/tools/lighthouse/). Trong quá trình đó, chúng tôi sẽ giới thiệu một vài plugin nữa mà bạn sẽ thường muốn dùng trong trang web Gatsby của bạn.
 
-## Kiểm toán với Lighthouse
+## Đánh giá với Lighthouse
 
-Trích từ [Lighthouse website](https://developers.google.com/web/tools/lighthouse/):
+Trích từ [website của Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse là một mã nguồn mở, một công cụ tự động giúp nâng cao chất lượng các trang web. Bạn có thể dùng nó trên bất kì trang web nào, bất kể công khai hay cần xác thực. Nó có kiểm toán cho hiệu suất, hỗ trợ tiếp cận, progressive web apps (PWAs - ứng dụng web nâng cao), và hơn thế nữa.
+> Lighthouse là một công cụ mã nguồn mở, tự động hóa cho việc nâng cao chất lượng các trang web. Bạn có thể chạy nó trên bất kì trang web nào, dù là công cộng hay yêu cầu xác thực. Nó có các đánh giá cho hiệu suất, khả năng tiếp cận (accessibility), ứng dụng web nâng cao (progressive web apps - PWAs), và hơn thế nữa.
 
-Lighthouse đã được tích hợp trong Chrome DevTools (công cụ cho nhà phát triển Chrome). Chạy công cụ kiểm toán -- và rồi xem qua các lỗi nó tìm được và thay đổi theo các nâng cấp được gợi ý -- là phương pháp tối ưu để chuẩn bị cho website của bạn trước khi phát trực tiếp. Nó giúp bạn tự tin có một website nhanh nhất và dễ tiếp cận nhất có thể.
+Lighthouse được tích hợp trong Chrome DevTools (công cụ cho nhà phát triển của Chrome). Chạy công cụ đánh giá -- sau đó giải quyết các lỗi nó tìm được và thực hiện những cải tiến mà nó đề xuất -- là một cách tuyệt vời để chuẩn bị cho trang web của bạn lên sóng. Nó giúp bạn tự tin rằng trang web của bạn nhanh và dễ tiếp cận nhất có thể.
 
-Thử ngay đi nào!
+Hãy thử ngay đi nào!
 
-Đầu tiên, bạn cần lập một phiên bản hoàn thiện cho trang web Gatsby của bạn. Máy chủ thử nghiệm Gatsby được phát triển phù hợp cho việc triển khai nhanh. Tuy nhiên, website mà nó tạo ra, dù rất giống với các trang xây theo phiên bản thương mại, không tối ưu như bạn nghĩ.
+Đầu tiên, bạn cần tạo một production build (phiên bản phát hành) của trang web Gatsby của bạn. Máy chủ phát triển Gatsby được tối ưu hóa cho việc phát triển nhanh; Tuy nhiên, trang web mà nó tạo ra, dù rất giống với phiên bản phát hành của trang web, không được tối ưu bằng.
 
-### ✋ Tạo production build (phiên bản hoàn thiện)
+### ✋ Tạo một production build
 
-1.  Dừng máy chủ thử nghiệm (trong trường hợp nó đang chạy) và chạy câu lệnh sau:
+1.  Dừng máy chủ phát triển (nếu nó vẫn đang chạy) và chạy câu lệnh sau:
 
 ```shell
 gatsby build
 ```
 
-> 💡 Như bạn đã học trong [phần 1](/tutorial/part-one/), câu lệnh này xây một production build cho website của bạn và xuất các file tĩnh hoàn thiện vào trong thư mục `public`.
+> 💡 Như bạn đã học trong [phần 1](/tutorial/part-one/), câu lệnh này dựng một production build của trang web của bạn và xuất các file tĩnh đã được dựng vào trong thư mục `public`.
 
-2.  Để xem production build của website trên máy tính cục bộ, chạy lệnh:
+2.  Xem trang web phát hành một cách cục bộ. Hãy hạy lệnh:
 
 ```shell
 gatsby serve
 ```
 
-Khi câu lệnh này chạy, bạn có thể xem website của bạn trực tiếp tại [`localhost:9000`](http://localhost:9000).
+Một khi câu lệnh này bắt đầu, bạn có thể xem trang web của bạn tại [`localhost:9000`](http://localhost:9000).
 
-### Dùng công cụ kiểm toán Lighthouse
+### Chạy một đánh giá Lighthouse
 
-Tới đây bạn sẽ chạy thử Lighthouse lần đầu. 
+Bây giờ bạn sẽ chạy bài kiểm tra Lighthouse đầu tiên của bạn.
 
-1. Nếu chưa thực hiện, bạn hãy mở website bằng Chrome ẩn danh để không có bất kì tiện ích mở rộng nào làm gián đoạn quá trình kiểm toán. Sau đó, hãy mở công cụ cho nhà phát triển Chrome.
+1. Nếu chưa thực hiện, bạn hãy mở trang web trong Chế độ Ẩn danh của Chrome để không có tiện ích mở rộng nào can thiệp vào bài kiểm tra. Sau đó, hãy mở Chrome DevTools.
 
-2.  Ấn vào tab "Audits"<!-- DevTools không có phiên bản Tiếng Việt -->, bạn sẽ thấy trên màn hình như sau:
+2. Ấn vào tab "Audits" nơi bạn sẽ thấy một màn hình như sau:
 
-![Bắt đầu kiểm toán với Lighthouse](./lighthouse-audit.png)
+![Bắt đầu đánh giá với Lighthouse](./lighthouse-audit.png)
 
-3.  Chọn "Perform an audit..." (Mặc định là tất cả các dạng kiểm toán sẽ được chọn). Sau đó chọn "Run audit". (Sẽ mất tầm một phút để hoàn thành bài kiểm toán). Một khi kiểm toán xong, bạn sẽ thấy kết quả hiện trên màn hình như sau:
+3.  Click vào "Perform an audit..." (Tất cả các dạng kiểm toán sẽ được chọn theo mặc định). Sau đó click "Run audit". (Nó sẽ mất tầm một phút để chạy bài đánh giá). Một khi đánh giá xong, bạn sẽ thấy kết quả trông giống như thế này:
 
-![Kết quả kiểm toán từ Lighthouse](./lighthouse-audit-results.png)
+![Kết quả đánh giá từ Lighthouse](./lighthouse-audit-results.png)
 
-Như bạn đã thấy, hiệu suất của Gatsby vô cùng đột phá, nhưng bạn vẫn chưa vận dụng được ứng dụng nâng cao (PWA), hỗ trợ tiếp cận, thông lệ phổ biến, và tối ưu hóa công cụ tìm kiếm (Search Engine Optimization - SEO) để cải thiện điểm số kiểm toán (đồng thời giúp website của bạn thân thiện hơn với người dùng và các công cụ tìm kiếm).
+Như bạn có thể thấy, hiệu suất của Gatsby là vô cùng đột phá, nhưng bạn vẫn thiếu những thứ cho PWA, Accessibility, Best Practices, và SEO để cải thiện điểm số của bạn (đồng thời làm cho trang web của bạn thân thiện hơn với người dùng và các công cụ tìm kiếm).
 
-## Thêm tập tin kê khai (manifest file)
+## Thêm một tập tin kê khai
 
-Có vẻ như điểm của bạn tụt hậu trong mục "Progressive Web App". Cùng giải quyết điều đó nào.
+Có vẻ như bạn có một điểm hơi tụt hậu trong mục "Progressive Web App". Cùng giải quyết điều đó nào.
 
-Nhưng trước hết, PWAs thật sự _là gì_?
+Nhưng trước hết, chính xác thì PWAs _là gì_?
 
-Đó chỉ là những website thông thường nhưng tận dụng được chức năng tiên tiến của trình duyệt nhằm tăng cường trải nghiệm web thông qua những đặc tính và ưu điểm như của một ứng dụng. Tham khảo [Tổng quan của Google](https://developers.google.com/web/progressive-web-apps/) về định nghĩa của một trải nghiệm PWA.
+Chúng là những trang web thông thường nhưng tận dụng được những chức năng của trình duyệt hiện đại nhằm tăng cường trải nghiệm web thông qua những chức năng và lợi ích như là của một ứng dụng. Hãy xem qua [tổng quan của Google](https://developers.google.com/web/progressive-web-apps/) về những thứ định nghĩa một trải nghiệm PWA.
 
-Sự bao gồm của bản kê khai ứng dụng web (web app manifest) là một trong ba [yêu cầu cơ bản cho PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1) được chấp nhận rộng rãi.
+Sự bao gồm của một bản kê khai ứng dụng web (web app manifest) là một trong ba [yêu cầu cơ bản cho một PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1) được chấp nhận rộng rãi.
 
 Trích [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-> Bản kê khai ứng dụng web chỉ đơn giản là một tập tin JSON dùng để thông báo cho trình duyệt về ứng dụng web và phương thức để 'cài đặt' ứng dụng đó trên điện thoại hay máy tính của người dùng.
+> Bản kê khai ứng dụng web là một tập tin JSON đơn giản báo cho trình duyệt về ứng dụng web của bạn và cách nó hành xử khi được 'cài đặt' trên điện thoại hay máy tính của người dùng.
 
-[Bản kê khai plugin (manifest plugin) của Gatsby](/packages/gatsby-plugin-manifest/) tinh chỉnh Gatsby để tạo ra tập tin `manifest.webmanifest` trên mỗi trang web được tạo.
+[Plugin kê khai của Gatsby](/packages/gatsby-plugin-manifest/) cấu hình Gatsby để tạo ra một tập tin `manifest.webmanifest` trên mỗi trang web được dựng.
 
 ### ✋ Sử dụng `gatsby-plugin-manifest`
 
@@ -86,9 +86,9 @@ Trích [Google](https://developers.google.com/web/fundamentals/web-app-manifest/
 npm install --save gatsby-plugin-manifest
 ```
 
-2. Thêm một icon tiêu đề (favicon) cho ứng dụng của bạn trong `src/images/icon.png`. Cho mục đích thực tập bạn có thể dùng [biểu tượng mẫu này](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png), nếu bạn không có sẵn. Biểu tượng này cần thiết để lập tất cả các hình ảnh cho kê khai. Để biết thêm thông tin, xem qua tài liệu cho [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
+2. Thêm một favicon (icon tiêu đề) cho ứng dụng của bạn trong `src/images/icon.png`. Cho mục đích của bài hướng dẫn này bạn có thể dùng [biểu tượng mẫu này](https://raw.githubusercontent.com/gatsbyjs/gatsby/master/docs/tutorial/part-eight/icon.png), nếu bạn không có sẵn. Biểu tượng này là cần thiết để dựng tất cả các hình ảnh cho bản kê khai. Để biết thêm thông tin, xem qua tài liệu cho [`gatsby-plugin-manifest`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-manifest/README.md).
 
-3. Thêm plugin vào `plugins` tập hợp trong tập tin `gatsby-config.js`.
+3. Thêm plugin vào mảng `plugins` trong tập tin `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -101,23 +101,23 @@ npm install --save gatsby-plugin-manifest
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button) 
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Để kính hoạt bản thông báo "Add to Homescreen" vô hiệu hóa UI của trình duyệt (bao gồm nút back)
+        // hãy xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // Đường dẫn này là tương đối so với thư mục gốc của trang web
       },
     },
   ]
 }
 ```
 
-Đó là tất cả những gì bạn cần để bắt đầu thêm một bản kê khai web vào một trang web Gatsby. Ví dụ ở trên gợi nhắc một thiết lập cơ bản -- Truy cập [tài liệu tham khảo về plugin](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) để tìm thêm lựa chọn.
+Đó là tất cả những gì bạn cần để bắt đầu với việc thêm một bản kê khai web vào một trang web Gatsby. Ví dụ ở trên phản ảnh cấu hình cơ bản -- Hãy xem qua [tài liệu tham khảo về plugin](/packages/gatsby-plugin-manifest/?=gatsby-plugin-manifest#automatic-mode) để có nhiều tùy chọn hơn.
 
 ## Thêm hỗ trợ ngoại tuyến
 
-Một yêu cầu khác để website được công nhận là một PWA chính là vận dụng [máy chủ úy nhiệm (service worker)](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Máy chủ ủy nhiệm sẽ chạy nền, quyết định phương thức sử dụng mạng và nội dung cache (cached content) dựa trên hiện trạng kết nối, cho một trải nghiệm ngoại tuyết không gián đoạn và trong kiểm soát.
+Một yêu cầu khác để một trang web đủ điều kiện là một PWA là vận dụng một [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). Một service worker sẽ chạy nền, quyết định việc phục vụ mạng hay là những nội dung được cached (lưu trữ sẵn để dùng sau) dựa trên trạng thái kết nối, cho phép một trải nghiệm ngoại tuyết trơn tru và trong kiểm soát.
 
-[Plugin Gatsby ngoại tuyến](/packages/gatsby-plugin-offline/) giúp trang web Gatsby có thể hoạt động ngoại tuyến và trở nên trơn tru hơn khi gặp kết nối kém bằng cách tạo một máy chủ ủy nhiệm cho trang web của bạn.
+[Plugin ngoại tuyến của Gatsby](/packages/gatsby-plugin-offline/) làm cho một trang web Gatsby hoạt động ngoại tuyến và trở nên chống chịu hơn đối với kết nối mạng kém bằng cách tạo một service worker cho trang web của bạn.
 
 ### ✋ Sử dụng `gatsby-plugin-offline`
 
@@ -127,7 +127,7 @@ Một yêu cầu khác để website được công nhận là một PWA chính 
 npm install --save gatsby-plugin-offline
 ```
 
-2.  Thêm plugin vào `plugins` tập hợp trong tập tin `gatsby-config.js`.
+2.  Thêm plugin vào mảng `plugins` trong tập tin `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -140,10 +140,10 @@ npm install --save gatsby-plugin-offline
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button) 
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        // Để kính hoạt bản thông báo "Add to Homescreen" vô hiệu hóa UI của trình duyệt (bao gồm nút back)
+        // hãy xem qua https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // Đường dẫn này là tương đối so với thư mục gốc của trang web
       },
     },
     // highlight-next-line
@@ -152,17 +152,17 @@ npm install --save gatsby-plugin-offline
 }
 ```
 
-Đó là tất cả những gì bạn cần biết để thiết lập một máy chủ úy nhiệm trên Gatsby.
+Đó là tất cả những gì bạn cần để bắt đầu với service worker trên Gatsby.
 
-> 💡 Tiện ích ngoại tuyến này nên được liệt kê _sau_ plugin kê khai (manifest plugin) để nó có thể cache `manifest.webmanifest` được tạo ra.
+> 💡 Plugin ngoại tuyến này nên được liệt kê _sau_ plugin kê khai để plugin ngoại tuyến có thể cache được tập tin `manifest.webmanifest` được tạo ra.
 
-## Thêm siêu dữ liệu (metadata) của trang
+## Thêm siêu dữ liệu vào trang
 
-Thêm siêu dữ liệu vào trang (ví dụ như tiêu đề hoặc miêu tả) là chìa khóa giúp cho các công cụ tìm kiếm như Google hiểu được nội dung của bạn và quyết định khi nào nó sẽ trồi lên trong kết quả tìm kiếm.
+Thêm siêu dữ liệu (metadata) vào các trang (ví dụ như tiêu đề hoặc miêu tả) là chìa khóa giúp cho các công cụ tìm kiếm như Google hiểu được nội dung của bạn và quyết định khi nào nó sẽ nổi lên trong kết quả tìm kiếm.
 
-[Mũ bảo hiểm React (React Helmet)](https://github.com/nfl/react-helmet) là một gói cung cấp giao diện component React (React component interface) giúp bạn quản lý [tựa đề trang](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+[React Helmet](https://github.com/nfl/react-helmet) là một gói cung cấp một giao diện dưới dạng React component để bạn quản lý [phần đầu của tài liệu](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head) của bạn.
 
-[Plugin mũ bảo hiểm react (react helmet plugin)](/packages/gatsby-plugin-react-helmet/) của Gatsby cung cấp hỗ trợ nhanh cho dữ liệu kết xuất đồ họa máy chủ (server rendering data) cùng với Mũ bảo hiểm React. Thông qua plugin này, những thuộc tính bạn thêm vào Mũ bảo hiểm React cũng sẽ được thêm vào các trang HTML tĩnh được xây bằng Gatsby.
+[Plugin react helmet](/packages/gatsby-plugin-react-helmet/) của Gatsby cung cấp hỗ trợ drop-in cho dữ liệu kết xuất đồ họa máy chủ (server rendering data) cùng với Mũ bảo hiểm React. Thông qua plugin này, những thuộc tính bạn thêm vào Mũ bảo hiểm React cũng sẽ được thêm vào các trang HTML tĩnh được xây bằng Gatsby.
 
 ### ✋ Sử dụng `React Helmet` và `gatsby-plugin-react-helmet`
 
@@ -172,7 +172,7 @@ Thêm siêu dữ liệu vào trang (ví dụ như tiêu đề hoặc miêu tả)
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2.  Hãy chắc chắn rằng bạn đã có  `miêu tả` và một `tác giả` được thiết lập bên trong vật thể `siteMetadata` của bạn. Đồng thời, thêm plugin `gatsby-plugin-react-helmet` vào trong tập hợp `plugins` trong tệp tin của bạn `gatsby-config.js`.
+2.  Hãy chắc chắn rằng bạn đã có `miêu tả` và một `tác giả` được thiết lập bên trong vật thể `siteMetadata` của bạn. Đồng thời, thêm plugin `gatsby-plugin-react-helmet` vào trong tập hợp `plugins` trong tệp tin của bạn `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
