@@ -270,7 +270,7 @@ export default ({ children }) => (
 )
 ```
 
-![with-navigation2](with-navigation2.png)
+![with-navigation2](with-navigation.png)
 
 Và bạn đã hoàn thành xong! Một trang web gồm 3 trang với điều hướng toàn cục cơ bản.
 
