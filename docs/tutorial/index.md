@@ -28,7 +28,11 @@ Trong những phần hướng dẫn trung cấp này, bạn sẽ học cách ké
 
 Gatsby themes (chủ đề) trừu tượng hoá tất cả cấu hình mặc định của bạn (tính năng dùng chung, nguồn dữ liệu, thiết kế) ra khỏi trang web của bạn và làm nó thành một gói có thể cài đặt.
 
+<<<<<<< HEAD
 Điều này có nghĩa là cấu hình và chức năng không được ghi trực tiếp vào dự án của bạn, nhưng được phiên bản, quản lý tập trung và được cài đặt như một dependency (gói phụ thuộc). Bạn có thể cập nhật liền mạch một theme, kết hợp các themes với nhau và thậm chí trao đổi một theme tương thích cho một theme khác.
+=======
+This means that the configuration and functionality aren’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Tìm hiểu thêm về sử dụng và xây dựng các themes với [Hướng dẫn Gatsby theme](/tutorial/theme-tutorials/).
 

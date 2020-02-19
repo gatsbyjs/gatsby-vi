@@ -28,7 +28,11 @@ Ví dụ về hành vi không được chấp nhận của người tham gia bao
 
 Người bảo trì dự án có nhiệm vụ nêu rõ mức tiêu chuẩn của những hành vi chấp nhận được và được kỳ vọng rằng họ sẽ thực hiện những hành động sửa chữa phù hợp và công bằng nhằm đáp lại những hành vi không được chấp nhận.
 
+<<<<<<< HEAD
 Người bảo trì dự án có quyền và nghĩa vụ để xoá, sửa và từ chối các lời bình luận, commits, code, sửa wiki, issues, và các đóng góp khác mà không tuân theo với bộ quy tắc ứng xử này, hoặc có thể tạm thời hoặc vĩnh viễn cấm người đóng góp có hành vi được họ cho là không phù hợp, hăm doạ, xúc phạm và tổn thương người khác.
+=======
+Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this code of conduct, or to ban temporarily or permanently any contributor for other behaviors that they deem inappropriate, divisive, threatening, offensive, or harmful.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Phạm vi của chúng tôi
 
