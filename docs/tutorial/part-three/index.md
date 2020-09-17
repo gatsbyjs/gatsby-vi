@@ -274,7 +274,11 @@ export default ({ children }) => (
 
 Và bạn đã hoàn thành xong! Một trang web gồm 3 trang với điều hướng toàn cục cơ bản.
 
+<<<<<<< HEAD
 _Thử thách:_ Với sức mạnh của "component bố cục" mới, hãy thử thêm vào đầu trang, cuối trang, điều hướng toàn cục, các sidebar,... vào trang web Gatsby của bạn!
+=======
+_Challenge:_ With your new "layout component" powers, try adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ## Tiếp theo là gì?
 

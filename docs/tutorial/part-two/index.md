@@ -248,7 +248,11 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
+<<<<<<< HEAD
 Mã lệnh `console.log(styles)` sẽ in kết quả của việc nhúng tập tin để bạn có thể thấy kết quả của tập tin `./about-css-modules.module.css` đã qua xử lý. Nếu bạn mở bảng điều khiển (console) của nhà lập trình (ví dụ như developer tools của Firefox hay là Chrome) trên trình duyệt của bạn, bạn sẽ thấy:
+=======
+The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools, often by the F12 key) in your browser, you'll see:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Kết quả của việc nhúng mô-đun CSS trong console](css-modules-console.png)
 

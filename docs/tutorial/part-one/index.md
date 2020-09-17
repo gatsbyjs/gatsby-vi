@@ -165,7 +165,11 @@ export default () => (
 )
 ```
 
+<<<<<<< HEAD
 2.  Điều hướng đến http://localhost:8000/about/.
+=======
+2.  Navigate to `http://localhost:8000/about/`
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Trang about mới](05-about-page.png)
 
@@ -230,7 +234,11 @@ Bây giờ bạn sẽ lại thấy dòng tiêu đề "Giới thiệu về Gatsby
 
 ### “props” là gì?
 
+<<<<<<< HEAD
 Trước đó bạn định nghĩa các component React là những đoạn code có thể tái sử dụng mà mô tả UI. Để làm cho các đoạn code có thể tái sử dụng này linh động, bạn cần có khả năng cung cấp cho chúng với các dữ liệu khác nhau. Bạn làm điều đó bằng đầu vào được gọi “props". Props (một cách đơn giản nhất) là những thuộc tính được cung cấp cho các React component.
+=======
+Earlier, you defined React components as reusable pieces of code describing a UI. To make these reusable pieces dynamic you need to be able to supply them with different data. You do that with input called "props". Props are (appropriately enough) properties supplied to React components.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Trong `about.js` bạn truyền một thuộc tính `headerText` với giá trị `"Giới thiệu về Gatsby"` cho component phụ `Header` được nhúng vào:
 
@@ -331,16 +339,26 @@ Sau khi bạn lưu tập tin, bạn sẽ thấy trang contact và có thể đi 
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
+<<<<<<< HEAD
   <p>Xin lỗi! Trình duyệt của bạn không hỗ trợ video này.</p>
+=======
+  <p>Sorry! Your browser doesn't support this video.</p>
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 </video>
 
 Component `<Link />` của Gatsby là để liên kết giữa các trang trong trang web của bạn. Đối với các liên kết bên ngoài không được xử lí bởi trang web Gatsby của bạn, hãy sử dụng thẻ `<a>` thông thường của HTML.
 
 ## Triển khai một trang Gatsby
 
+<<<<<<< HEAD
 Gatsby.js là một _trình tạo web hiện đại_, có nghĩa là nó không cần máy chủ để thiết lập hoặc cơ sở dữ liệu phức tạp để triển khai. Thay vào đó, lệnh `build` của Gatsby tạo ra một thư mục chứa các tập tin HTML và JavaScript tĩnh mà bạn có thể triển khai đến một dịch vụ hosting trang web tĩnh.
 
 Hãy thử sử dụng [Surge](http://surge.sh/) để triển khai trang web Gatsby đầu tiên của bạn. Surge là một trong nhiều "host cho các trang web tĩnh" cho phép triển khai các trang web Gatsby.
+=======
+Gatsby.js is a _modern site generator_, which means there are no servers to set up or complicated databases to deploy. Instead, the Gatsby `build` command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+
+Try using [Surge](http://surge.sh/) for deploying your first Gatsby website. Surge is one of many "static site hosts" which makes it possible to deploy Gatsby sites.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 Nếu trước đó bạn vẫn chưa cài đặt &amp; thiết lập Surge, mở một cửa sở terminal và cài đặt công cụ dòng lệnh của họ:
 
@@ -371,7 +389,13 @@ Rồi cuối cùng triển khai trang web của bạn bằng cách xuất bản 
 surge public/
 ```
 
+<<<<<<< HEAD
 Khi điều này kết thúc, bạn sẽ thấy trong terminal của bạn một cái gì đó như:
+=======
+> Note that you will have to press the `enter` key after you see the `domain: some-name.surge.sh` information on your command-line interface.
+
+Once this finishes running, you should see in your terminal something like:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![Ảnh chụp màn hình của việc xuất bản trang web Gatsby với Surge](surge-deployment.png)
 

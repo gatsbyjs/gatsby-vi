@@ -14,8 +14,13 @@ Trong mục hướng dẫn này, bạn sẽ học về cách kéo dữ liệu v�
 
 GraphiQL là môi trường phát triển tích hợp (IDE) cho GraphQL. Nó là một công cụ mạnh mẽ (và hoàn toàn tuyệt vời) mà bạn sẽ sử dụng thường xuyên khi xây dựng những trang web Gatsby.
 
+<<<<<<< HEAD
 Bạn có thể truy cập nó khi máy chủ phát triển của trang web của bạn đang vận hành—mặc định tại
 <http://localhost:8000/___graphql>.
+=======
+You can access it when your site's development server is running—normally at
+`http://localhost:8000/___graphql`.
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
@@ -93,8 +98,13 @@ Bằng một cách khác, bạn có thể thêm các trường vào bằng phím
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
+<<<<<<< HEAD
 Thử thêm một số trường vào lệnh truy vấn của bạn, nhấn tổ hợp <kbd>Ctrl + Enter</kbd>
 mỗi khi muốn chạy lại lệnh truy vấn. Bạn sẽ được thấy kết quả của lệnh truy vấn đã được cập nhật:
+=======
+Try adding a number of fields to your query, press <kbd>Ctrl + Enter</kbd>
+each time to re-run the query. You'll see the updated query results:
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![allfile-qeury](allfile-query.png)
 
@@ -209,7 +219,11 @@ export const query = graphql`
 `
 ```
 
+<<<<<<< HEAD
 Và bây giờ dẫn tới [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
+=======
+And now visit `http://localhost:8000/my-files`… 😲
+>>>>>>> 90932a06db2e297cf416552b84e48b4b82e56fbc
 
 ![my-files-page](my-files-page.png)
 
