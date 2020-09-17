@@ -19,6 +19,8 @@ Hướng dẫn này phù hợp cho những lập trình viên từ trung cấp �
 npm install -g gatsby-cli
 ```
 
+> Câu lệnh trên sẽ cài đặt Gatsby CLI một cách toàn cục trên máy bạn
+
 ### Tạo trang Gatsby mới:
 
 ```shell
@@ -37,7 +39,8 @@ cd gatsby-site
 gatsby develop
 ```
 
-Gatsby sẽ khởi động môi trường dev reload liên tục ở đường dẫn mặc định `localhost:8000`.
+
+Gatsby sẽ khởi động môi trường phát triển "tự động reload" có thể truy cập ở đường dẫn mặc định `http://localhost:8000`.
 
 Hãy thử chỉnh sửa 1 trang Javascript trong `src/pages`. Những thay đổi của bạn sẽ được cập nhật ngay trên trình duyệt.
 

@@ -152,7 +152,7 @@ Trong mục này, bạn sẽ tạo một component của một trang mới và t
 
 1. Tạo một thư mục mới tại `src/components` và sau đó, trong thư mục vừa tạo này, tạo một tập tin gọi là `container.js` và sao chép những dòng sau đây:
 
-```javascript:title=src/components/container.js
+```jsx:title=src/components/container.js
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -177,7 +177,7 @@ Bạn sẽ thấy rằng tên của tập tin kết thúc với `.module.css` th
 3. Tạo một component trang mới tại
    `src/pages/about-css-modules.js`:
 
-```javascript:title=src/pages/about-css-modules.js
+```jsx:title=src/pages/about-css-modules.js
 import React from "react"
 
 import Container from "../components/container"
