@@ -1,68 +1,70 @@
 ---
-title: Quick Start
+title: Bắt đầu nhanh
 ---
 
-This quick start is intended for intermediate to advanced developers. For a gentler intro to Gatsby, [head to our tutorial](/tutorial/)!
+Hướng dẫn này phù hợp cho những lập trình viên từ trung cấp đến nâng cao. Với những hướng dẫn căn bản hơn về Gatsby, [vui lòng xem tại đây](/tutorial/)
 
-## Use the Gatsby CLI
+## Sử dụng Gatsby CLI:
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
-  lessonTitle="Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line"
+  lessonTitle="Bắt đầu nhanh với Gatsby. Tạo dựng trang web với Gatsby thông qua câu lệnh"
 />
 
-**Note**: this video uses `npx`, which is a tool to execute an npm package without first installing it. Running the command `npx gatsby new` is the same as running `gatsby new` after installing the gatsby-cli on your computer.
+**Lưu Ý**: Video này sử dụng `npx`, là 1 công cụ dùng để chạy npm package mà không cần phải qua cài đặt. Chạy lệnh `npx gatsby new` cũng giống như chạy lệnh `gatsby new` sau khi đã cài đặt `gatsby-cli` trên máy của bạn.
 
-### Install the Gatsby CLI
+### Cài đặt Gatsby CLI:
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-> The above command installs Gatsby CLI globally on your machine.
+> Câu lệnh trên sẽ cài đặt Gatsby CLI một cách toàn cục trên máy bạn
 
-### Create a new site
+### Tạo trang Gatsby mới:
 
 ```shell
 gatsby new gatsby-site
 ```
 
-### Change directories into site folder
+### Vào thư mục chứa site bạn vừa tạo:
 
 ```shell
 cd gatsby-site
 ```
 
-### Start development server
+### Khởi động development server:
 
 ```shell
 gatsby develop
 ```
 
-Gatsby will start a hot-reloading development environment accessible by default at `http://localhost:8000`.
 
-Try editing the JavaScript pages in `src/pages`. Saved changes will live reload in the browser.
+Gatsby sẽ khởi động môi trường phát triển "tự động reload" có thể truy cập ở đường dẫn mặc định `http://localhost:8000`.
 
-### Create a production build
+Hãy thử chỉnh sửa 1 trang Javascript trong `src/pages`. Những thay đổi của bạn sẽ được cập nhật ngay trên trình duyệt.
+
+### Tạo bản build cho production
 
 ```shell
 gatsby build
 ```
 
-Gatsby will perform an optimized production build for your site, generating static HTML and per-route JavaScript code bundles.
+Gatsby sẽ tạo ra một bản build tối ưu cho trang của bạn, tạo ra các file HTML tĩnh và đóng gói các mảng Javascript code của bạn.
 
-### Serve the production build locally
+### Chạy bản build production trên máy local
 
 ```shell
 gatsby serve
 ```
 
-Gatsby starts a local HTML server for testing your built site. Remember to build your site using `gatsby build` before using this command.
+Gatsby sẽ tạo 1 server HTML local cho bạn test trang web. Hãy nhớ dùng câu lệnh `gatsby build` trước khi chạy lệnh `gatsby serve` nhé.
 
-### Access documentation for CLI commands
+### Tìm hiểu thêm về dòng lệnh Gatsby CLI
 
-To see detailed documentation for the CLI commands, run `gatsby --help` in the terminal.
+Để hiểu rõ hơn về các câu lênh mà Gatsby CLI có, chạy lệnh `gatsby --help` trong terminal.
 
-For specific commands, run `gatsby COMMAND_NAME --help` e.g. `gatsby new --help`.
+Nếu muốn tìm hiểu câu lệnh cụ thể, chạy lệnh `gatsby TÊN_LỆNH --help`, ví dụ `gatsby new --help`.
 
-For more information on the Gatsby CLI, visit the [CLI reference](/docs/gatsby-cli/) section of the docs.
+Để có thêm thông tin về Gatsby CLI, bạn có thể xem [Ghi chú về CLI](/docs/gatsby-cli/).
+
